@@ -1,8 +1,8 @@
 //
-//  NSNumber+CHRandomKit.m
-//  CHRandomKit
+//	NSNumber+CHRandomKit.m
+//	CHRandomKit
 //
-//  Created by Christian Huxtable, October 2015.
+//	Created by Christian Huxtable, October 2015.
 //  Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
 //
 //	Permission to use, copy, modify, and/or distribute this software for any purpose with or without
