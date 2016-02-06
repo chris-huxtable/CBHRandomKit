@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83B0BCAE1C665F53006247A3 /* CHSafeMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BCAC1C665F53006247A3 /* CHSafeMemory.c */; };
+		83B0BCAF1C665F53006247A3 /* CHSafeMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B0BCAD1C665F53006247A3 /* CHSafeMemory.h */; };
 		83FC53861BD1A9A3006AD2B6 /* CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC53851BD1A9A3006AD2B6 /* CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83FC538F1BD1A9F9006AD2B6 /* CHRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC538D1BD1A9F9006AD2B6 /* CHRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83FC53901BD1A9F9006AD2B6 /* CHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC538E1BD1A9F9006AD2B6 /* CHRandom.m */; settings = {ASSET_TAGS = (); }; };
+		83FC53901BD1A9F9006AD2B6 /* CHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC538E1BD1A9F9006AD2B6 /* CHRandom.m */; };
 		83FC53931BD1B602006AD2B6 /* NSArray+CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC53911BD1B602006AD2B6 /* NSArray+CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83FC53941BD1B602006AD2B6 /* NSArray+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC53921BD1B602006AD2B6 /* NSArray+CHRandomKit.m */; settings = {ASSET_TAGS = (); }; };
-		83FC53A51BD1D090006AD2B6 /* NSNumber+CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC53A31BD1D090006AD2B6 /* NSNumber+CHRandomKit.h */; settings = {ASSET_TAGS = (); }; };
-		83FC53A61BD1D090006AD2B6 /* NSNumber+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC53A41BD1D090006AD2B6 /* NSNumber+CHRandomKit.m */; settings = {ASSET_TAGS = (); }; };
+		83FC53941BD1B602006AD2B6 /* NSArray+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC53921BD1B602006AD2B6 /* NSArray+CHRandomKit.m */; };
+		83FC53A51BD1D090006AD2B6 /* NSNumber+CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC53A31BD1D090006AD2B6 /* NSNumber+CHRandomKit.h */; };
+		83FC53A61BD1D090006AD2B6 /* NSNumber+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC53A41BD1D090006AD2B6 /* NSNumber+CHRandomKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83B0BCAC1C665F53006247A3 /* CHSafeMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CHSafeMemory.c; sourceTree = "<group>"; };
+		83B0BCAD1C665F53006247A3 /* CHSafeMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSafeMemory.h; sourceTree = "<group>"; };
 		83FC53821BD1A9A3006AD2B6 /* CHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FC53851BD1A9A3006AD2B6 /* CHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHRandomKit.h; sourceTree = "<group>"; };
 		83FC53871BD1A9A3006AD2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				83FC538E1BD1A9F9006AD2B6 /* CHRandom.m */,
 				83FC53951BD1B608006AD2B6 /* Catagories */,
 				83FC53851BD1A9A3006AD2B6 /* CHRandomKit.h */,
+				83B0BCAD1C665F53006247A3 /* CHSafeMemory.h */,
+				83B0BCAC1C665F53006247A3 /* CHSafeMemory.c */,
 				83FC53871BD1A9A3006AD2B6 /* Info.plist */,
 			);
 			path = CHRandomKit;
@@ -87,6 +93,7 @@
 			files = (
 				83FC538F1BD1A9F9006AD2B6 /* CHRandom.h in Headers */,
 				83FC53A51BD1D090006AD2B6 /* NSNumber+CHRandomKit.h in Headers */,
+				83B0BCAF1C665F53006247A3 /* CHSafeMemory.h in Headers */,
 				83FC53861BD1A9A3006AD2B6 /* CHRandomKit.h in Headers */,
 				83FC53931BD1B602006AD2B6 /* NSArray+CHRandomKit.h in Headers */,
 			);
@@ -162,6 +169,7 @@
 				83FC53A61BD1D090006AD2B6 /* NSNumber+CHRandomKit.m in Sources */,
 				83FC53941BD1B602006AD2B6 /* NSArray+CHRandomKit.m in Sources */,
 				83FC53901BD1A9F9006AD2B6 /* CHRandom.m in Sources */,
+				83B0BCAE1C665F53006247A3 /* CHSafeMemory.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +286,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_ENABLE_PASCAL_STRINGS = NO;
-				GCC_FAST_MATH = YES;
+				GCC_FAST_MATH = NO;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -301,6 +310,7 @@
 				INFOPLIST_FILE = CHRandomKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LLVM_LTO = YES;
 				OSACOMPILE_EXECUTE_ONLY = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,11 +346,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_ENABLE_PASCAL_STRINGS = NO;
-				GCC_FAST_MATH = YES;
+				GCC_FAST_MATH = NO;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -359,6 +370,7 @@
 				INFOPLIST_FILE = CHRandomKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LLVM_LTO = YES;
 				OSACOMPILE_EXECUTE_ONLY = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
