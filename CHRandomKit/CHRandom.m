@@ -19,6 +19,10 @@
 
 #import "CHRandom.h"
 
+#import "CHSafeMemory.h"
+
+
+
 @implementation CHRandom
 
 
@@ -359,10 +363,12 @@
 
 + (void *)randomBytes:(size_t)size
 {
-	void *buf = malloc(size);
-	[self fillBuffer:buf ofSize:size];
+	// By definition sizeof(char) == 1
 
-	return buf;
+	void *buffer = CHSafeCalloc(size, 1);
+	arc4random_buf(buffer, size);
+
+	return buffer;
 }
 
 

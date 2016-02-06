@@ -19,14 +19,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-//! Project version number for CHRandomKit.
-FOUNDATION_EXPORT double CHRandomKitVersionNumber;
 
-//! Project version string for CHRandomKit.
+FOUNDATION_EXPORT double CHRandomKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CHRandomKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <CHRandomKit/PublicHeader.h>
 
 #import <CHRandomKit/CHRandom.h>
 
 #import <CHRandomKit/NSArray+CHRandomKit.h>
+#import <CHRandomKit/NSNumber+CHRandomKit.h>
