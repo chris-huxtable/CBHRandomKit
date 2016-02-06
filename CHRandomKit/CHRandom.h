@@ -31,13 +31,13 @@
 }
 
 
-// Boolean
+
 #pragma mark - Boolean
 
 + (BOOL)randomBool;
 
 
-// Floating Point
+
 #pragma mark - Floating Point
 
 ///---

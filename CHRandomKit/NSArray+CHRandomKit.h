@@ -26,7 +26,7 @@
  */
 @interface NSArray<ObjectType> (CHRandomKit)
 
-// Shuffling
+
 #pragma mark - Shuffling
 
 ///---
@@ -40,7 +40,7 @@
 - (NSArray<ObjectType> * _Nonnull)arrayByShuffling;
 
 
-// Accessors
+
 #pragma mark - Accessors
 
 ///---
@@ -64,7 +64,7 @@
 @interface NSMutableArray<ObjectType> (CHRandomKit)
 
 
-// Shuffling
+
 #pragma mark - Shuffling
 
 ///---
@@ -78,7 +78,7 @@
 - (NSMutableArray<ObjectType> * _Nonnull)shuffle;
 
 
-// Insertion
+
 #pragma mark - Insertion
 
 ///---
@@ -93,7 +93,7 @@
 - (NSUInteger)insertObjectAtRandomIndex:(ObjectType _Nonnull)object;
 
 
-// Removal
+
 #pragma mark - Removal
 
 ///---

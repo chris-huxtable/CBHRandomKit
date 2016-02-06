@@ -22,7 +22,7 @@
 @implementation CHRandom
 
 
-// Boolean
+
 #pragma mark - Boolean
 
 + (BOOL)randomBool
@@ -34,7 +34,7 @@
 }
 
 
-// Floating Point
+
 #pragma mark - Floating Point
 
 + (float)randomFloat
@@ -70,7 +70,7 @@
 }
 
 
-// Char
+
 #pragma mark - Char
 
 + (char)randomChar
@@ -89,8 +89,6 @@
 	return value;
 }
 
-
-#pragma mark -
 
 + (char)randomCharBetweenLower:(char)lowerBound andUpperBound:(char)upperBound
 {
@@ -116,7 +114,7 @@
 }
 
 
-// Short
+
 #pragma mark - Short
 
 + (short)randomShort
@@ -135,8 +133,6 @@
 	return value;
 }
 
-
-#pragma mark -
 
 + (short)randomShortBetweenLower:(short)lowerBound andUpperBound:(short)upperBound
 {
@@ -162,7 +158,7 @@
 }
 
 
-// Int
+
 #pragma mark - Int
 
 + (int)randomInt
@@ -181,8 +177,6 @@
 	return value;
 }
 
-
-#pragma mark -
 
 + (int)randomIntBetweenLower:(int)lowerBound andUpperBound:(int)upperBound
 {
@@ -208,7 +202,7 @@
 }
 
 
-// Integer
+
 #pragma mark - Integer
 
 + (NSInteger)randomInteger
@@ -227,8 +221,6 @@
 	return value;
 }
 
-
-#pragma mark -
 
 + (NSInteger)randomIntegerBetweenLower:(NSInteger)lowerBound andUpperBound:(NSInteger)upperBound
 {
@@ -266,7 +258,7 @@
 }
 
 
-// Long
+
 #pragma mark - Long
 
 + (long)randomLong
@@ -282,8 +274,6 @@
 	return value;
 }
 
-
-#pragma mark -
 
 + (long)randomLongBetweenLower:(long)lowerBound andUpperBound:(long)upperBound
 {
@@ -309,7 +299,7 @@
 }
 
 
-// Long Long
+
 #pragma mark - Long Long
 
 + (long long)randomLongLong
@@ -328,8 +318,6 @@
 	return value;
 }
 
-
-#pragma mark -
 
 + (long long)randomLongLongBetweenLower:(long long)lowerBound andUpperBound:(long long)upperBound
 {
@@ -355,7 +343,7 @@
 }
 
 
-// Data
+
 #pragma mark - Data
 
 
@@ -378,7 +366,7 @@
 }
 
 
-// Buffer
+
 #pragma mark - Buffer
 
 + (void)fillBuffer:(void *)buffer ofSize:(size_t)size

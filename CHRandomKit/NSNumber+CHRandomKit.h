@@ -27,7 +27,7 @@
 @interface NSNumber (CHRandomKit)
 
 
-// Boolean
+
 #pragma mark - Boolean
 
 ///---
@@ -47,7 +47,7 @@
 - (instancetype)initWithRandomBool;
 
 
-// Floating Point
+
 #pragma mark - Floating Point
 
 ///---
@@ -93,7 +93,7 @@
 - (instancetype)initWithRandomDouble;
 
 
-// Char
+
 #pragma mark - Char
 
 ///---
@@ -126,7 +126,7 @@
 - (instancetype)initWithRandomUnsignedChar;
 
 
-// Short
+
 #pragma mark - Short
 
 ///---
@@ -159,7 +159,7 @@
 - (instancetype)initWithRandomUnsignedShort;
 
 
-// Int
+
 #pragma mark - Int
 
 ///---
@@ -192,7 +192,7 @@
 - (instancetype)initWithRandomUnsignedInt;
 
 
-// Integer
+
 #pragma mark - Integer
 
 ///---
@@ -225,7 +225,7 @@
 - (instancetype)initWithRandomUnsignedInteger;
 
 
-// Long
+
 #pragma mark - Long
 
 ///---
@@ -258,7 +258,7 @@
 - (instancetype)initWithRandomUnsignedLong;
 
 
-// Long Long
+
 #pragma mark - Long Long
 
 ///---

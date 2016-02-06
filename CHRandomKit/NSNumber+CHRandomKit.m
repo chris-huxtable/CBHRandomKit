@@ -22,10 +22,11 @@
 #import "CHRandom.h"
 
 
+
 @implementation NSNumber (CHRandomKit)
 
 
-// Boolean
+
 #pragma mark - Boolean
 
 + (instancetype)numberWithRandomBool
@@ -39,7 +40,7 @@
 }
 
 
-// Floating Point
+
 #pragma mark - Floating Point
 
 + (instancetype)numberWithRandomFloat
@@ -75,7 +76,7 @@
 }
 
 
-// Char
+
 #pragma mark - Char
 
 + (instancetype)numberWithRandomChar
@@ -100,7 +101,7 @@
 }
 
 
-// Short
+
 #pragma mark - Short
 
 + (instancetype)numberWithRandomShort
@@ -125,7 +126,7 @@
 }
 
 
-// Int
+
 #pragma mark - Int
 
 + (instancetype)numberWithRandomInt
@@ -150,7 +151,7 @@
 }
 
 
-// Integer
+
 #pragma mark - Integer
 
 + (instancetype)numberWithRandomInteger
@@ -175,7 +176,7 @@
 }
 
 
-// Long
+
 #pragma mark - Long
 
 + (instancetype)numberWithRandomLong
@@ -200,7 +201,7 @@
 }
 
 
-// Long Long
+
 #pragma mark - Long Long
 
 + (instancetype)numberWithRandomLongLong
@@ -223,5 +224,6 @@
 {
 	return [self initWithUnsignedLongLong:[CHRandom randomUnsignedLongLong]];
 }
+
 
 @end

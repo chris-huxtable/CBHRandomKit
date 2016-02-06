@@ -21,9 +21,11 @@
 
 #import "CHRandom.h"
 
+
+
 @implementation NSArray (CHRandomKit)
 
-// Shuffling
+
 #pragma mark - Shuffling
 
 - (NSArray *)arrayByShuffling
@@ -32,7 +34,7 @@
 }
 
 
-// Accessors
+
 #pragma mark - Accessors
 
 - (id _Nonnull)randomObject
@@ -46,7 +48,7 @@
 @implementation NSMutableArray (CHRandomKit)
 
 
-// Shuffling
+
 #pragma mark - Shuffling
 
 - (NSMutableArray *)shuffle
@@ -65,7 +67,7 @@
 }
 
 
-// Insertion
+
 #pragma mark - Insertion
 
 - (NSUInteger)insertObjectAtRandomIndex:(id _Nonnull)object
@@ -78,7 +80,7 @@
 }
 
 
-// Removal
+
 #pragma mark - Removal
 
 - (id _Nonnull)removeRandomObject
