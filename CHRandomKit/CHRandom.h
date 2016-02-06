@@ -17,7 +17,7 @@
 //	OF THIS SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 
 /**
@@ -69,7 +69,6 @@
 + (long double)randomLongDouble;
 
 
-// Char
 #pragma mark - Char
 
 ///---
@@ -90,8 +89,6 @@
 + (unsigned char)randomUnsignedChar;
 
 
-#pragma mark -
-
 /** Generates a pseudo-random `char` greater than the lower bound and less than the upper bound.
  * @param lowerBound	The exclusive lower bound for the random `char`.
  * @param upperBound	The exclusive upper bound for the random `char`.
@@ -108,7 +105,7 @@
 + (unsigned char)randomUnsignedCharWithBound:(unsigned char)bound;
 
 
-// Short
+
 #pragma mark - Short
 
 ///---
@@ -129,8 +126,6 @@
 + (unsigned short)randomUnsignedShort;
 
 
-#pragma mark -
-
 /** Generates a pseudo-random `short` greater than the lower bound and less than the upper bound.
  * @param lowerBound	The exclusive lower bound for the random `short`.
  * @param upperBound	The exclusive upper bound for the random `short`.
@@ -147,7 +142,7 @@
 + (unsigned short)randomUnsignedShortWithBound:(unsigned short)bound;
 
 
-// Int
+
 #pragma mark - Int
 
 ///---
@@ -167,8 +162,6 @@
 + (unsigned int)randomUnsignedInt;
 
 
-#pragma mark -
-
 /** Generates a pseudo-random `int` greater than the lower bound and less than the upper bound.
  * @param lowerBound	The exclusive lower bound for the random `int`.
  * @param upperBound	The exclusive upper bound for the random `int`.
@@ -185,7 +178,7 @@
 + (unsigned int)randomUnsignedIntWithBound:(unsigned int)bound;
 
 
-// Integer
+
 #pragma mark - Integer
 
 ///---
@@ -204,8 +197,6 @@
  */
 + (NSUInteger)randomUnsignedInteger;
 
-
-#pragma mark -
 
 /** Generates a pseudo-random `NSUInteger` greater than the lower bound and less than the upper bound.
  * @param lowerBound	The exclusive lower bound for the random `NSInteger`.
@@ -230,7 +221,7 @@
 + (NSUInteger)randomUnsignedIntegerInRange:(NSRange)range;
 
 
-// Long
+
 #pragma mark - Long
 
 ///---
@@ -250,8 +241,6 @@
 + (unsigned long)randomUnsignedLong;
 
 
-#pragma mark -
-
 /** Generates a pseudo-random `long` greater than the lower bound and less than the upper bound.
  * @param lowerBound	The exclusive lower bound for the random `long`.
  * @param upperBound	The exclusive upper bound for the random `long`.
@@ -268,7 +257,7 @@
 + (unsigned long)randomUnsignedLongWithBound:(unsigned long)bound;
 
 
-// Long Long
+
 #pragma mark - Long Long
 
 ///---
@@ -288,8 +277,6 @@
 + (unsigned long long)randomUnsignedLongLong;
 
 
-#pragma mark -
-
 /** Generates a pseudo-random `long long` greater than the lower bound and less than the upper bound.
  * @param lowerBound	The exclusive lower bound for the random `long long`.
  * @param upperBound	The exclusive upper bound for the random `long long`.
@@ -306,7 +293,7 @@
 + (unsigned long long)randomUnsignedLongLongWithBound:(unsigned long long)bound;
 
 
-// Data
+
 #pragma mark - Data
 
 ///---
@@ -327,7 +314,7 @@
  */
 + (NSMutableData *)randomMutableDataOfLength:(NSUInteger)length;
 
-/** Generates a stream of pseudo-random data of a given length. The result bust be freed using `free()`.
+/** Generates a stream of pseudo-random data of a given length. The result must be eventually freed using `free()`.
  * @param size	The size in bytes of random data to return.
  * @return		A stream of pseudo-random data of a given length
  * @since		Available in version 1.0 and later.
@@ -335,7 +322,7 @@
 + (void *)randomBytes:(size_t)size;
 
 
-// Buffer
+
 #pragma mark - Buffer
 
 ///---

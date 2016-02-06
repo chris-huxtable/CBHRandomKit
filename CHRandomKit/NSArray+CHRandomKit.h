@@ -17,7 +17,9 @@
 //	OF THIS SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+
 
 /**
  * @author      Chris Huxtable <chris@huxtable.ca>
