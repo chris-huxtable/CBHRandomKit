@@ -1,6 +1,7 @@
 # CHRandomKit
 
 An easier & safer to use interface for good, cryptographically secure, random.
+This framework is currently under development, and is subject to change.
 
 ## Use
 
