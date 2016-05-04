@@ -351,7 +351,6 @@
 
 #pragma mark - Data
 
-
 + (NSData *)randomDataOfLength:(NSUInteger)length
 {
 	return [NSData dataWithBytesNoCopy:[self randomBytes:length] length:length];
