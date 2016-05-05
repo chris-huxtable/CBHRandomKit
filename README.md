@@ -14,4 +14,4 @@ Generate a random `NSUInteger`:
     NSUInteger randInt = [CHRandom randomUnsignedInteger];
 
 ## Licence
-CHRandomKit is available under the [ISC licence](https://github.com/chris-huxtable/CHRandomKit/blob/master/LICENCE).
+CHRandomKit is available under the [ISC license](https://github.com/chris-huxtable/CHRandomKit/blob/master/LICENSE).
