@@ -20,7 +20,7 @@
 
 #import "CHRandom.h"
 
-#import "CHSafeMemory.h"
+#import "CHSaferMemory.h"
 
 
 
@@ -365,7 +365,7 @@
 {
 	// By definition sizeof(char) == 1
 
-	void *buffer = CHSafeCalloc(size, 1);
+	void *buffer = CHSaferCallocOrExit(size, 1);
 	arc4random_buf(buffer, size);
 
 	return buffer;

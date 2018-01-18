@@ -1,5 +1,5 @@
 //
-//	CHSafeMemory.h
+//	CHSaferMemory.h
 //
 //	Created by Christian Huxtable <chris@huxtable.ca>, January 2016.
 //	Copyright (c) 2016, Christian Huxtable <chris@huxtable.ca>
@@ -21,21 +21,23 @@
 
 
 
-#pragma mark Safe Malloc / Calloc
+#pragma mark Safer Malloc / Calloc
 
 #pragma once
 
-#ifndef _CHSafeMemory
-#define _CHSafeMemory
+#ifndef _CHSaferMemory
+#define _CHSaferMemory
 
-void* CHSafeMallocf(size_t num, size_t size, const char *funcName);
-void* CHSafeCallocf(size_t num, size_t size, const char *funcName);
+void *CHSaferMalloc(size_t nmemb, size_t size);
+void *CHSaferCalloc(size_t nmemb, size_t size);
 
-void CHSafeFreef(void **mem, const char *funcName);
+void CHSaferFree_f(void **mem);
+#define CHSaferFree(mem) CHSaferFree_f(&(mem))
 
-#define CHSafeMalloc(num, size) CHSafeMallocf((num), (size), __PRETTY_FUNCTION__)
-#define CHSafeCalloc(num, size) CHSafeCallocf((num), (size), __PRETTY_FUNCTION__)
+void *CHSaferMallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName);
+void *CHSaferCallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName);
 
-#define CHSafeFree(mem) CHSafeFreef(&(mem), __PRETTY_FUNCTION__)
+#define CHSaferMallocOrExit(nmemb, size) CHSaferMallocOrExit_traceable((nmemb), (size), __PRETTY_FUNCTION__)
+#define CHSaferCallocOrExit(nmemb, size) CHSaferCallocOrExit_traceable((nmemb), (size), __PRETTY_FUNCTION__)
 
-#endif /* _CHSafeMemory */
+#endif /* _CHSaferMemory */
