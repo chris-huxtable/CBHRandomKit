@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83B0BCAE1C665F53006247A3 /* CHSafeMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BCAC1C665F53006247A3 /* CHSafeMemory.c */; };
-		83B0BCAF1C665F53006247A3 /* CHSafeMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B0BCAD1C665F53006247A3 /* CHSafeMemory.h */; };
+		83B0BCAE1C665F53006247A3 /* CHSaferMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 83B0BCAC1C665F53006247A3 /* CHSaferMemory.c */; };
+		83B0BCAF1C665F53006247A3 /* CHSaferMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B0BCAD1C665F53006247A3 /* CHSaferMemory.h */; };
 		83FC53861BD1A9A3006AD2B6 /* CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC53851BD1A9A3006AD2B6 /* CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83FC538F1BD1A9F9006AD2B6 /* CHRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FC538D1BD1A9F9006AD2B6 /* CHRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83FC53901BD1A9F9006AD2B6 /* CHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC538E1BD1A9F9006AD2B6 /* CHRandom.m */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83B0BCAC1C665F53006247A3 /* CHSafeMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CHSafeMemory.c; sourceTree = "<group>"; };
-		83B0BCAD1C665F53006247A3 /* CHSafeMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSafeMemory.h; sourceTree = "<group>"; };
+		83B0BCAC1C665F53006247A3 /* CHSaferMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CHSaferMemory.c; sourceTree = "<group>"; };
+		83B0BCAD1C665F53006247A3 /* CHSaferMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSaferMemory.h; sourceTree = "<group>"; };
 		83FC53821BD1A9A3006AD2B6 /* CHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FC53851BD1A9A3006AD2B6 /* CHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHRandomKit.h; sourceTree = "<group>"; };
 		83FC53871BD1A9A3006AD2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 				83FC538E1BD1A9F9006AD2B6 /* CHRandom.m */,
 				83FC53951BD1B608006AD2B6 /* Catagories */,
 				83FC53851BD1A9A3006AD2B6 /* CHRandomKit.h */,
-				83B0BCAD1C665F53006247A3 /* CHSafeMemory.h */,
-				83B0BCAC1C665F53006247A3 /* CHSafeMemory.c */,
+				83B0BCAD1C665F53006247A3 /* CHSaferMemory.h */,
+				83B0BCAC1C665F53006247A3 /* CHSaferMemory.c */,
 				83FC53871BD1A9A3006AD2B6 /* Info.plist */,
 			);
 			path = CHRandomKit;
@@ -93,7 +93,7 @@
 			files = (
 				83FC538F1BD1A9F9006AD2B6 /* CHRandom.h in Headers */,
 				83FC53A51BD1D090006AD2B6 /* NSNumber+CHRandomKit.h in Headers */,
-				83B0BCAF1C665F53006247A3 /* CHSafeMemory.h in Headers */,
+				83B0BCAF1C665F53006247A3 /* CHSaferMemory.h in Headers */,
 				83FC53861BD1A9A3006AD2B6 /* CHRandomKit.h in Headers */,
 				83FC53931BD1B602006AD2B6 /* NSArray+CHRandomKit.h in Headers */,
 			);
@@ -126,7 +126,7 @@
 		83FC53791BD1A9A2006AD2B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Christian Huxtable";
 				TargetAttributes = {
 					83FC53811BD1A9A3006AD2B6 = {
@@ -169,7 +169,7 @@
 				83FC53A61BD1D090006AD2B6 /* NSNumber+CHRandomKit.m in Sources */,
 				83FC53941BD1B602006AD2B6 /* NSArray+CHRandomKit.m in Sources */,
 				83FC53901BD1A9F9006AD2B6 /* CHRandom.m in Sources */,
-				83B0BCAE1C665F53006247A3 /* CHSafeMemory.c in Sources */,
+				83B0BCAE1C665F53006247A3 /* CHSaferMemory.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,13 +184,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -215,7 +223,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -231,13 +239,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
