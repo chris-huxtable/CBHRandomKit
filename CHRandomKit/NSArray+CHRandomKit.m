@@ -46,7 +46,7 @@
 
 - (id)randomObject
 {
-	return [self objectAtIndex:[CHRandom randomUnsignedIntegerWithBound:[self count]]];
+	return [self objectAtIndex:[CHRandom randomUnsignedIntegerWithBound:[self count] - 1]];
 }
 
 @end

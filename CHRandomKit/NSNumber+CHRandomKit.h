@@ -114,17 +114,36 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithRandomChar;
 
 
-/** Generates a NSNumber contianing a pseudo-random `unsigned char`.
- * @return		A NSNumber contianing a pseudo-random `unsigned char`.
- * @since		Available in version 1.0 and later.
- */
-+ (instancetype)numberWithRandomUnsignedChar;
+#pragma mark - Byte
 
-/** Generates a NSNumber contianing a pseudo-random `unsigned char`.
- * @return		A NSNumber contianing a pseudo-random `unsigned char`.
- * @since		Available in version 1.0 and later.
+///---
+/// @name Generating NSNumber's containing char values.
+///---
+
+/** Generates a NSNumber contianing a pseudo-random `int8_t`.
+ * @return		A NSNumber contianing a pseudo-random `int8_t`.
+ * @since		Available in version 1.2 and later.
  */
-- (instancetype)initWithRandomUnsignedChar;
++ (instancetype)numberWithRandomByte;
+
+/** Generates a NSNumber contianing a pseudo-random `int8_t`.
+ * @return		A NSNumber contianing a pseudo-random `int8_t`.
+ * @since		Available in version 1.2 and later.
+ */
+- (instancetype)initWithRandomByte;
+
+
+/** Generates a NSNumber contianing a pseudo-random `uint8_t`.
+ * @return		A NSNumber contianing a pseudo-random `uint8_t`.
+ * @since		Available in version 1.2 and later.
+ */
++ (instancetype)numberWithRandomUnsignedByte;
+
+/** Generates a NSNumber contianing a pseudo-random `uint8_t`.
+ * @return		A NSNumber contianing a pseudo-random `uint8_t`.
+ * @since		Available in version 1.2 and later.
+ */
+- (instancetype)initWithRandomUnsignedByte;
 
 
 #pragma mark - Short

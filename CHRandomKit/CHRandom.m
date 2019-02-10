@@ -22,6 +22,9 @@
 #import "CHSaferMemory.h"
 
 
+#define SWAP(T, a, b) do { T tmp = a; a = b; b = tmp; } while (0)
+
+
 @implementation CHRandom
 
 
@@ -40,34 +43,35 @@
 
 + (float)randomFloat
 {
-	float value = 0.0f;
-	[self fillBuffer:&value ofSize:sizeof(float)];
-
-	return (value /= FLT_MAX);
+	uint32_t value = 0.0L;
+	[self fillBuffer:&value ofSize:sizeof(uint32_t)];
+	
+	return ((float)value / (float)0xFFFFFFFF);
 }
 
 + (CGFloat)randomCGFloat
 {
-	CGFloat value = 0.0;
-	[self fillBuffer:&value ofSize:sizeof(CGFloat)];
-
-	return (value /= CGFLOAT_MAX);
+	#ifdef CGFLOAT_IS_DOUBLE
+		return [self randomDouble];
+	#else
+		return [self randomFloat];
+	#endif
 }
 
 + (double)randomDouble
 {
-	double value = 0.0;
-	[self fillBuffer:&value ofSize:sizeof(double)];
+	uint64_t value = 0.0L;
+	[self fillBuffer:&value ofSize:sizeof(uint64_t)];
 
-	return (value /= DBL_MAX);
+	return ((double)value / (double)0xFFFFFFFFFFFFFFFF);
 }
 
 + (long double)randomLongDouble
 {
-	long double value = 0.0L;
-	[self fillBuffer:&value ofSize:sizeof(long double)];
+	uint64_t value = 0.0L;
+	[self fillBuffer:&value ofSize:sizeof(uint64_t)];
 
-	return (value /= LDBL_MAX);
+	return ((double)value / (double)0xFFFFFFFFFFFFFFFF);
 }
 
 
@@ -75,43 +79,70 @@
 
 + (char)randomChar
 {
-	char value = 0;
-	[self fillBuffer:&value ofSize:sizeof(char)];
-
-	return value;
+	return (char)[self randomByte];
 }
-
-+ (unsigned char)randomUnsignedChar
-{
-	unsigned char value = 0;
-	[self fillBuffer:&value ofSize:sizeof(unsigned char)];
-
-	return value;
-}
-
 
 + (char)randomCharBetweenLower:(char)lowerBound andUpperBound:(char)upperBound
 {
-	if ( lowerBound >= upperBound ) { return 0; }
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(char, lowerBound, upperBound); }
 
-	unsigned char width = (unsigned char)(upperBound - lowerBound - 1);
-
-	if ( width < 2 ) { return 0; }
-
-	return (char)[self randomUnsignedShortWithBound:width] + lowerBound + 1;
+	unsigned char width = (unsigned char)(upperBound - lowerBound);
+	return (char)[self randomUnsignedByteWithBound:width] + lowerBound;
 }
 
-+ (unsigned char)randomUnsignedCharWithBound:(unsigned char)bound
+
+#pragma mark - Byte
+
++ (int8_t)randomByte
 {
-	if ( bound < 2 ) { return 0; }
+	int8_t value = 0;
+	[self fillBuffer:&value ofSize:sizeof(int8_t)];
 
-	unsigned char min = -bound % bound;
-	unsigned char r = 0;
+	return value;
+}
 
-	while ( (r = [self randomUnsignedChar]) < min ) { }
++ (int8_t)randomByteBetweenLower:(int8_t)lowerBound andUpperBound:(int8_t)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(int8_t, lowerBound, upperBound); }
+
+	uint8_t width = (uint8_t)(upperBound - lowerBound);
+	return (int8_t)[self randomUnsignedByteWithBound:width] + lowerBound;
+}
+
+
++ (uint8_t)randomUnsignedByte
+{
+	uint8_t value = 0;
+	[self fillBuffer:&value ofSize:sizeof(uint8_t)];
+
+	return value;
+}
+
++ (uint8_t)randomUnsignedByteWithBound:(uint8_t)bound
+{
+	if ( bound < 1 ) { return 1; }
+	++bound;
+
+	uint8_t min = -bound % bound;
+	uint8_t r = 0;
+
+	/// Recalculate if result has modulo-bias
+	while ( (r = [self randomUnsignedByte]) < min ) { }
 
 	return (r %= bound);
 }
+
++ (uint8_t)randomUnsignedByteBetweenLower:(uint8_t)lowerBound andUpperBound:(uint8_t)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(uint8_t, lowerBound, upperBound); }
+
+	uint8_t width = (uint8_t)(upperBound - lowerBound);
+	return [self randomUnsignedByteWithBound:width] + lowerBound;
+}
+
 
 
 #pragma mark - Short
@@ -124,6 +155,16 @@
 	return value;
 }
 
++ (short)randomShortBetweenLower:(short)lowerBound andUpperBound:(short)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(short, lowerBound, upperBound); }
+
+	unsigned short width = (unsigned short)(upperBound - lowerBound);
+	return (short)[self randomUnsignedShortWithBound:width] + lowerBound;
+}
+
+
 + (unsigned short)randomUnsignedShort
 {
 	unsigned short value = 0;
@@ -132,28 +173,27 @@
 	return value;
 }
 
-
-+ (short)randomShortBetweenLower:(short)lowerBound andUpperBound:(short)upperBound
-{
-	if ( lowerBound >= upperBound ) { return 0; }
-
-	unsigned short width = (unsigned short)(upperBound - lowerBound - 1);
-
-	if ( width < 2 ) { return 0; }
-
-	return (short)[self randomUnsignedShortWithBound:width] + lowerBound + 1;
-}
-
 + (unsigned short)randomUnsignedShortWithBound:(unsigned short)bound
 {
-	if ( bound < 2 ) { return 0; }
+	if ( bound < 1 ) { return 1; }
+	++bound;
 
 	unsigned short min = -bound % bound;
 	unsigned short r = 0;
 
+	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedShort]) < min ) { }
 
 	return (r %= bound);
+}
+
++ (unsigned short)randomUnsignedShortBetweenLower:(unsigned short)lowerBound andUpperBound:(unsigned short)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(unsigned short, lowerBound, upperBound); }
+
+	unsigned short width = (unsigned short)(upperBound - lowerBound);
+	return [self randomUnsignedShortWithBound:width] + lowerBound;
 }
 
 
@@ -167,6 +207,16 @@
 	return value;
 }
 
++ (int)randomIntBetweenLower:(int)lowerBound andUpperBound:(int)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(int, lowerBound, upperBound); }
+
+	unsigned int width = (unsigned int)(upperBound - lowerBound);
+	return (int)[self randomUnsignedIntWithBound:width] + lowerBound;
+}
+
+
 + (unsigned int)randomUnsignedInt
 {
 	unsigned int value = 0;
@@ -175,28 +225,27 @@
 	return value;
 }
 
-
-+ (int)randomIntBetweenLower:(int)lowerBound andUpperBound:(int)upperBound
-{
-	if ( lowerBound >= upperBound ) { return 0; }
-
-	unsigned int width = (unsigned int)(upperBound - lowerBound - 1);
-
-	if ( width < 2 ) { return 0; }
-
-	return (int)[self randomUnsignedIntWithBound:width] + lowerBound + 1;
-}
-
 + (unsigned int)randomUnsignedIntWithBound:(unsigned int)bound
 {
-	if ( bound < 2 ) { return 0; }
+	if ( bound < 1 ) { return 1; }
+	++bound;
 
 	unsigned int min = -bound % bound;
 	unsigned int r = 0;
 
+	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedInt]) < min ) { }
 
 	return (r %= bound);
+}
+
++ (unsigned int)randomUnsignedIntBetweenLower:(unsigned int)lowerBound andUpperBound:(unsigned int)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(unsigned int, lowerBound, upperBound); }
+
+	unsigned int width = (unsigned int)(upperBound - lowerBound);
+	return [self randomUnsignedIntWithBound:width] + lowerBound;
 }
 
 
@@ -210,6 +259,16 @@
 	return value;
 }
 
++ (NSInteger)randomIntegerBetweenLower:(NSInteger)lowerBound andUpperBound:(NSInteger)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(NSInteger, lowerBound, upperBound); }
+
+	NSUInteger width = (NSUInteger)(upperBound - lowerBound);
+	return (NSInteger)[self randomUnsignedIntegerWithBound:width] + lowerBound;
+}
+
+
 + (NSUInteger)randomUnsignedInteger
 {
 	NSUInteger value = 0;
@@ -218,36 +277,34 @@
 	return value;
 }
 
-
-+ (NSInteger)randomIntegerBetweenLower:(NSInteger)lowerBound andUpperBound:(NSInteger)upperBound
-{
-	if ( lowerBound >= upperBound ) { return 0; }
-
-	NSUInteger width = (NSUInteger)(upperBound - lowerBound - 1);
-
-	if ( width < 2 ) { return 0; }
-
-	return (NSInteger)[self randomUnsignedIntegerWithBound:width] + lowerBound + 1;
-}
-
-
 + (NSUInteger)randomUnsignedIntegerWithBound:(NSUInteger)bound
 {
-	if ( bound < 2 ) { return 0; }
+	if ( bound < 1 ) { return 0; }
+	++bound;
 
 	NSUInteger min = -bound % bound;
 	NSUInteger r = 0;
 
+	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedInteger]) < min ) { }
 
 	return (r %= bound);
 }
 
++ (NSUInteger)randomUnsignedIntegerBetweenLower:(NSUInteger)lowerBound andUpperBound:(NSUInteger)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(NSUInteger, lowerBound, upperBound); }
+
+	NSUInteger width = (NSUInteger)(upperBound - lowerBound);
+	return [self randomUnsignedIntegerWithBound:width] + lowerBound;
+}
+
 + (NSUInteger)randomUnsignedIntegerInRange:(NSRange)range
 {
+	/// Catch Potential Overflow
 	if ( range.length > NSUIntegerMax - range.location )
 	{
-		// Catch Potential Overflow
 		range.length = NSUIntegerMax - range.location;
 	}
 
@@ -262,6 +319,16 @@
 	return (long)[self randomBytes:sizeof(long)];
 }
 
++ (long)randomLongBetweenLower:(long)lowerBound andUpperBound:(long)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(long, lowerBound, upperBound); }
+
+	unsigned long width = (unsigned long)(upperBound - lowerBound);
+	return (long)[self randomUnsignedLongWithBound:width] + lowerBound;
+}
+
+
 + (unsigned long)randomUnsignedLong
 {
 	unsigned long value = 0;
@@ -270,28 +337,27 @@
 	return value;
 }
 
-
-+ (long)randomLongBetweenLower:(long)lowerBound andUpperBound:(long)upperBound
-{
-	if ( lowerBound >= upperBound ) { return 0; }
-
-	unsigned long width = (unsigned long)(upperBound - lowerBound - 1);
-
-	if ( width < 2 ) { return 0; }
-
-	return (long)[self randomUnsignedLongWithBound:width] + lowerBound + 1;
-}
-
 + (unsigned long)randomUnsignedLongWithBound:(unsigned long)bound
 {
-	if ( bound < 2 ) { return 0; }
+	if ( bound < 1 ) { return 1; }
+	++bound;
 
 	unsigned long min = -bound % bound;
 	unsigned long r = 0;
 
+	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedLong]) < min ) { }
 
 	return (r %= bound);
+}
+
++ (unsigned long)randomUnsignedLongBetweenLower:(unsigned long)lowerBound andUpperBound:(unsigned long)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(unsigned long, lowerBound, upperBound); }
+
+	unsigned long width = (unsigned long)(upperBound - lowerBound);
+	return [self randomUnsignedLongWithBound:width] + lowerBound;
 }
 
 
@@ -305,6 +371,16 @@
 	return value;
 }
 
++ (long long)randomLongLongBetweenLower:(long long)lowerBound andUpperBound:(long long)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(long long, lowerBound, upperBound); }
+
+	unsigned long long width = (unsigned long long)(upperBound - lowerBound);
+	return (long long)[self randomUnsignedLongWithBound:width] + lowerBound;
+}
+
+
 + (unsigned long long)randomUnsignedLongLong
 {
 	unsigned long long value = 0;
@@ -313,28 +389,27 @@
 	return value;
 }
 
-
-+ (long long)randomLongLongBetweenLower:(long long)lowerBound andUpperBound:(long long)upperBound
-{
-	if ( lowerBound >= upperBound ) { return 0; }
-
-	unsigned long long width = (unsigned long long)(upperBound - lowerBound - 1);
-
-	if ( width < 2 ) { return 0; }
-
-	return (long long)[self randomUnsignedLongWithBound:width] + lowerBound + 1;
-}
-
 + (unsigned long long)randomUnsignedLongLongWithBound:(unsigned long long)bound
 {
-	if ( bound < 2 ) { return 0; }
+	if ( bound < 1 ) { return 1; }
+	++bound;
 
 	unsigned long long min = -bound % bound;
 	unsigned long long r = 0;
 
+	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedLongLong]) < min ) { }
 
 	return (r %= bound);
+}
+
++ (unsigned long long)randomUnsignedLongLongBetweenLower:(unsigned long long)lowerBound andUpperBound:(unsigned long long)upperBound
+{
+	if ( lowerBound == upperBound ) { return lowerBound; }
+	if ( lowerBound > upperBound ) { SWAP(unsigned long long, lowerBound, upperBound); }
+
+	unsigned long long width = (unsigned long long)(upperBound - lowerBound);
+	return [self randomUnsignedLongWithBound:width] + lowerBound;
 }
 
 

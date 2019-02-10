@@ -22,7 +22,7 @@
 
 	while ( count > 0 )
 	{
-		index = [CHRandom randomUnsignedIntegerWithBound:count];
+		index = [CHRandom randomUnsignedIntegerWithBound:count - 1];
 		[self exchangeObjectAtIndex:--count withObjectAtIndex:index];
 	}
 
@@ -34,7 +34,7 @@
 
 - (NSUInteger)insertObjectAtRandomIndex:(id _Nonnull)object
 {
-	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count]];
+	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
 	[self insertObject:object atIndex:index];
 
@@ -46,7 +46,7 @@
 
 - (id _Nonnull)removeRandomObject
 {
-	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count]];
+	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
 	id object = [self objectAtIndex:index];
 	[self removeObjectAtIndex:index];

@@ -86,14 +86,27 @@
 }
 
 
-+ (instancetype)numberWithRandomUnsignedChar
+#pragma mark - Byte
+
++ (instancetype)numberWithRandomByte
 {
-	return [[[self alloc] initWithRandomUnsignedChar] autorelease];
+	return [[[self alloc] initWithRandomByte] autorelease];
 }
 
-- (instancetype)initWithRandomUnsignedChar
+- (instancetype)initWithRandomByte
 {
-	return [self initWithUnsignedChar:[CHRandom randomUnsignedChar]];
+	return [self initWithChar:(char)[CHRandom randomByte]];
+}
+
+
++ (instancetype)numberWithRandomUnsignedByte
+{
+	return [[[self alloc] initWithRandomUnsignedByte] autorelease];
+}
+
+- (instancetype)initWithRandomUnsignedByte
+{
+	return [self initWithUnsignedChar:[CHRandom randomUnsignedByte]];
 }
 
 
