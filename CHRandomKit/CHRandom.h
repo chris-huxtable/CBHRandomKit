@@ -40,26 +40,26 @@
 /// @name Generating Floating Point Values
 ///---
 
-/** Generates a pseudo-random `float` between 0.0f and 1.0f.
- * @return		A pseudo-random `float` between 0.0f and 1.0f.
+/** Generates a pseudo-random `float` between 0.0f and 1.0f inclusive.
+ * @return		A pseudo-random `float` between 0.0f and 1.0f inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (float)randomFloat;
 
-/** Generates a pseudo-random `CGFloat` between 0.0 and 1.0.
- * @return		A pseudo-random `CGFloat` between 0.0 and 1.0.
+/** Generates a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
+ * @return		A pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (CGFloat)randomCGFloat;
 
-/** Generates a pseudo-random `double` between 0.0 and 1.0.
- * @return		A pseudo-random `double` between 0.0 and 1.0.
+/** Generates a pseudo-random `double` between 0.0 and 1.0 inclusive.
+ * @return		A pseudo-random `double` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (double)randomDouble;
 
-/** Generates a pseudo-random `long double` between 0.0Ld and 1.0Ld. Precision is limited to that of a double.
- * @return		A pseudo-random `long double` between 0.0Ld and 1.0Ld.
+/** Generates a pseudo-random `long double` between 0.0Ld and 1.0Ld inclusive. Precision is limited to that of a double.
+ * @return		A pseudo-random `long double` between 0.0Ld and 1.0Ld inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (long double)randomLongDouble;
@@ -78,10 +78,10 @@
  */
 + (char)randomChar;
 
-/** Generates a pseudo-random `char` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `char`.
- * @param upperBound	The exclusive upper bound for the random `char`.
- * @return				A pseudo-random `char` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `char` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `char`.
+ * @param upperBound	The inclusive upper bound for the random `char`.
+ * @return				A pseudo-random `char` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.0 and later.
  */
 + (char)randomCharBetweenLower:(char)lowerBound andUpperBound:(char)upperBound;
@@ -101,10 +101,10 @@
  */
 + (int8_t)randomByte;
 
-/** Generates a pseudo-random `int8_t` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `int8_t`.
- * @param upperBound	The exclusive upper bound for the random `int8_t`.
- * @return				A pseudo-random `int8_t` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `int8_t` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `int8_t`.
+ * @param upperBound	The inclusive upper bound for the random `int8_t`.
+ * @return				A pseudo-random `int8_t` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (int8_t)randomByteBetweenLower:(int8_t)lowerBound andUpperBound:(int8_t)upperBound;
@@ -116,17 +116,17 @@
  */
 + (uint8_t)randomUnsignedByte;
 
-/** Generates a pseudo-random `unsigned char` less then a given upper bound.
- * @param bound			The exclusive upper bound for the random `unsigned char`.
+/** Generates a pseudo-random `unsigned char` less then or equal to a given upper bound.
+ * @param bound			The inclusive upper bound for the random `unsigned char`.
  * @return				A pseudo-random `unsigned char` less then a given upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (uint8_t)randomUnsignedByteWithBound:(uint8_t)bound;
 
-/** Generates a pseudo-random `uint8_t` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `uint8_t`.
- * @param upperBound	The exclusive upper bound for the random `uint8_t`.
- * @return				A pseudo-random `uint8_t` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `uint8_t` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `uint8_t`.
+ * @param upperBound	The inclusive upper bound for the random `uint8_t`.
+ * @return				A pseudo-random `uint8_t` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (uint8_t)randomUnsignedByteBetweenLower:(uint8_t)lowerBound andUpperBound:(uint8_t)upperBound;
@@ -146,10 +146,10 @@
  */
 + (short)randomShort;
 
-/** Generates a pseudo-random `short` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `short`.
- * @param upperBound	The exclusive upper bound for the random `short`.
- * @return				A pseudo-random `short` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `short` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `short`.
+ * @param upperBound	The inclusive upper bound for the random `short`.
+ * @return				A pseudo-random `short` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.0 and later.
  */
 + (short)randomShortBetweenLower:(short)lowerBound andUpperBound:(short)upperBound;
@@ -162,16 +162,16 @@
 + (unsigned short)randomUnsignedShort;
 
 /** Generates a pseudo-random `unsigned short` less then a given upper bound.
- * @param bound The exclusive upper bound for the random `unsigned short`.
+ * @param bound The inclusive upper bound for the random `unsigned short`.
  * @return		A pseudo-random `unsigned short` less then a given upper bound.
  * @since		Available in version 1.0 and later.
  */
 + (unsigned short)randomUnsignedShortWithBound:(unsigned short)bound;
 
-/** Generates a pseudo-random `unsigned short` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `unsigned short`.
- * @param upperBound	The exclusive upper bound for the random `unsigned short`.
- * @return				A pseudo-random `short` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `unsigned short` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `unsigned short`.
+ * @param upperBound	The inclusive upper bound for the random `unsigned short`.
+ * @return				A pseudo-random `short` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (unsigned short)randomUnsignedShortBetweenLower:(unsigned short)lowerBound andUpperBound:(unsigned short)upperBound;
@@ -189,10 +189,10 @@
  */
 + (int)randomInt;
 
-/** Generates a pseudo-random `int` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `int`.
- * @param upperBound	The exclusive upper bound for the random `int`.
- * @return				A pseudo-random `int` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `int` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `int`.
+ * @param upperBound	The inclusive upper bound for the random `int`.
+ * @return				A pseudo-random `int` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.0 and later.
  */
 + (int)randomIntBetweenLower:(int)lowerBound andUpperBound:(int)upperBound;
@@ -211,10 +211,10 @@
  */
 + (unsigned int)randomUnsignedIntWithBound:(unsigned int)bound;
 
-/** Generates a pseudo-random `unsigned int` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `unsigned int`.
- * @param upperBound	The exclusive upper bound for the random `unsigned int`.
- * @return				A pseudo-random `int` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `unsigned int` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `unsigned int`.
+ * @param upperBound	The inclusive upper bound for the random `unsigned int`.
+ * @return				A pseudo-random `int` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (unsigned int)randomUnsignedIntBetweenLower:(unsigned int)lowerBound andUpperBound:(unsigned int)upperBound;
@@ -227,45 +227,45 @@
 ///---
 
 /** Generates a pseudo-random `NSInteger`.
- * @return		A pseudo-random `NSInteger`.
- * @since		Available in version 1.0 and later.
+ * @return				A pseudo-random `NSInteger`.
+ * @since				Available in version 1.0 and later.
  */
 + (NSInteger)randomInteger;
 
-/** Generates a pseudo-random `NSInteger` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `NSInteger`.
- * @param upperBound	The exclusive upper bound for the random `NSInteger`.
- * @return				A pseudo-random `NSInteger` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `NSInteger` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `NSInteger`.
+ * @param upperBound	The inclusive upper bound for the random `NSInteger`.
+ * @return				A pseudo-random `NSInteger` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.0 and later.
  */
 + (NSInteger)randomIntegerBetweenLower:(NSInteger)lowerBound andUpperBound:(NSInteger)upperBound;
 
 
 /** Generates a pseudo-random `NSUInteger`.
- * @return		A pseudo-random `NSUInteger`.
- ** @since		Available in version 1.0 and later.
+ * @return				A pseudo-random `NSUInteger`.
+ ** @since				Available in version 1.0 and later.
  */
 + (NSUInteger)randomUnsignedInteger;
 
 /** Generates a pseudo-random `NSUInteger` less then a given upper bound.
- * @param bound The exclusive upper bound for the random `NSUInteger`.
- * @return		A pseudo-random `NSUInteger` less then a given upper bound.
- * @since		Available in version 1.0 and later.
+ * @param bound			The inclusive upper bound for the random `NSUInteger`.
+ * @return				A pseudo-random `NSUInteger` less then a given upper bound.
+ * @since				Available in version 1.0 and later.
  */
 + (NSUInteger)randomUnsignedIntegerWithBound:(NSUInteger)bound;
 
-/** Generates a pseudo-random `NSUInteger` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `NSUInteger`.
- * @param upperBound	The exclusive upper bound for the random `NSUInteger`.
- * @return				A pseudo-random `NSInteger` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `NSUInteger` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `NSUInteger`.
+ * @param upperBound	The inclusive upper bound for the random `NSUInteger`.
+ * @return				A pseudo-random `NSInteger` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (NSUInteger)randomUnsignedIntegerBetweenLower:(NSUInteger)lowerBound andUpperBound:(NSUInteger)upperBound;
 
 /** Generates a pseudo-random `NSUInteger` inside a given range.
- * @param range The inclusive range of acceptable values.
- * @return		A pseudo-random `NSUInteger` inside the range.
- * @since		Available in version 1.0 and later.
+ * @param range			The inclusive range of acceptable values.
+ * @return				A pseudo-random `NSUInteger` inside the range.
+ * @since				Available in version 1.0 and later.
  */
 + (NSUInteger)randomUnsignedIntegerInRange:(NSRange)range;
 
@@ -277,37 +277,37 @@
 ///---
 
 /** Generates a pseudo-random `long`.
- * @return		A pseudo-random `long`.
- * @since		Available in version 1.0 and later.
+ * @return				A pseudo-random `long`.
+ * @since				Available in version 1.0 and later.
  */
 + (long)randomLong;
 
-/** Generates a pseudo-random `long` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `long`.
- * @param upperBound	The exclusive upper bound for the random `long`.
- * @return				A pseudo-random `long` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `long` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `long`.
+ * @param upperBound	The inclusive upper bound for the random `long`.
+ * @return				A pseudo-random `long` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.0 and later.
  */
 + (long)randomLongBetweenLower:(long)lowerBound andUpperBound:(long)upperBound;
 
 
 /** Generates a pseudo-random `unsigned long`.
- * @return		A pseudo-random `unsigned long`.
- * @since		Available in version 1.0 and later.
+ * @return				A pseudo-random `unsigned long`.
+ * @since				Available in version 1.0 and later.
  */
 + (unsigned long)randomUnsignedLong;
 
 /** Generates a pseudo-random `NSUInteger` less then a given upper bound.
- * @param bound The exclusive upper bound for the random `NSUInteger`.
- * @return		A pseudo-random `NSUInteger` less then a given upper bound.
- * @since		Available in version 1.0 and later.
+ * @param bound			The inclusive upper bound for the random `NSUInteger`.
+ * @return				A pseudo-random `NSUInteger` less then a given upper bound.
+ * @since				Available in version 1.0 and later.
  */
 + (unsigned long)randomUnsignedLongWithBound:(unsigned long)bound;
 
-/** Generates a pseudo-random `unsigned long` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `unsigned long`.
- * @param upperBound	The exclusive upper bound for the random `unsigned long`.
- * @return				A pseudo-random `long` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `unsigned long` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `unsigned long`.
+ * @param upperBound	The inclusive upper bound for the random `unsigned long`.
+ * @return				A pseudo-random `long` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (unsigned long)randomUnsignedLongBetweenLower:(unsigned long)lowerBound andUpperBound:(unsigned long)upperBound;
@@ -320,37 +320,37 @@
 ///---
 
 /** Generates a pseudo-random `long long`.
- * @return		A pseudo-random `long long`.
- * @since		Available in version 1.0 and later.
+ * @return				A pseudo-random `long long`.
+ * @since				Available in version 1.0 and later.
  */
 + (long long)randomLongLong;
 
-/** Generates a pseudo-random `long long` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `long long`.
- * @param upperBound	The exclusive upper bound for the random `long long`.
- * @return				A pseudo-random `long long` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `long long` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `long long`.
+ * @param upperBound	The inclusive upper bound for the random `long long`.
+ * @return				A pseudo-random `long long` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.0 and later.
  */
 + (long long)randomLongLongBetweenLower:(long long)lowerBound andUpperBound:(long long)upperBound;
 
 
 /** Generates a pseudo-random `unsigned long long`.
- * @return		A pseudo-random `unsigned long long`.
- * @since		Available in version 1.0 and later.
+ * @return				A pseudo-random `unsigned long long`.
+ * @since				Available in version 1.0 and later.
  */
 + (unsigned long long)randomUnsignedLongLong;
 
 /** Generates a pseudo-random `unsigned long long` less then a given upper bound.
- * @param bound The exclusive upper bound for the random `unsigned long long`.
- * @return		A pseudo-random `unsigned long long` less then a given upper bound.
- * @since		Available in version 1.0 and later.
+ * @param bound			The inclusive upper bound for the random `unsigned long long`.
+ * @return				A pseudo-random `unsigned long long` less then a given upper bound.
+ * @since				Available in version 1.0 and later.
  */
 + (unsigned long long)randomUnsignedLongLongWithBound:(unsigned long long)bound;
 
-/** Generates a pseudo-random `unsigned long long` greater than the lower bound and less than the upper bound.
- * @param lowerBound	The exclusive lower bound for the random `unsigned long long`.
- * @param upperBound	The exclusive upper bound for the random `unsigned long long`.
- * @return				A pseudo-random `long long` greater than the lower bound and less than the upper bound.
+/** Generates a pseudo-random `unsigned long long` greater than or equal to the lower bound and less than or equal to the upper bound.
+ * @param lowerBound	The inclusive lower bound for the random `unsigned long long`.
+ * @param upperBound	The inclusive upper bound for the random `unsigned long long`.
+ * @return				A pseudo-random `long long` greater than or equal to the lower bound and less than or equal to the upper bound.
  * @since				Available in version 1.2 and later.
  */
 + (unsigned long long)randomUnsignedLongLongBetweenLower:(unsigned long long)lowerBound andUpperBound:(unsigned long long)upperBound;

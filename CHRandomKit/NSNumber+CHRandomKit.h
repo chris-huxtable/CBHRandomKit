@@ -56,40 +56,40 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Generating NSNumber's containing floating point values.
 ///---
 
-/** Generates a NSNumber contianing a pseudo-random `float` between 0.0 and 1.0.
- * @return		A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0.
+/** Generates a NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
+ * @return		A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (instancetype)numberWithRandomFloat;
 
-/** Generates a NSNumber contianing a pseudo-random `float` between 0.0 and 1.0.
- * @return		A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0.
+/** Generates a NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
+ * @return		A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomFloat;
 
 
-/** Generates a NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0.
- * @return		A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0.
+/** Generates a NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
+ * @return		A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (instancetype)numberWithRandomCGFloat;
 
-/** Generates a NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0.
- * @return		A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0.
+/** Generates a NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
+ * @return		A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomCGFloat;
 
 
-/** Generates a NSNumber contianing a pseudo-random `double` between 0.0 and 1.0.
- * @return		A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0.
+/** Generates a NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
+ * @return		A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 + (instancetype)numberWithRandomDouble;
 
-/** Generates a NSNumber contianing a pseudo-random `double` between 0.0 and 1.0.
- * @return		A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0.
+/** Generates a NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
+ * @return		A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomDouble;
