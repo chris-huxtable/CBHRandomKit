@@ -1,5 +1,5 @@
 //
-//	NSArray+CHRandomKit.h
+//	NSMutableArray+CHRandomKit.h
 //	CHRandomKit
 //
 //	Created by Christian Huxtable, October 2015.
@@ -28,33 +28,47 @@ NS_ASSUME_NONNULL_BEGIN
  * @version     1.2
  * @since       2015-10-15
  */
-@interface NSArray<ObjectType> (CHRandomKit)
+@interface NSMutableArray<ObjectType> (CHRandomKit)
 
 
 #pragma mark - Shuffling
 
 ///---
-/// @name Shuffling arrays.
+/// @name Shuffling Arrays.
 ///---
 
-/** Creates a new shuffled copy of itself.
- * @return		A new shuffled copy of itself.
+/** Shuffles the order of its elements.
+ * @return		Its self shuffled.
  * @since		Available in version 1.0 and later.
  */
-- (NSArray<ObjectType> *)arrayByShuffling;
+- (NSMutableArray<ObjectType> *)shuffle;
 
 
-#pragma mark - Accessors
+#pragma mark - Insertion
 
 ///---
-/// @name Accessing random entries.
+/// @name Inserting objects into array.
 ///---
 
-/** Returns a random element from itself.
- * @return		A random element from itself.
+/** Inserts an object at a random index.
+ * @param object	The object to insert.
+ * @return			The index in which the object was inserted.
+ * @since			Available in version 1.0 and later.
+ */
+- (NSUInteger)insertObjectAtRandomIndex:(ObjectType)object;
+
+
+#pragma mark - Removal
+
+///---
+/// @name Removing objects from array.
+///---
+
+/** Removes a random object from itself.
+ * @return		The object which was removed.
  * @since		Available in version 1.0 and later.
  */
-- (ObjectType)randomObject;
+- (ObjectType)removeRandomObject;
 
 @end
 

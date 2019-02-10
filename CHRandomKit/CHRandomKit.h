@@ -28,4 +28,5 @@ FOUNDATION_EXPORT const unsigned char CHRandomKitVersionString[];
 #import <CHRandomKit/CHRandom.h>
 
 #import <CHRandomKit/NSArray+CHRandomKit.h>
+#import <CHRandomKit/NSMutableArray+CHRandomKit.h>
 #import <CHRandomKit/NSNumber+CHRandomKit.h>

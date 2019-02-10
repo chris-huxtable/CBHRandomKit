@@ -19,13 +19,10 @@
 //
 
 #import "CHRandom.h"
-
 #import "CHSaferMemory.h"
 
 
-
 @implementation CHRandom
-
 
 
 #pragma mark - Boolean
@@ -35,9 +32,8 @@
 	int8_t value = 0;
 	[self fillBuffer:&value ofSize:sizeof(int8_t)];
 
-	return (0b00000001 & value);
+	return (0x01 & value);
 }
-
 
 
 #pragma mark - Floating Point
@@ -73,7 +69,6 @@
 
 	return (value /= LDBL_MAX);
 }
-
 
 
 #pragma mark - Char
@@ -119,7 +114,6 @@
 }
 
 
-
 #pragma mark - Short
 
 + (short)randomShort
@@ -163,7 +157,6 @@
 }
 
 
-
 #pragma mark - Int
 
 + (int)randomInt
@@ -205,7 +198,6 @@
 
 	return (r %= bound);
 }
-
 
 
 #pragma mark - Integer
@@ -263,7 +255,6 @@
 }
 
 
-
 #pragma mark - Long
 
 + (long)randomLong
@@ -302,7 +293,6 @@
 
 	return (r %= bound);
 }
-
 
 
 #pragma mark - Long Long
@@ -348,7 +338,6 @@
 }
 
 
-
 #pragma mark - Data
 
 + (NSData *)randomDataOfLength:(NSUInteger)length
@@ -370,7 +359,6 @@
 
 	return buffer;
 }
-
 
 
 #pragma mark - Buffer

@@ -23,7 +23,7 @@
 
 /**
  * @author      Christian Huxtable <chris@huxtable.ca>
- * @version     1.0
+ * @version     1.2
  * @since       2015-10-15
  */
 @interface CHRandom : NSObject
@@ -32,11 +32,9 @@
 }
 
 
-
 #pragma mark - Boolean
 
 + (BOOL)randomBool;
-
 
 
 #pragma mark - Floating Point
@@ -106,7 +104,6 @@
 + (unsigned char)randomUnsignedCharWithBound:(unsigned char)bound;
 
 
-
 #pragma mark - Short
 
 ///---
@@ -143,7 +140,6 @@
 + (unsigned short)randomUnsignedShortWithBound:(unsigned short)bound;
 
 
-
 #pragma mark - Int
 
 ///---
@@ -177,7 +173,6 @@
  * @since		Available in version 1.0 and later.
  */
 + (unsigned int)randomUnsignedIntWithBound:(unsigned int)bound;
-
 
 
 #pragma mark - Integer
@@ -222,7 +217,6 @@
 + (NSUInteger)randomUnsignedIntegerInRange:(NSRange)range;
 
 
-
 #pragma mark - Long
 
 ///---
@@ -256,7 +250,6 @@
  * @since		Available in version 1.0 and later.
  */
 + (unsigned long)randomUnsignedLongWithBound:(unsigned long)bound;
-
 
 
 #pragma mark - Long Long
@@ -294,7 +287,6 @@
 + (unsigned long long)randomUnsignedLongLongWithBound:(unsigned long long)bound;
 
 
-
 #pragma mark - Data
 
 ///---
@@ -321,7 +313,6 @@
  * @since		Available in version 1.0 and later.
  */
 + (void *)randomBytes:(size_t)size;
-
 
 
 #pragma mark - Buffer

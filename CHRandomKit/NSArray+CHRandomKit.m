@@ -20,6 +20,7 @@
 
 #import "NSArray+CHRandomKit.h"
 
+#import "NSMutableArray+CHRandomKit.h"
 #import "CHRandom.h"
 
 
@@ -31,67 +32,21 @@
 
 - (NSArray *)arrayByShuffling
 {
-	return [[[self mutableCopy] autorelease] shuffle];
-}
+	NSMutableArray *mutableArray = [self mutableCopy];
+	[mutableArray shuffle];
 
+	NSArray *array = [mutableArray copy];
+	[mutableArray release];
+
+	return [array autorelease];
+}
 
 
 #pragma mark - Accessors
 
-- (id _Nonnull)randomObject
+- (id)randomObject
 {
 	return [self objectAtIndex:[CHRandom randomUnsignedIntegerWithBound:[self count]]];
-}
-
-@end
-
-
-@implementation NSMutableArray (CHRandomKit)
-
-
-
-#pragma mark - Shuffling
-
-- (NSMutableArray *)shuffle
-{
-	NSUInteger count = [self count];
-	NSUInteger index = 0;
-
-	while ( count > 0 )
-	{
-		index = [CHRandom randomUnsignedIntegerWithBound:count];
-
-		[self exchangeObjectAtIndex:--count withObjectAtIndex:index];
-	}
-
-	return self;
-}
-
-
-
-#pragma mark - Insertion
-
-- (NSUInteger)insertObjectAtRandomIndex:(id _Nonnull)object
-{
-	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count]];
-
-	[self insertObject:object atIndex:index];
-
-	return index;
-}
-
-
-
-#pragma mark - Removal
-
-- (id _Nonnull)removeRandomObject
-{
-	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count]];
-
-	id object = [self objectAtIndex:index];
-	[self removeObjectAtIndex:index];
-
-	return object;
 }
 
 @end

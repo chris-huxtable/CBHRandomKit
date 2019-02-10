@@ -19,16 +19,13 @@
 
 #include "CHSaferMemory.h"
 
-
 #include <errno.h>
 #include <stdio.h>
 
-
-#define MUL_NO_OVERFLOW	(1UL << (sizeof(size_t) * 4))
-
+#define MUL_NO_OVERFLOW (1UL << (sizeof(size_t) * 4))
 
 
-#pragma mark Safer Malloc / Calloc
+#pragma mark - Safer Malloc / Calloc
 
 void *CHSaferMalloc(size_t nmemb, size_t size)
 {
@@ -68,7 +65,6 @@ void CHSaferFree_f(void **mem)
 	free(*mem);
 	*mem = __DARWIN_NULL;
 }
-
 
 void *CHSaferMallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName)
 {

@@ -21,14 +21,14 @@
 @import Foundation;
 
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @author      Chris Huxtable <chris@huxtable.ca>
- * @version     1.0
+ * @version     1.2
  * @since       2015-10-15
  */
 @interface NSNumber (CHRandomKit)
-
 
 
 #pragma mark - Boolean
@@ -48,7 +48,6 @@
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomBool;
-
 
 
 #pragma mark - Floating Point
@@ -96,7 +95,6 @@
 - (instancetype)initWithRandomDouble;
 
 
-
 #pragma mark - Char
 
 ///---
@@ -127,7 +125,6 @@
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomUnsignedChar;
-
 
 
 #pragma mark - Short
@@ -162,7 +159,6 @@
 - (instancetype)initWithRandomUnsignedShort;
 
 
-
 #pragma mark - Int
 
 ///---
@@ -193,7 +189,6 @@
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomUnsignedInt;
-
 
 
 #pragma mark - Integer
@@ -228,7 +223,6 @@
 - (instancetype)initWithRandomUnsignedInteger;
 
 
-
 #pragma mark - Long
 
 ///---
@@ -259,7 +253,6 @@
  * @since		Available in version 1.0 and later.
  */
 - (instancetype)initWithRandomUnsignedLong;
-
 
 
 #pragma mark - Long Long
@@ -294,3 +287,5 @@
 - (instancetype)initWithRandomUnsignedLongLong;
 
 @end
+
+NS_ASSUME_NONNULL_END
