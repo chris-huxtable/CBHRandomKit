@@ -1,17 +1,17 @@
 //
-//  NSMutableArray+CHRandomKit.m
-//  CHRandomKit
+//  NSMutableArray+CBHRandomKit.m
+//  CBHRandomKit
 //
 //  Created by Christian Huxtable on 2019-02-08.
 //  Copyright © 2019 Christian Huxtable. All rights reserved.
 //
 
-#import "NSMutableArray+CHRandomKit.h"
+#import "NSMutableArray+CBHRandomKit.h"
 
-#import "CHRandom.h"
+#import "CBHRandom.h"
 
 
-@implementation NSMutableArray (CHRandomKit)
+@implementation NSMutableArray (CBHRandomKit)
 
 #pragma mark - Shuffling
 
@@ -22,7 +22,7 @@
 
 	while ( count > 0 )
 	{
-		index = [CHRandom randomUnsignedIntegerWithBound:count - 1];
+		index = [CBHRandom randomUnsignedIntegerWithBound:count - 1];
 		[self exchangeObjectAtIndex:--count withObjectAtIndex:index];
 	}
 
@@ -34,7 +34,7 @@
 
 - (NSUInteger)insertObjectAtRandomIndex:(id _Nonnull)object
 {
-	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count] - 1];
+	NSUInteger index = [CBHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
 	[self insertObject:object atIndex:index];
 
@@ -46,7 +46,7 @@
 
 - (id _Nonnull)removeRandomObject
 {
-	NSUInteger index = [CHRandom randomUnsignedIntegerWithBound:[self count] - 1];
+	NSUInteger index = [CBHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
 	id object = [self objectAtIndex:index];
 	[self removeObjectAtIndex:index];

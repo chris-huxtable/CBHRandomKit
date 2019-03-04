@@ -1,6 +1,6 @@
 //
-//	CHRandomTests+Floats.h
-//	CHRandomKit
+//	CBHRandomTests+Floats.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, February 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
@@ -20,7 +20,7 @@
 
 @import XCTest;
 
-#import "CHRandomKit/CHRandom.h"
+#import "CBHRandomKit/CBHRandom.h"
 
 
 #define COUNT 1000000
@@ -59,10 +59,10 @@ double average_double(double const *array, size_t const length)
 
 
 
-@interface CHRandomTests_Floats : XCTestCase
+@interface CBHRandomTests_Floats : XCTestCase
 @end
 
-@implementation CHRandomTests_Floats
+@implementation CBHRandomTests_Floats
 
 
 - (void)testFloat
@@ -71,7 +71,7 @@ double average_double(double const *array, size_t const length)
 
 	for (size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomFloat];
+		array[i] = [CBHRandom randomFloat];
 	}
 
 	double average = average_float(array, COUNT);
@@ -84,7 +84,7 @@ double average_double(double const *array, size_t const length)
 
 	for (size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomDouble];
+		array[i] = [CBHRandom randomDouble];
 	}
 
 	double average = average_double(array, COUNT);

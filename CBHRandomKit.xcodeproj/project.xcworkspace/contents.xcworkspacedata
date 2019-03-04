@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CHRandomKit.xcodeproj">
+      location = "self:/Volumes/Descartes/Desktop/CBHRandomKit/CBHRandomKit.xcodeproj">
    </FileRef>
 </Workspace>

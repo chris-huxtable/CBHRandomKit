@@ -1,6 +1,6 @@
 //
-//	NSNumber+CHRandomKit.m
-//	CHRandomKit
+//	NSNumber+CBHRandomKit.m
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, October 2015.
 //	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
@@ -17,12 +17,12 @@
 //	OF THIS SOFTWARE.
 //
 
-#import "NSNumber+CHRandomKit.h"
+#import "NSNumber+CBHRandomKit.h"
 
-#import "CHRandom.h"
+#import "CBHRandom.h"
 
 
-@implementation NSNumber (CHRandomKit)
+@implementation NSNumber (CBHRandomKit)
 
 
 #pragma mark - Boolean
@@ -34,7 +34,7 @@
 
 - (instancetype)initWithRandomBool
 {
-	return [self initWithBool:[CHRandom randomBool]];
+	return [self initWithBool:[CBHRandom randomBool]];
 }
 
 
@@ -47,7 +47,7 @@
 
 - (instancetype)initWithRandomFloat
 {
-	return [self initWithFloat:[CHRandom randomFloat]];
+	return [self initWithFloat:[CBHRandom randomFloat]];
 }
 
 
@@ -58,7 +58,7 @@
 
 - (instancetype)initWithRandomCGFloat
 {
-	return [self initWithDouble:[CHRandom randomCGFloat]];
+	return [self initWithDouble:[CBHRandom randomCGFloat]];
 }
 
 
@@ -69,7 +69,7 @@
 
 - (instancetype)initWithRandomDouble
 {
-	return [self initWithDouble:[CHRandom randomDouble]];
+	return [self initWithDouble:[CBHRandom randomDouble]];
 }
 
 
@@ -82,7 +82,7 @@
 
 - (instancetype)initWithRandomChar
 {
-	return [self initWithChar:[CHRandom randomChar]];
+	return [self initWithChar:[CBHRandom randomChar]];
 }
 
 
@@ -95,7 +95,7 @@
 
 - (instancetype)initWithRandomByte
 {
-	return [self initWithChar:(char)[CHRandom randomByte]];
+	return [self initWithChar:(char)[CBHRandom randomByte]];
 }
 
 
@@ -106,7 +106,7 @@
 
 - (instancetype)initWithRandomUnsignedByte
 {
-	return [self initWithUnsignedChar:[CHRandom randomUnsignedByte]];
+	return [self initWithUnsignedChar:[CBHRandom randomUnsignedByte]];
 }
 
 
@@ -119,7 +119,7 @@
 
 - (instancetype)initWithRandomShort
 {
-	return [self initWithShort:[CHRandom randomShort]];
+	return [self initWithShort:[CBHRandom randomShort]];
 }
 
 
@@ -130,7 +130,7 @@
 
 - (instancetype)initWithRandomUnsignedShort
 {
-	return [self initWithUnsignedShort:[CHRandom randomUnsignedShort]];
+	return [self initWithUnsignedShort:[CBHRandom randomUnsignedShort]];
 }
 
 
@@ -143,7 +143,7 @@
 
 - (instancetype)initWithRandomInt
 {
-	return [self initWithInt:[CHRandom randomInt]];
+	return [self initWithInt:[CBHRandom randomInt]];
 }
 
 
@@ -154,7 +154,7 @@
 
 - (instancetype)initWithRandomUnsignedInt
 {
-	return [self initWithUnsignedInt:[CHRandom randomUnsignedInt]];
+	return [self initWithUnsignedInt:[CBHRandom randomUnsignedInt]];
 }
 
 
@@ -167,7 +167,7 @@
 
 - (instancetype)initWithRandomInteger
 {
-	return [self initWithInteger:[CHRandom randomInteger]];
+	return [self initWithInteger:[CBHRandom randomInteger]];
 }
 
 
@@ -178,7 +178,7 @@
 
 - (instancetype)initWithRandomUnsignedInteger
 {
-	return [self initWithUnsignedInteger:[CHRandom randomUnsignedInteger]];
+	return [self initWithUnsignedInteger:[CBHRandom randomUnsignedInteger]];
 }
 
 
@@ -191,7 +191,7 @@
 
 - (instancetype)initWithRandomLong
 {
-	return [self initWithLong:[CHRandom randomLong]];
+	return [self initWithLong:[CBHRandom randomLong]];
 }
 
 
@@ -202,7 +202,7 @@
 
 - (instancetype)initWithRandomUnsignedLong
 {
-	return [self initWithUnsignedLong:[CHRandom randomUnsignedLong]];
+	return [self initWithUnsignedLong:[CBHRandom randomUnsignedLong]];
 }
 
 
@@ -215,7 +215,7 @@
 
 - (instancetype)initWithRandomLongLong
 {
-	return [self initWithLongLong:[CHRandom randomLongLong]];
+	return [self initWithLongLong:[CBHRandom randomLongLong]];
 }
 
 
@@ -226,7 +226,7 @@
 
 - (instancetype)initWithRandomUnsignedLongLong
 {
-	return [self initWithUnsignedLongLong:[CHRandom randomUnsignedLongLong]];
+	return [self initWithUnsignedLongLong:[CBHRandom randomUnsignedLongLong]];
 }
 
 @end

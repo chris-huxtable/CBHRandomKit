@@ -1,6 +1,6 @@
 //
-//	CHRandomTests+Bytes.h
-//	CHRandomKit
+//	CBHRandomTests+Bytes.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, February 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
@@ -20,7 +20,7 @@
 
 @import XCTest;
 
-#import "CHRandomKit/CHRandom.h"
+#import "CBHRandomKit/CBHRandom.h"
 
 
 #define COUNT 1000000
@@ -86,15 +86,15 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 
 
 
-@interface CHRandomTests_Bytes : XCTestCase
+@interface CBHRandomTests_Bytes : XCTestCase
 @end
 
-@implementation CHRandomTests_Bytes
+@implementation CBHRandomTests_Bytes
 
 
 - (void)testByte
 {
-	// TODO: [CHRandom randomByte];
+	// TODO: [CBHRandom randomByte];
 }
 
 - (void)testByteBetweenLowerAndUpperBound
@@ -105,7 +105,7 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomByteBetweenLower:10 andUpperBound:20];
+			array[i] = [CBHRandom randomByteBetweenLower:10 andUpperBound:20];
 		}
 
 		double average = averageByte(array, COUNT);
@@ -116,7 +116,7 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomByteBetweenLower:-10 andUpperBound:-20];
+			array[i] = [CBHRandom randomByteBetweenLower:-10 andUpperBound:-20];
 		}
 
 		double average = averageByte(array, COUNT);
@@ -127,7 +127,7 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomByteBetweenLower:-10 andUpperBound:10];
+			array[i] = [CBHRandom randomByteBetweenLower:-10 andUpperBound:10];
 		}
 
 		double average = averageByte(array, COUNT);
@@ -138,7 +138,7 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 
 - (void)testUnsignedByte
 {
-	// TODO: [CHRandom randomUnsignedByte];
+	// TODO: [CBHRandom randomUnsignedByte];
 }
 
 - (void)testUnsignedByteWithBound
@@ -147,7 +147,7 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedByteWithBound:20];
+		array[i] = [CBHRandom randomUnsignedByteWithBound:20];
 	}
 
 	double average = averageUnsignedByte(array, COUNT);
@@ -165,7 +165,7 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedByteBetweenLower:10 andUpperBound:20];
+		array[i] = [CBHRandom randomUnsignedByteBetweenLower:10 andUpperBound:20];
 	}
 
 	double average = averageUnsignedByte(array, COUNT);

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "83E6D156220FE02D00B6F4A8"
-               BuildableName = "CHRandomKit.framework"
-               BlueprintName = "CHRandomKit"
-               ReferencedContainer = "container:CHRandomKit.xcodeproj">
+               BuildableName = "CBHRandomKit.framework"
+               BlueprintName = "CBHRandomKit"
+               ReferencedContainer = "container:CBHRandomKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "83E6D17B22109A4700B6F4A8"
-               BuildableName = "CHRandomKitTests.xctest"
-               BlueprintName = "CHRandomKitTests"
-               ReferencedContainer = "container:CHRandomKit.xcodeproj">
+               BuildableName = "CBHRandomKitTests.xctest"
+               BlueprintName = "CBHRandomKitTests"
+               ReferencedContainer = "container:CBHRandomKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83E6D156220FE02D00B6F4A8"
-            BuildableName = "CHRandomKit.framework"
-            BlueprintName = "CHRandomKit"
-            ReferencedContainer = "container:CHRandomKit.xcodeproj">
+            BuildableName = "CBHRandomKit.framework"
+            BlueprintName = "CBHRandomKit"
+            ReferencedContainer = "container:CBHRandomKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83E6D156220FE02D00B6F4A8"
-            BuildableName = "CHRandomKit.framework"
-            BlueprintName = "CHRandomKit"
-            ReferencedContainer = "container:CHRandomKit.xcodeproj">
+            BuildableName = "CBHRandomKit.framework"
+            BlueprintName = "CBHRandomKit"
+            ReferencedContainer = "container:CBHRandomKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83E6D156220FE02D00B6F4A8"
-            BuildableName = "CHRandomKit.framework"
-            BlueprintName = "CHRandomKit"
-            ReferencedContainer = "container:CHRandomKit.xcodeproj">
+            BuildableName = "CBHRandomKit.framework"
+            BlueprintName = "CBHRandomKit"
+            ReferencedContainer = "container:CBHRandomKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
@@ -96,6 +96,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "CBHRandomKit"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

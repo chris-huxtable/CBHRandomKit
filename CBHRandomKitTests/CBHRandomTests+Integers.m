@@ -1,6 +1,6 @@
 //
-//	CHRandomTests+Integers.h
-//	CHRandomKit
+//	CBHRandomTests+Integers.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, February 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
@@ -20,7 +20,7 @@
 
 @import XCTest;
 
-#import "CHRandomKit/CHRandom.h"
+#import "CBHRandomKit/CBHRandom.h"
 
 
 #define COUNT 1000000
@@ -86,15 +86,15 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 
 
-@interface CHRandomTests_Integers : XCTestCase
+@interface CBHRandomTests_Integers : XCTestCase
 @end
 
-@implementation CHRandomTests_Integers
+@implementation CBHRandomTests_Integers
 
 
 - (void)testInteger
 {
-	// TODO: [CHRandom randomInteger];
+	// TODO: [CBHRandom randomInteger];
 }
 
 - (void)testIntegerBetweenLowerAndUpperBound
@@ -105,7 +105,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomIntegerBetweenLower:10 andUpperBound:20];
+			array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:20];
 		}
 
 		double average = averageInteger(array, COUNT);
@@ -116,7 +116,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomIntegerBetweenLower:-10 andUpperBound:-20];
+			array[i] = [CBHRandom randomIntegerBetweenLower:-10 andUpperBound:-20];
 		}
 
 		double average = averageInteger(array, COUNT);
@@ -127,7 +127,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomIntegerBetweenLower:-10 andUpperBound:10];
+			array[i] = [CBHRandom randomIntegerBetweenLower:-10 andUpperBound:10];
 		}
 
 		double average = averageInteger(array, COUNT);
@@ -138,7 +138,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 - (void)testUnsignedInteger
 {
-	// TODO: [CHRandom randomUnsignedInteger];
+	// TODO: [CBHRandom randomUnsignedInteger];
 }
 
 - (void)testUnsignedIntegerWithBound
@@ -147,7 +147,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedIntegerWithBound:20];
+		array[i] = [CBHRandom randomUnsignedIntegerWithBound:20];
 	}
 
 	double average = averageUnsignedInteger(array, COUNT);
@@ -165,7 +165,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedIntegerBetweenLower:10 andUpperBound:20];
+		array[i] = [CBHRandom randomUnsignedIntegerBetweenLower:10 andUpperBound:20];
 	}
 
 	double average = averageUnsignedInteger(array, COUNT);
@@ -186,7 +186,7 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedIntegerInRange:range];
+		array[i] = [CBHRandom randomUnsignedIntegerInRange:range];
 	}
 
 	double average = averageUnsignedInteger(array, COUNT);

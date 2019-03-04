@@ -1,6 +1,6 @@
 //
-//	NSNumber+CHRandomKit.h
-//	CHRandomKit
+//	NSNumber+CBHRandomKit.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, October 2015.
 //	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @version     1.2
  * @since       2015-10-15
  */
-@interface NSNumber (CHRandomKit)
+@interface NSNumber (CBHRandomKit)
 
 
 #pragma mark - Boolean

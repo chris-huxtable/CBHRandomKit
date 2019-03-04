@@ -1,5 +1,5 @@
 //
-//	CHSaferMemory.c
+//	CBHSaferMemory.c
 //
 //	Created by Christian Huxtable <chris@huxtable.ca>, January 2016.
 //	Copyright (c) 2016, Christian Huxtable <chris@huxtable.ca>
@@ -17,7 +17,7 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#include "CHSaferMemory.h"
+#include "CBHSaferMemory.h"
 
 #include <errno.h>
 #include <stdio.h>
@@ -27,7 +27,7 @@
 
 #pragma mark - Safer Malloc / Calloc
 
-void *CHSaferMalloc(size_t nmemb, size_t size)
+void *CBHSaferMalloc(size_t nmemb, size_t size)
 {
 	if ((nmemb >= MUL_NO_OVERFLOW || size >= MUL_NO_OVERFLOW) && nmemb > 0 && (SIZE_MAX / nmemb) < size) {
 		errno = ENOMEM;
@@ -43,7 +43,7 @@ void *CHSaferMalloc(size_t nmemb, size_t size)
 	return malloc(size);
 }
 
-void *CHSaferCalloc(size_t nmemb, size_t size)
+void *CBHSaferCalloc(size_t nmemb, size_t size)
 {
 	if ((nmemb >= MUL_NO_OVERFLOW || size >= MUL_NO_OVERFLOW) && nmemb > 0 && (SIZE_MAX / nmemb) < size) {
 		errno = ENOMEM;
@@ -58,7 +58,7 @@ void *CHSaferCalloc(size_t nmemb, size_t size)
 	return calloc(nmemb, size);
 }
 
-void CHSaferFree_f(void **mem)
+void CBHSaferFree_f(void **mem)
 {
 	if ( *mem == NULL || *mem == __DARWIN_NULL ) { return; }
 
@@ -66,24 +66,24 @@ void CHSaferFree_f(void **mem)
 	*mem = __DARWIN_NULL;
 }
 
-void *CHSaferMallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName)
+void *CBHSaferMallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName)
 {
-	void *tmp = CHSaferMalloc(nmemb, size);
+	void *tmp = CBHSaferMalloc(nmemb, size);
 	if (tmp == NULL)
 	{
-		fprintf(stderr, "Allocation Failure: CHSaferMallocOrExit failed (%s)\n", funcName);
+		fprintf(stderr, "Allocation Failure: CBHSaferMallocOrExit failed (%s)\n", funcName);
 		exit(EXIT_FAILURE);
 	}
 
 	return tmp;
 }
 
-void *CHSaferCallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName)
+void *CBHSaferCallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName)
 {
-	void *tmp = CHSaferMalloc(nmemb, size);
+	void *tmp = CBHSaferMalloc(nmemb, size);
 	if (tmp == NULL)
 	{
-		fprintf(stderr, "Allocation Failure: CHSaferCallocOrExit failed (%s)\n", funcName);
+		fprintf(stderr, "Allocation Failure: CBHSaferCallocOrExit failed (%s)\n", funcName);
 		exit(EXIT_FAILURE);
 	}
 

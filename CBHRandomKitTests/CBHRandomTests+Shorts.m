@@ -1,6 +1,6 @@
 //
-//	CHRandomTests+Shorts.h
-//	CHRandomKit
+//	CBHRandomTests+Shorts.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, February 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
@@ -20,7 +20,7 @@
 
 @import XCTest;
 
-#import "CHRandomKit/CHRandom.h"
+#import "CBHRandomKit/CBHRandom.h"
 
 
 #define COUNT 1000000
@@ -86,15 +86,15 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 
 
-@interface CHRandomTests_Shorts : XCTestCase
+@interface CBHRandomTests_Shorts : XCTestCase
 @end
 
-@implementation CHRandomTests_Shorts
+@implementation CBHRandomTests_Shorts
 
 
 - (void)testShort
 {
-	// TODO: [CHRandom randomShort];
+	// TODO: [CBHRandom randomShort];
 }
 
 - (void)testShortBetweenLowerAndUpperBound
@@ -105,7 +105,7 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomShortBetweenLower:10 andUpperBound:20];
+			array[i] = [CBHRandom randomShortBetweenLower:10 andUpperBound:20];
 		}
 
 		double average = averageShort(array, COUNT);
@@ -116,7 +116,7 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomShortBetweenLower:-10 andUpperBound:-20];
+			array[i] = [CBHRandom randomShortBetweenLower:-10 andUpperBound:-20];
 		}
 
 		double average = averageShort(array, COUNT);
@@ -127,7 +127,7 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomShortBetweenLower:-10 andUpperBound:10];
+			array[i] = [CBHRandom randomShortBetweenLower:-10 andUpperBound:10];
 		}
 
 		double average = averageShort(array, COUNT);
@@ -138,7 +138,7 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 - (void)testUnsignedShort
 {
-	// TODO: [CHRandom randomUnsignedShort];
+	// TODO: [CBHRandom randomUnsignedShort];
 }
 
 - (void)testUnsignedShortWithBound
@@ -147,7 +147,7 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedShortWithBound:20];
+		array[i] = [CBHRandom randomUnsignedShortWithBound:20];
 	}
 
 	double average = averageUnsignedShort(array, COUNT);
@@ -165,7 +165,7 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedShortBetweenLower:10 andUpperBound:20];
+		array[i] = [CBHRandom randomUnsignedShortBetweenLower:10 andUpperBound:20];
 	}
 
 	double average = averageUnsignedShort(array, COUNT);

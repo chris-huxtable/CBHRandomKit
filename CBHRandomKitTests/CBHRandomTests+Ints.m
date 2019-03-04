@@ -1,6 +1,6 @@
 //
-//	CHRandomTests+Ints.h
-//	CHRandomKit
+//	CBHRandomTests+Ints.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, February 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
@@ -20,7 +20,7 @@
 
 @import XCTest;
 
-#import "CHRandomKit/CHRandom.h"
+#import "CBHRandomKit/CBHRandom.h"
 
 
 #define COUNT 1000000
@@ -86,15 +86,15 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 
 
-@interface CHRandomTests_Ints : XCTestCase
+@interface CBHRandomTests_Ints : XCTestCase
 @end
 
-@implementation CHRandomTests_Ints
+@implementation CBHRandomTests_Ints
 
 
 - (void)testInt
 {
-	// TODO: [CHRandom randomInt];
+	// TODO: [CBHRandom randomInt];
 }
 
 - (void)testIntBetweenLowerAndUpperBound
@@ -105,7 +105,7 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomIntBetweenLower:10 andUpperBound:20];
+			array[i] = [CBHRandom randomIntBetweenLower:10 andUpperBound:20];
 		}
 
 		double average = averageInt(array, COUNT);
@@ -116,7 +116,7 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomIntBetweenLower:-10 andUpperBound:-20];
+			array[i] = [CBHRandom randomIntBetweenLower:-10 andUpperBound:-20];
 		}
 
 		double average = averageInt(array, COUNT);
@@ -127,7 +127,7 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = [CHRandom randomIntBetweenLower:-10 andUpperBound:10];
+			array[i] = [CBHRandom randomIntBetweenLower:-10 andUpperBound:10];
 		}
 
 		double average = averageInt(array, COUNT);
@@ -138,7 +138,7 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 - (void)testUnsignedInt
 {
-	// TODO: [CHRandom randomUnsignedInt];
+	// TODO: [CBHRandom randomUnsignedInt];
 }
 
 - (void)testUnsignedIntWithBound
@@ -147,7 +147,7 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedIntWithBound:20];
+		array[i] = [CBHRandom randomUnsignedIntWithBound:20];
 	}
 
 	double average = averageUnsignedInt(array, COUNT);
@@ -165,7 +165,7 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 	for ( size_t i = 0; i < COUNT; ++i)
 	{
-		array[i] = [CHRandom randomUnsignedIntBetweenLower:10 andUpperBound:20];
+		array[i] = [CBHRandom randomUnsignedIntBetweenLower:10 andUpperBound:20];
 	}
 
 	double average = averageUnsignedInt(array, COUNT);

@@ -1,6 +1,6 @@
 //
-//	NSArray+CHRandomKit.m
-//	CHRandomKit
+//	NSArray+CBHRandomKit.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, October 2015.
 //	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
@@ -18,35 +18,44 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#import "NSArray+CHRandomKit.h"
-
-#import "NSMutableArray+CHRandomKit.h"
-#import "CHRandom.h"
+@import Foundation;
 
 
+NS_ASSUME_NONNULL_BEGIN
 
-@implementation NSArray (CHRandomKit)
+/**
+ * @author      Chris Huxtable <chris@huxtable.ca>
+ * @version     1.2
+ * @since       2015-10-15
+ */
+@interface NSArray<ObjectType> (CBHRandomKit)
 
 
 #pragma mark - Shuffling
 
-- (NSArray *)arrayByShuffling
-{
-	NSMutableArray *mutableArray = [self mutableCopy];
-	[mutableArray shuffle];
+///---
+/// @name Shuffling arrays.
+///---
 
-	NSArray *array = [mutableArray copy];
-	[mutableArray release];
-
-	return [array autorelease];
-}
+/** Creates a new shuffled copy of itself.
+ * @return		A new shuffled copy of itself.
+ * @since		Available in version 1.0 and later.
+ */
+- (NSArray<ObjectType> *)arrayByShuffling;
 
 
 #pragma mark - Accessors
 
-- (id)randomObject
-{
-	return [self objectAtIndex:[CHRandom randomUnsignedIntegerWithBound:[self count] - 1]];
-}
+///---
+/// @name Accessing random entries.
+///---
+
+/** Returns a random element from itself.
+ * @return		A random element from itself.
+ * @since		Available in version 1.0 and later.
+ */
+- (ObjectType)randomObject;
 
 @end
+
+NS_ASSUME_NONNULL_END

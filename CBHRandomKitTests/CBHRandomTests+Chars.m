@@ -1,6 +1,6 @@
 //
-//	CHRandomTests+Chars.h
-//	CHRandomKit
+//	CBHRandomTests+Chars.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, February 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
@@ -20,7 +20,7 @@
 
 @import XCTest;
 
-#import "CHRandomKit/CHRandom.h"
+#import "CBHRandomKit/CBHRandom.h"
 
 
 #define COUNT 1000000
@@ -57,15 +57,15 @@ BOOL contains_int8(int8_t const *array, size_t const length, int8_t const needle
 }
 
 
-@interface CHRandomTests_Chars : XCTestCase
+@interface CBHRandomTests_Chars : XCTestCase
 @end
 
-@implementation CHRandomTests_Chars
+@implementation CBHRandomTests_Chars
 
 
 - (void)testChar
 {
-	// TODO: [CHRandom randomChar];
+	// TODO: [CBHRandom randomChar];
 }
 
 - (void)testCharBetweenLowerAndUpperBound
@@ -76,7 +76,7 @@ BOOL contains_int8(int8_t const *array, size_t const length, int8_t const needle
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = (int8_t)[CHRandom randomCharBetweenLower:10 andUpperBound:20];
+			array[i] = (int8_t)[CBHRandom randomCharBetweenLower:10 andUpperBound:20];
 		}
 
 		double average = average_int8(array, COUNT);

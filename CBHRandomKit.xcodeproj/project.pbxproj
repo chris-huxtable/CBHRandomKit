@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83A9978E2210AC6E00B31FD5 /* CHRandomTests+Longs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978D2210AC6E00B31FD5 /* CHRandomTests+Longs.m */; };
-		83A997902210AE1100B31FD5 /* CHRandomTests+LongLongs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978F2210AE1100B31FD5 /* CHRandomTests+LongLongs.m */; };
-		83A997922210AEB800B31FD5 /* CHRandomTests+Ints.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997912210AEB800B31FD5 /* CHRandomTests+Ints.m */; };
-		83A997942210AF1000B31FD5 /* CHRandomTests+Shorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997932210AF1000B31FD5 /* CHRandomTests+Shorts.m */; };
-		83A997962210B01000B31FD5 /* CHRandomTests+Chars.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997952210B01000B31FD5 /* CHRandomTests+Chars.m */; };
-		83A997982210B24E00B31FD5 /* CHRandomTests+Floats.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997972210B24E00B31FD5 /* CHRandomTests+Floats.m */; };
-		83A9979A2210B6A000B31FD5 /* CHRandomTests+Bytes.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997992210B6A000B31FD5 /* CHRandomTests+Bytes.m */; };
-		83E6D15C220FE02D00B6F4A8 /* CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D15A220FE02D00B6F4A8 /* CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83E6D164220FE05A00B6F4A8 /* CHRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D162220FE05A00B6F4A8 /* CHRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83E6D165220FE05A00B6F4A8 /* CHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D163220FE05A00B6F4A8 /* CHRandom.m */; };
-		83E6D16E220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D168220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.m */; };
-		83E6D16F220FE09500B6F4A8 /* NSArray+CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D169220FE09500B6F4A8 /* NSArray+CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83E6D170220FE09500B6F4A8 /* NSNumber+CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D16A220FE09500B6F4A8 /* NSNumber+CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83E6D171220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D16B220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83E6D172220FE09500B6F4A8 /* NSArray+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D16C220FE09500B6F4A8 /* NSArray+CHRandomKit.m */; };
-		83E6D173220FE09500B6F4A8 /* NSNumber+CHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D16D220FE09500B6F4A8 /* NSNumber+CHRandomKit.m */; };
-		83E6D176220FE0CE00B6F4A8 /* CHSaferMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D174220FE0CE00B6F4A8 /* CHSaferMemory.h */; };
-		83E6D177220FE0CE00B6F4A8 /* CHSaferMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D175220FE0CE00B6F4A8 /* CHSaferMemory.c */; };
-		83E6D18122109A4700B6F4A8 /* CHRandomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E6D157220FE02D00B6F4A8 /* CHRandomKit.framework */; };
-		83E6D18822109A8F00B6F4A8 /* CHRandomTests+Integers.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D18722109A8F00B6F4A8 /* CHRandomTests+Integers.m */; };
+		83A9978E2210AC6E00B31FD5 /* CBHRandomTests+Longs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */; };
+		83A997902210AE1100B31FD5 /* CBHRandomTests+LongLongs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */; };
+		83A997922210AEB800B31FD5 /* CBHRandomTests+Ints.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997912210AEB800B31FD5 /* CBHRandomTests+Ints.m */; };
+		83A997942210AF1000B31FD5 /* CBHRandomTests+Shorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997932210AF1000B31FD5 /* CBHRandomTests+Shorts.m */; };
+		83A997962210B01000B31FD5 /* CBHRandomTests+Chars.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997952210B01000B31FD5 /* CBHRandomTests+Chars.m */; };
+		83A997982210B24E00B31FD5 /* CBHRandomTests+Floats.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997972210B24E00B31FD5 /* CBHRandomTests+Floats.m */; };
+		83A9979A2210B6A000B31FD5 /* CBHRandomTests+Bytes.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997992210B6A000B31FD5 /* CBHRandomTests+Bytes.m */; };
+		83E6D15C220FE02D00B6F4A8 /* CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E6D164220FE05A00B6F4A8 /* CBHRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D162220FE05A00B6F4A8 /* CBHRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E6D165220FE05A00B6F4A8 /* CBHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D163220FE05A00B6F4A8 /* CBHRandom.m */; };
+		83E6D16E220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D168220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m */; };
+		83E6D16F220FE09500B6F4A8 /* NSArray+CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D169220FE09500B6F4A8 /* NSArray+CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E6D170220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D16A220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E6D171220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D16B220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E6D172220FE09500B6F4A8 /* NSArray+CBHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D16C220FE09500B6F4A8 /* NSArray+CBHRandomKit.m */; };
+		83E6D173220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D16D220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m */; };
+		83E6D176220FE0CE00B6F4A8 /* CBHSaferMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D174220FE0CE00B6F4A8 /* CBHSaferMemory.h */; };
+		83E6D177220FE0CE00B6F4A8 /* CBHSaferMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D175220FE0CE00B6F4A8 /* CBHSaferMemory.c */; };
+		83E6D18122109A4700B6F4A8 /* CBHRandomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */; };
+		83E6D18822109A8F00B6F4A8 /* CBHRandomTests+Integers.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D18722109A8F00B6F4A8 /* CBHRandomTests+Integers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,34 +35,34 @@
 			containerPortal = 83E6D14E220FE02D00B6F4A8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 83E6D156220FE02D00B6F4A8;
-			remoteInfo = CHRandomKit;
+			remoteInfo = CBHRandomKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		83A9978D2210AC6E00B31FD5 /* CHRandomTests+Longs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Longs.m"; sourceTree = "<group>"; };
-		83A9978F2210AE1100B31FD5 /* CHRandomTests+LongLongs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+LongLongs.m"; sourceTree = "<group>"; };
-		83A997912210AEB800B31FD5 /* CHRandomTests+Ints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Ints.m"; sourceTree = "<group>"; };
-		83A997932210AF1000B31FD5 /* CHRandomTests+Shorts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Shorts.m"; sourceTree = "<group>"; };
-		83A997952210B01000B31FD5 /* CHRandomTests+Chars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Chars.m"; sourceTree = "<group>"; };
-		83A997972210B24E00B31FD5 /* CHRandomTests+Floats.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Floats.m"; sourceTree = "<group>"; };
-		83A997992210B6A000B31FD5 /* CHRandomTests+Bytes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Bytes.m"; sourceTree = "<group>"; };
-		83E6D157220FE02D00B6F4A8 /* CHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83E6D15A220FE02D00B6F4A8 /* CHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHRandomKit.h; sourceTree = "<group>"; };
+		83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Longs.m"; sourceTree = "<group>"; };
+		83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+LongLongs.m"; sourceTree = "<group>"; };
+		83A997912210AEB800B31FD5 /* CBHRandomTests+Ints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Ints.m"; sourceTree = "<group>"; };
+		83A997932210AF1000B31FD5 /* CBHRandomTests+Shorts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Shorts.m"; sourceTree = "<group>"; };
+		83A997952210B01000B31FD5 /* CBHRandomTests+Chars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Chars.m"; sourceTree = "<group>"; };
+		83A997972210B24E00B31FD5 /* CBHRandomTests+Floats.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Floats.m"; sourceTree = "<group>"; };
+		83A997992210B6A000B31FD5 /* CBHRandomTests+Bytes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Bytes.m"; sourceTree = "<group>"; };
+		83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHRandomKit.h; sourceTree = "<group>"; };
 		83E6D15B220FE02D00B6F4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83E6D162220FE05A00B6F4A8 /* CHRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRandom.h; sourceTree = "<group>"; };
-		83E6D163220FE05A00B6F4A8 /* CHRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRandom.m; sourceTree = "<group>"; };
-		83E6D168220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CHRandomKit.m"; sourceTree = "<group>"; };
-		83E6D169220FE09500B6F4A8 /* NSArray+CHRandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHRandomKit.h"; sourceTree = "<group>"; };
-		83E6D16A220FE09500B6F4A8 /* NSNumber+CHRandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CHRandomKit.h"; sourceTree = "<group>"; };
-		83E6D16B220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CHRandomKit.h"; sourceTree = "<group>"; };
-		83E6D16C220FE09500B6F4A8 /* NSArray+CHRandomKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHRandomKit.m"; sourceTree = "<group>"; };
-		83E6D16D220FE09500B6F4A8 /* NSNumber+CHRandomKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CHRandomKit.m"; sourceTree = "<group>"; };
-		83E6D174220FE0CE00B6F4A8 /* CHSaferMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSaferMemory.h; sourceTree = "<group>"; };
-		83E6D175220FE0CE00B6F4A8 /* CHSaferMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CHSaferMemory.c; sourceTree = "<group>"; };
-		83E6D17C22109A4700B6F4A8 /* CHRandomKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHRandomKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E6D162220FE05A00B6F4A8 /* CBHRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHRandom.h; sourceTree = "<group>"; };
+		83E6D163220FE05A00B6F4A8 /* CBHRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHRandom.m; sourceTree = "<group>"; };
+		83E6D168220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CBHRandomKit.m"; sourceTree = "<group>"; };
+		83E6D169220FE09500B6F4A8 /* NSArray+CBHRandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CBHRandomKit.h"; sourceTree = "<group>"; };
+		83E6D16A220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CBHRandomKit.h"; sourceTree = "<group>"; };
+		83E6D16B220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CBHRandomKit.h"; sourceTree = "<group>"; };
+		83E6D16C220FE09500B6F4A8 /* NSArray+CBHRandomKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CBHRandomKit.m"; sourceTree = "<group>"; };
+		83E6D16D220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CBHRandomKit.m"; sourceTree = "<group>"; };
+		83E6D174220FE0CE00B6F4A8 /* CBHSaferMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHSaferMemory.h; sourceTree = "<group>"; };
+		83E6D175220FE0CE00B6F4A8 /* CBHSaferMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBHSaferMemory.c; sourceTree = "<group>"; };
+		83E6D17C22109A4700B6F4A8 /* CBHRandomKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBHRandomKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E6D18022109A4700B6F4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83E6D18722109A8F00B6F4A8 /* CHRandomTests+Integers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHRandomTests+Integers.m"; sourceTree = "<group>"; };
+		83E6D18722109A8F00B6F4A8 /* CBHRandomTests+Integers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Integers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E6D18122109A4700B6F4A8 /* CHRandomKit.framework in Frameworks */,
+				83E6D18122109A4700B6F4A8 /* CBHRandomKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +87,8 @@
 		83E6D14D220FE02D00B6F4A8 = {
 			isa = PBXGroup;
 			children = (
-				83E6D159220FE02D00B6F4A8 /* CHRandomKit */,
-				83E6D17D22109A4700B6F4A8 /* CHRandomKitTests */,
+				83E6D159220FE02D00B6F4A8 /* CBHRandomKit */,
+				83E6D17D22109A4700B6F4A8 /* CBHRandomKitTests */,
 				83E6D158220FE02D00B6F4A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,53 +96,53 @@
 		83E6D158220FE02D00B6F4A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83E6D157220FE02D00B6F4A8 /* CHRandomKit.framework */,
-				83E6D17C22109A4700B6F4A8 /* CHRandomKitTests.xctest */,
+				83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */,
+				83E6D17C22109A4700B6F4A8 /* CBHRandomKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83E6D159220FE02D00B6F4A8 /* CHRandomKit */ = {
+		83E6D159220FE02D00B6F4A8 /* CBHRandomKit */ = {
 			isa = PBXGroup;
 			children = (
-				83E6D15A220FE02D00B6F4A8 /* CHRandomKit.h */,
-				83E6D162220FE05A00B6F4A8 /* CHRandom.h */,
-				83E6D163220FE05A00B6F4A8 /* CHRandom.m */,
+				83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */,
+				83E6D162220FE05A00B6F4A8 /* CBHRandom.h */,
+				83E6D163220FE05A00B6F4A8 /* CBHRandom.m */,
 				83E6D167220FE08000B6F4A8 /* Catagories */,
-				83E6D174220FE0CE00B6F4A8 /* CHSaferMemory.h */,
-				83E6D175220FE0CE00B6F4A8 /* CHSaferMemory.c */,
+				83E6D174220FE0CE00B6F4A8 /* CBHSaferMemory.h */,
+				83E6D175220FE0CE00B6F4A8 /* CBHSaferMemory.c */,
 				83E6D15B220FE02D00B6F4A8 /* Info.plist */,
 			);
-			path = CHRandomKit;
+			path = CBHRandomKit;
 			sourceTree = "<group>";
 		};
 		83E6D167220FE08000B6F4A8 /* Catagories */ = {
 			isa = PBXGroup;
 			children = (
-				83E6D169220FE09500B6F4A8 /* NSArray+CHRandomKit.h */,
-				83E6D16C220FE09500B6F4A8 /* NSArray+CHRandomKit.m */,
-				83E6D16B220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.h */,
-				83E6D168220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.m */,
-				83E6D16A220FE09500B6F4A8 /* NSNumber+CHRandomKit.h */,
-				83E6D16D220FE09500B6F4A8 /* NSNumber+CHRandomKit.m */,
+				83E6D169220FE09500B6F4A8 /* NSArray+CBHRandomKit.h */,
+				83E6D16C220FE09500B6F4A8 /* NSArray+CBHRandomKit.m */,
+				83E6D16B220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h */,
+				83E6D168220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m */,
+				83E6D16A220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h */,
+				83E6D16D220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m */,
 			);
 			name = Catagories;
 			sourceTree = "<group>";
 		};
-		83E6D17D22109A4700B6F4A8 /* CHRandomKitTests */ = {
+		83E6D17D22109A4700B6F4A8 /* CBHRandomKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				83A997972210B24E00B31FD5 /* CHRandomTests+Floats.m */,
-				83A997952210B01000B31FD5 /* CHRandomTests+Chars.m */,
-				83A997992210B6A000B31FD5 /* CHRandomTests+Bytes.m */,
-				83A997932210AF1000B31FD5 /* CHRandomTests+Shorts.m */,
-				83A997912210AEB800B31FD5 /* CHRandomTests+Ints.m */,
-				83E6D18722109A8F00B6F4A8 /* CHRandomTests+Integers.m */,
-				83A9978D2210AC6E00B31FD5 /* CHRandomTests+Longs.m */,
-				83A9978F2210AE1100B31FD5 /* CHRandomTests+LongLongs.m */,
+				83A997972210B24E00B31FD5 /* CBHRandomTests+Floats.m */,
+				83A997952210B01000B31FD5 /* CBHRandomTests+Chars.m */,
+				83A997992210B6A000B31FD5 /* CBHRandomTests+Bytes.m */,
+				83A997932210AF1000B31FD5 /* CBHRandomTests+Shorts.m */,
+				83A997912210AEB800B31FD5 /* CBHRandomTests+Ints.m */,
+				83E6D18722109A8F00B6F4A8 /* CBHRandomTests+Integers.m */,
+				83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */,
+				83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */,
 				83E6D18022109A4700B6F4A8 /* Info.plist */,
 			);
-			path = CHRandomKitTests;
+			path = CBHRandomKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,21 +152,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E6D171220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.h in Headers */,
-				83E6D164220FE05A00B6F4A8 /* CHRandom.h in Headers */,
-				83E6D176220FE0CE00B6F4A8 /* CHSaferMemory.h in Headers */,
-				83E6D170220FE09500B6F4A8 /* NSNumber+CHRandomKit.h in Headers */,
-				83E6D15C220FE02D00B6F4A8 /* CHRandomKit.h in Headers */,
-				83E6D16F220FE09500B6F4A8 /* NSArray+CHRandomKit.h in Headers */,
+				83E6D171220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h in Headers */,
+				83E6D164220FE05A00B6F4A8 /* CBHRandom.h in Headers */,
+				83E6D176220FE0CE00B6F4A8 /* CBHSaferMemory.h in Headers */,
+				83E6D170220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h in Headers */,
+				83E6D15C220FE02D00B6F4A8 /* CBHRandomKit.h in Headers */,
+				83E6D16F220FE09500B6F4A8 /* NSArray+CBHRandomKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		83E6D156220FE02D00B6F4A8 /* CHRandomKit */ = {
+		83E6D156220FE02D00B6F4A8 /* CBHRandomKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83E6D15F220FE02D00B6F4A8 /* Build configuration list for PBXNativeTarget "CHRandomKit" */;
+			buildConfigurationList = 83E6D15F220FE02D00B6F4A8 /* Build configuration list for PBXNativeTarget "CBHRandomKit" */;
 			buildPhases = (
 				83E6D152220FE02D00B6F4A8 /* Headers */,
 				83E6D153220FE02D00B6F4A8 /* Sources */,
@@ -177,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = CHRandomKit;
-			productName = CHRandomKit;
-			productReference = 83E6D157220FE02D00B6F4A8 /* CHRandomKit.framework */;
+			name = CBHRandomKit;
+			productName = CBHRandomKit;
+			productReference = 83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		83E6D17B22109A4700B6F4A8 /* CHRandomKitTests */ = {
+		83E6D17B22109A4700B6F4A8 /* CBHRandomKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83E6D18622109A4700B6F4A8 /* Build configuration list for PBXNativeTarget "CHRandomKitTests" */;
+			buildConfigurationList = 83E6D18622109A4700B6F4A8 /* Build configuration list for PBXNativeTarget "CBHRandomKitTests" */;
 			buildPhases = (
 				83E6D17822109A4700B6F4A8 /* Sources */,
 				83E6D17922109A4700B6F4A8 /* Frameworks */,
@@ -195,9 +195,9 @@
 			dependencies = (
 				83E6D18322109A4700B6F4A8 /* PBXTargetDependency */,
 			);
-			name = CHRandomKitTests;
-			productName = CHRandomKitTests;
-			productReference = 83E6D17C22109A4700B6F4A8 /* CHRandomKitTests.xctest */;
+			name = CBHRandomKitTests;
+			productName = CBHRandomKitTests;
+			productReference = 83E6D17C22109A4700B6F4A8 /* CBHRandomKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83E6D151220FE02D00B6F4A8 /* Build configuration list for PBXProject "CHRandomKit" */;
+			buildConfigurationList = 83E6D151220FE02D00B6F4A8 /* Build configuration list for PBXProject "CBHRandomKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83E6D156220FE02D00B6F4A8 /* CHRandomKit */,
-				83E6D17B22109A4700B6F4A8 /* CHRandomKitTests */,
+				83E6D156220FE02D00B6F4A8 /* CBHRandomKit */,
+				83E6D17B22109A4700B6F4A8 /* CBHRandomKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,11 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E6D16E220FE09500B6F4A8 /* NSMutableArray+CHRandomKit.m in Sources */,
-				83E6D177220FE0CE00B6F4A8 /* CHSaferMemory.c in Sources */,
-				83E6D165220FE05A00B6F4A8 /* CHRandom.m in Sources */,
-				83E6D173220FE09500B6F4A8 /* NSNumber+CHRandomKit.m in Sources */,
-				83E6D172220FE09500B6F4A8 /* NSArray+CHRandomKit.m in Sources */,
+				83E6D16E220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m in Sources */,
+				83E6D177220FE0CE00B6F4A8 /* CBHSaferMemory.c in Sources */,
+				83E6D165220FE05A00B6F4A8 /* CBHRandom.m in Sources */,
+				83E6D173220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m in Sources */,
+				83E6D172220FE09500B6F4A8 /* NSArray+CBHRandomKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +269,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A997982210B24E00B31FD5 /* CHRandomTests+Floats.m in Sources */,
-				83A9979A2210B6A000B31FD5 /* CHRandomTests+Bytes.m in Sources */,
-				83E6D18822109A8F00B6F4A8 /* CHRandomTests+Integers.m in Sources */,
-				83A997902210AE1100B31FD5 /* CHRandomTests+LongLongs.m in Sources */,
-				83A9978E2210AC6E00B31FD5 /* CHRandomTests+Longs.m in Sources */,
-				83A997962210B01000B31FD5 /* CHRandomTests+Chars.m in Sources */,
-				83A997922210AEB800B31FD5 /* CHRandomTests+Ints.m in Sources */,
-				83A997942210AF1000B31FD5 /* CHRandomTests+Shorts.m in Sources */,
+				83A997982210B24E00B31FD5 /* CBHRandomTests+Floats.m in Sources */,
+				83A9979A2210B6A000B31FD5 /* CBHRandomTests+Bytes.m in Sources */,
+				83E6D18822109A8F00B6F4A8 /* CBHRandomTests+Integers.m in Sources */,
+				83A997902210AE1100B31FD5 /* CBHRandomTests+LongLongs.m in Sources */,
+				83A9978E2210AC6E00B31FD5 /* CBHRandomTests+Longs.m in Sources */,
+				83A997962210B01000B31FD5 /* CBHRandomTests+Chars.m in Sources */,
+				83A997922210AEB800B31FD5 /* CBHRandomTests+Ints.m in Sources */,
+				83A997942210AF1000B31FD5 /* CBHRandomTests+Shorts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +285,7 @@
 /* Begin PBXTargetDependency section */
 		83E6D18322109A4700B6F4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83E6D156220FE02D00B6F4A8 /* CHRandomKit */;
+			target = 83E6D156220FE02D00B6F4A8 /* CBHRandomKit */;
 			targetProxy = 83E6D18222109A4700B6F4A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -343,7 +343,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -447,7 +446,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -498,25 +496,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BACZA3W44R;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CHRandomKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/CBHRandomKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CHRandomKit;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -524,25 +520,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BACZA3W44R;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CHRandomKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/CBHRandomKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CHRandomKit;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -554,14 +548,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = BACZA3W44R;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = CHRandomKitTests/Info.plist;
+				INFOPLIST_FILE = CBHRandomKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CHRandomKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -574,14 +568,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = BACZA3W44R;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = CHRandomKitTests/Info.plist;
+				INFOPLIST_FILE = CBHRandomKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CHRandomKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -589,7 +583,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83E6D151220FE02D00B6F4A8 /* Build configuration list for PBXProject "CHRandomKit" */ = {
+		83E6D151220FE02D00B6F4A8 /* Build configuration list for PBXProject "CBHRandomKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E6D15D220FE02D00B6F4A8 /* Debug */,
@@ -598,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83E6D15F220FE02D00B6F4A8 /* Build configuration list for PBXNativeTarget "CHRandomKit" */ = {
+		83E6D15F220FE02D00B6F4A8 /* Build configuration list for PBXNativeTarget "CBHRandomKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E6D160220FE02D00B6F4A8 /* Debug */,
@@ -607,7 +601,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83E6D18622109A4700B6F4A8 /* Build configuration list for PBXNativeTarget "CHRandomKitTests" */ = {
+		83E6D18622109A4700B6F4A8 /* Build configuration list for PBXNativeTarget "CBHRandomKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E6D18422109A4700B6F4A8 /* Debug */,

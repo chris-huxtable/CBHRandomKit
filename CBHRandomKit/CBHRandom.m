@@ -1,6 +1,6 @@
 //
-//	CHRandom.m
-//	CHRandomKit
+//	CBHRandom.m
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, October 2015.
 //	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
@@ -18,14 +18,14 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#import "CHRandom.h"
-#import "CHSaferMemory.h"
+#import "CBHRandom.h"
+#import "CBHSaferMemory.h"
 
 
 #define SWAP(T, a, b) do { T tmp = a; a = b; b = tmp; } while (0)
 
 
-@implementation CHRandom
+@implementation CBHRandom
 
 
 #pragma mark - Boolean
@@ -429,7 +429,7 @@
 {
 	// By definition sizeof(char) == 1
 
-	void *buffer = CHSaferCallocOrExit(size, 1);
+	void *buffer = CBHSaferCallocOrExit(size, 1);
 	arc4random_buf(buffer, size);
 
 	return buffer;

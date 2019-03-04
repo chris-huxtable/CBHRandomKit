@@ -1,6 +1,6 @@
 //
-//	CHRandom.h
-//	CHRandomKit
+//	CBHRandom.h
+//	CBHRandomKit
 //
 //	Created by Christian Huxtable, October 2015.
 //	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
@@ -26,7 +26,7 @@
  * @version     1.2
  * @since       2015-10-15
  */
-@interface CHRandom : NSObject
+@interface CBHRandom : NSObject
 
 
 #pragma mark - Boolean

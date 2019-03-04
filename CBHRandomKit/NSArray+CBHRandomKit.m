@@ -1,8 +1,8 @@
 //
-//	CHRandomKit.h
-//	CHRandomKit
+//	NSArray+CBHRandomKit.m
+//	CBHRandomKit
 //
-//	Created by Christian Huxtable <chris@huxtable.ca>, October 2015.
+//	Created by Christian Huxtable, October 2015.
 //	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
 //
 //	Permission to use, copy, modify, and/or distribute this software for any
@@ -18,15 +18,35 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-@import Cocoa;
+#import "NSArray+CBHRandomKit.h"
+
+#import "NSMutableArray+CBHRandomKit.h"
+#import "CBHRandom.h"
 
 
-FOUNDATION_EXPORT double CHRandomKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char CHRandomKitVersionString[];
+
+@implementation NSArray (CBHRandomKit)
 
 
-#import <CHRandomKit/CHRandom.h>
+#pragma mark - Shuffling
 
-#import <CHRandomKit/NSArray+CHRandomKit.h>
-#import <CHRandomKit/NSMutableArray+CHRandomKit.h>
-#import <CHRandomKit/NSNumber+CHRandomKit.h>
+- (NSArray *)arrayByShuffling
+{
+	NSMutableArray *mutableArray = [self mutableCopy];
+	[mutableArray shuffle];
+
+	NSArray *array = [mutableArray copy];
+	[mutableArray release];
+
+	return [array autorelease];
+}
+
+
+#pragma mark - Accessors
+
+- (id)randomObject
+{
+	return [self objectAtIndex:[CBHRandom randomUnsignedIntegerWithBound:[self count] - 1]];
+}
+
+@end
