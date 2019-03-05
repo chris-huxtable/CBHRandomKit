@@ -18,12 +18,10 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-@import Cocoa;
-
+@import Foundation;
 
 FOUNDATION_EXPORT double CBHRandomKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CBHRandomKitVersionString[];
-
 
 #import <CBHRandomKit/CBHRandom.h>
 
