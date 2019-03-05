@@ -23,6 +23,7 @@
 
 
 #define SWAP(T, a, b) do { T tmp = a; a = b; b = tmp; } while (0)
+#define MODULO_BIAS_UNSIGNED_MIN(T, S, bound) (T)(-(S)bound % (S)bound);
 
 
 @implementation CBHRandom
@@ -125,7 +126,7 @@
 	if ( bound < 1 ) { return 1; }
 	++bound;
 
-	uint8_t min = -bound % bound;
+	uint8_t min = MODULO_BIAS_UNSIGNED_MIN(uint8_t, int8_t, bound);
 	uint8_t r = 0;
 
 	/// Recalculate if result has modulo-bias
@@ -178,7 +179,7 @@
 	if ( bound < 1 ) { return 1; }
 	++bound;
 
-	unsigned short min = -bound % bound;
+	unsigned short min = MODULO_BIAS_UNSIGNED_MIN(unsigned short, short, bound);
 	unsigned short r = 0;
 
 	/// Recalculate if result has modulo-bias
@@ -230,7 +231,7 @@
 	if ( bound < 1 ) { return 1; }
 	++bound;
 
-	unsigned int min = -bound % bound;
+	unsigned int min = MODULO_BIAS_UNSIGNED_MIN(unsigned int, int, bound);
 	unsigned int r = 0;
 
 	/// Recalculate if result has modulo-bias
@@ -282,7 +283,7 @@
 	if ( bound < 1 ) { return 0; }
 	++bound;
 
-	NSUInteger min = -bound % bound;
+	NSUInteger min = MODULO_BIAS_UNSIGNED_MIN(NSUInteger, NSInteger, bound);
 	NSUInteger r = 0;
 
 	/// Recalculate if result has modulo-bias
@@ -342,7 +343,7 @@
 	if ( bound < 1 ) { return 1; }
 	++bound;
 
-	unsigned long min = -bound % bound;
+	unsigned long min = MODULO_BIAS_UNSIGNED_MIN(unsigned long, long, bound);
 	unsigned long r = 0;
 
 	/// Recalculate if result has modulo-bias
@@ -394,7 +395,7 @@
 	if ( bound < 1 ) { return 1; }
 	++bound;
 
-	unsigned long long min = -bound % bound;
+	unsigned long long min = MODULO_BIAS_UNSIGNED_MIN(unsigned long long, long long, bound);
 	unsigned long long r = 0;
 
 	/// Recalculate if result has modulo-bias
