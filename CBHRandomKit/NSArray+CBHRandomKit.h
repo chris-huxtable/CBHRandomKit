@@ -23,7 +23,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
+/** Adds randomization methods to Arrays
+ *
  * @author      Chris Huxtable <chris@huxtable.ca>
  * @version     1.2
  * @since       2015-10-15
@@ -33,9 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Shuffling
 
-///---
-/// @name Shuffling arrays.
-///---
+/**
+ * @name Shuffling arrays.
+ */
 
 /** Creates a new shuffled copy of itself.
  * @return		A new shuffled copy of itself.
@@ -46,9 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Accessors
 
-///---
-/// @name Accessing random entries.
-///---
+/**
+ * @name Accessing random entries.
+ */
 
 /** Returns a random element from itself.
  * @return		A random element from itself.

@@ -428,8 +428,6 @@
 
 + (void *)randomBytes:(size_t)size
 {
-	// By definition sizeof(char) == 1
-
 	void *buffer = CBHSaferCallocOrExit(size, 1);
 	arc4random_buf(buffer, size);
 

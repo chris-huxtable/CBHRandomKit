@@ -23,7 +23,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
+/** Adds randomization methods to Mutable Arrays
+ *
  * @author      Chris Huxtable <chris@huxtable.ca>
  * @version     1.2
  * @since       2015-10-15
@@ -33,11 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Shuffling
 
-///---
-/// @name Shuffling Arrays.
-///---
+/**
+ * @name Shuffling Arrays.
+ */
 
 /** Shuffles the order of its elements.
+ *
  * @return		Its self shuffled.
  * @since		Available in version 1.0 and later.
  */
@@ -46,11 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Insertion
 
-///---
-/// @name Inserting objects into array.
-///---
+/**
+ * @name Inserting objects into array.
+ */
 
 /** Inserts an object at a random index.
+ *
  * @param object	The object to insert.
  * @return			The index in which the object was inserted.
  * @since			Available in version 1.0 and later.
@@ -60,11 +63,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Removal
 
-///---
-/// @name Removing objects from array.
-///---
+/**
+ * @name Removing objects from array.
+ */
 
 /** Removes a random object from itself.
+ *
  * @return		The object which was removed.
  * @since		Available in version 1.0 and later.
  */
