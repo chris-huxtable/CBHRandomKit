@@ -17,15 +17,15 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#include <stdlib.h>
-
-
-#pragma mark - Safer Malloc / Calloc
-
 #pragma once
 
 #ifndef _CBHSaferMemory
 #define _CBHSaferMemory
+
+#include <stdlib.h>
+
+
+#pragma mark - Safer Malloc / Calloc
 
 /** A function that acquires a chunk of memory checking for overflows.
  *
