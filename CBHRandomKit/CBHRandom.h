@@ -18,7 +18,9 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-@import Foundation;
+@import Foundation.NSData;
+@import Foundation.NSValue;
+@import CoreGraphics.CGBase;
 
 
 /** Generates Random Data

@@ -18,7 +18,8 @@
 //	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-@import Foundation;
+@import Foundation.NSObjCRuntime;
+
 
 FOUNDATION_EXPORT double CBHRandomKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CBHRandomKitVersionString[];
