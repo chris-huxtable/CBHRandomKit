@@ -85,5 +85,20 @@ BOOL contains_int8(int8_t const *array, size_t const length, int8_t const needle
 	}
 }
 
+- (void)testCharBetweenLowerAndUpperBound_flipped
+{
+	int8_t array[COUNT];
+
+	/// Test Flipped Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = (int8_t)[CBHRandom randomCharBetweenLower:20 andUpperBound:10];
+		}
+
+		double average = average_int8(array, COUNT);
+		XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+	}
+}
 
 @end

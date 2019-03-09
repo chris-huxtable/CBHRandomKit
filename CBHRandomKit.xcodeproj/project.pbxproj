@@ -17,6 +17,9 @@
 		83AB993C223361EC00F0310C /* CBHRandomTests+Bool.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB993B223361EC00F0310C /* CBHRandomTests+Bool.m */; };
 		83AB993E2233F78700F0310C /* CBHRandomTests+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB993D2233F78700F0310C /* CBHRandomTests+Array.m */; };
 		83AB9940223402AD00F0310C /* CBHRandomTests+MutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */; };
+		83AB994222341F0600F0310C /* CBHRandomTests+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB994122341F0600F0310C /* CBHRandomTests+Data.m */; };
+		83AB9944223422B900F0310C /* CBHRandomTests+Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9943223422B900F0310C /* CBHRandomTests+Number.m */; };
+		83AB99462234283E00F0310C /* CBHSaferMemoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB99452234283E00F0310C /* CBHSaferMemoryTests.m */; };
 		83E6D15C220FE02D00B6F4A8 /* CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83E6D164220FE05A00B6F4A8 /* CBHRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D162220FE05A00B6F4A8 /* CBHRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83E6D165220FE05A00B6F4A8 /* CBHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D163220FE05A00B6F4A8 /* CBHRandom.m */; };
@@ -55,6 +58,9 @@
 		83AB993B223361EC00F0310C /* CBHRandomTests+Bool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Bool.m"; sourceTree = "<group>"; };
 		83AB993D2233F78700F0310C /* CBHRandomTests+Array.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Array.m"; sourceTree = "<group>"; };
 		83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+MutableArray.m"; sourceTree = "<group>"; };
+		83AB994122341F0600F0310C /* CBHRandomTests+Data.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Data.m"; sourceTree = "<group>"; };
+		83AB9943223422B900F0310C /* CBHRandomTests+Number.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Number.m"; sourceTree = "<group>"; };
+		83AB99452234283E00F0310C /* CBHSaferMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHSaferMemoryTests.m; sourceTree = "<group>"; };
 		83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHRandomKit.h; sourceTree = "<group>"; };
 		83E6D15B220FE02D00B6F4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,8 +157,11 @@
 				83E6D18722109A8F00B6F4A8 /* CBHRandomTests+Integers.m */,
 				83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */,
 				83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */,
+				83AB994122341F0600F0310C /* CBHRandomTests+Data.m */,
 				83AB993D2233F78700F0310C /* CBHRandomTests+Array.m */,
 				83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */,
+				83AB9943223422B900F0310C /* CBHRandomTests+Number.m */,
+				83AB99452234283E00F0310C /* CBHSaferMemoryTests.m */,
 				83E6D18022109A4700B6F4A8 /* Info.plist */,
 			);
 			path = CBHRandomKitTests;
@@ -286,12 +295,15 @@
 				83A9979A2210B6A000B31FD5 /* CBHRandomTests+Bytes.m in Sources */,
 				83AB993C223361EC00F0310C /* CBHRandomTests+Bool.m in Sources */,
 				83E6D18822109A8F00B6F4A8 /* CBHRandomTests+Integers.m in Sources */,
+				83AB9944223422B900F0310C /* CBHRandomTests+Number.m in Sources */,
 				83A997902210AE1100B31FD5 /* CBHRandomTests+LongLongs.m in Sources */,
 				83A9978E2210AC6E00B31FD5 /* CBHRandomTests+Longs.m in Sources */,
 				83AB993E2233F78700F0310C /* CBHRandomTests+Array.m in Sources */,
 				83A997962210B01000B31FD5 /* CBHRandomTests+Chars.m in Sources */,
 				83A997922210AEB800B31FD5 /* CBHRandomTests+Ints.m in Sources */,
+				83AB99462234283E00F0310C /* CBHSaferMemoryTests.m in Sources */,
 				83A997942210AF1000B31FD5 /* CBHRandomTests+Shorts.m in Sources */,
+				83AB994222341F0600F0310C /* CBHRandomTests+Data.m in Sources */,
 				83AB9940223402AD00F0310C /* CBHRandomTests+MutableArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

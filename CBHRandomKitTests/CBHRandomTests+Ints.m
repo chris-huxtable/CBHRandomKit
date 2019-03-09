@@ -134,8 +134,29 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 		double average = averageInt(array, COUNT);
 		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
 	}
-}
 
+	/// Test Flipped Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = [CBHRandom randomIntBetweenLower:10 andUpperBound:-10];
+		}
+
+		double average = averageInt(array, COUNT);
+		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
+	}
+
+	/// Test Single Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = [CBHRandom randomIntBetweenLower:10 andUpperBound:10];
+		}
+
+		double average = averageInt(array, COUNT);
+		XCTAssertEqual(average, 10);
+	}
+}
 
 - (void)testUnsignedInt
 {
@@ -161,6 +182,19 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 	XCTAssertFalse(containsUnsignedInt(array, COUNT, 21));
 }
 
+- (void)testUnsignedIntWithBound_single
+{
+	unsigned int array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntWithBound:0];
+	}
+
+	double average = averageUnsignedInt(array, COUNT);
+	XCTAssertEqual(average, 0);
+}
+
 - (void)testUnsignedIntBetweenLowerAndUpperBound
 {
 	unsigned int array[COUNT];
@@ -179,6 +213,40 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 	XCTAssertFalse(containsUnsignedInt(array, COUNT, 21));
 	XCTAssertFalse(containsUnsignedInt(array, COUNT, 9));
+}
+
+- (void)testUnsignedIntBetweenLowerAndUpperBound_flipped
+{
+	unsigned int array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntBetweenLower:20 andUpperBound:10];
+	}
+
+	double average = averageUnsignedInt(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+
+	XCTAssertTrue(containsUnsignedInt(array, COUNT, 20));
+	XCTAssertTrue(containsUnsignedInt(array, COUNT, 10));
+
+	XCTAssertFalse(containsUnsignedInt(array, COUNT, 21));
+	XCTAssertFalse(containsUnsignedInt(array, COUNT, 9));
+}
+
+- (void)testUnsignedIntBetweenLowerAndUpperBound_single
+{
+	unsigned int array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntBetweenLower:10 andUpperBound:10];
+	}
+
+	double average = averageUnsignedInt(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, 10.0, 0.1);
 }
 
 @end

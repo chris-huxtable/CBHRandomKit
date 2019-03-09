@@ -55,16 +55,13 @@ double average_bool(BOOL const *array, size_t const length)
 {
 	BOOL array[COUNT];
 
-	/// Test Postive Bounds
+	for (size_t i = 0; i < COUNT; ++i)
 	{
-		for (size_t i = 0; i < COUNT; ++i)
-		{
-			array[i] = [CBHRandom randomBool];
-		}
-
-		double average = average_bool(array, COUNT);
-		XCTAssertEqualWithAccuracy(average, 0.5, 0.01);
+		array[i] = [CBHRandom randomBool];
 	}
+
+	double average = average_bool(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, 0.5, 0.01);
 }
 
 @end

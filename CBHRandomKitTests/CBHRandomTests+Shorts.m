@@ -134,8 +134,29 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 		double average = averageShort(array, COUNT);
 		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
 	}
-}
 
+	/// Test Flipped Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = [CBHRandom randomShortBetweenLower:10 andUpperBound:-10];
+		}
+
+		double average = averageShort(array, COUNT);
+		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
+	}
+
+	/// Test Single Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = [CBHRandom randomShortBetweenLower:10 andUpperBound:10];
+		}
+
+		double average = averageShort(array, COUNT);
+		XCTAssertEqual(average, 10);
+	}
+}
 
 - (void)testUnsignedShort
 {
@@ -161,6 +182,19 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 	XCTAssertFalse(containsUnsignedShort(array, COUNT, 21));
 }
 
+- (void)testUnsignedShortWithBound_single
+{
+	unsigned short array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedShortWithBound:0];
+	}
+
+	double average = averageUnsignedShort(array, COUNT);
+	XCTAssertEqual(average, 0);
+}
+
 - (void)testUnsignedShortBetweenLowerAndUpperBound
 {
 	unsigned short array[COUNT];
@@ -179,6 +213,40 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 	XCTAssertFalse(containsUnsignedShort(array, COUNT, 21));
 	XCTAssertFalse(containsUnsignedShort(array, COUNT, 9));
+}
+
+- (void)testUnsignedShortBetweenLowerAndUpperBound_flipped
+{
+	unsigned short array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedShortBetweenLower:20 andUpperBound:10];
+	}
+
+	double average = averageUnsignedShort(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+
+	XCTAssertTrue(containsUnsignedShort(array, COUNT, 20));
+	XCTAssertTrue(containsUnsignedShort(array, COUNT, 10));
+
+	XCTAssertFalse(containsUnsignedShort(array, COUNT, 21));
+	XCTAssertFalse(containsUnsignedShort(array, COUNT, 9));
+}
+
+- (void)testUnsignedShortBetweenLowerAndUpperBound_single
+{
+	unsigned short array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedShortBetweenLower:10 andUpperBound:10];
+	}
+
+	double average = averageUnsignedShort(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, 10.0, 0.1);
 }
 
 @end

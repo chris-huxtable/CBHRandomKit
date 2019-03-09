@@ -2,36 +2,53 @@
 //  CBHRandomTests+Data.m
 //  CBHRandomKitTests
 //
-//  Created by Christian Huxtable on 2019-03-09.
-//  Copyright © 2019 Christian Huxtable. All rights reserved.
+//  Created by Christian Huxtable, March 2019.
+//  Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
+//
+//  Permission to use, copy, modify, and/or distribute this software for any
+//  purpose with or without fee is hereby granted, provided that the above
+//  copyright notice and this permission notice appear in all copies.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+//  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+//  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+//  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+//  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+//  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+//  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
+
+#import "CBHRandomKit/CBHRandom.h"
+
 
 @interface CBHRandomTests_Data : XCTestCase
-
 @end
+
 
 @implementation CBHRandomTests_Data
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testData
+{
+	NSData *data = [CBHRandom randomDataOfLength:1024];
+
+	XCTAssertNotNil(data, @"Data should not be nil.");
+	XCTAssertEqual([data length], 1024, @"Data length should be 1024 bytes");
+
+	NSData *emptyData = [[NSMutableData dataWithLength:1024] copy];
+	XCTAssertNotEqualObjects(data, emptyData, @"Data should not be empty");
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
+- (void)testMutableData
+{
+	NSMutableData *data = [CBHRandom randomMutableDataOfLength:1024];
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
+	XCTAssertNotNil(data, @"Data should not be nil.");
+	XCTAssertEqual([data length], 1024, @"Data length should be 1024 bytes");
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+	NSData *emptyData = [NSMutableData dataWithLength:1024];
+	XCTAssertNotEqualObjects(data, emptyData, @"Data should not be empty");
 }
 
 @end

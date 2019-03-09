@@ -18,7 +18,7 @@
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 #import "CBHRandomKit/NSArray+CBHRandomKit.h"
 
@@ -28,6 +28,7 @@
 
 
 @implementation CBHRandomTests_Array
+
 
 - (void)testShuffle
 {

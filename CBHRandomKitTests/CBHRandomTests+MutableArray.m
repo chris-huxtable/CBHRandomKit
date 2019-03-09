@@ -18,7 +18,7 @@
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 #import "CBHRandomKit/NSMutableArray+CBHRandomKit.h"
 
@@ -28,6 +28,7 @@
 
 
 @implementation CBHRandomTests_MutableArray
+
 
 - (void)testShuffle
 {
@@ -53,6 +54,5 @@
 
 	XCTAssert([array count] == 7, @"Array length should have increased.");
 }
-
 
 @end

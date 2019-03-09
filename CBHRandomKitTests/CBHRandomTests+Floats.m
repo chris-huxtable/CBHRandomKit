@@ -73,9 +73,9 @@ CGFloat average_cgfloat(CGFloat const *array, size_t const length)
 }
 
 
-
 @interface CBHRandomTests_Floats : XCTestCase
 @end
+
 
 @implementation CBHRandomTests_Floats
 

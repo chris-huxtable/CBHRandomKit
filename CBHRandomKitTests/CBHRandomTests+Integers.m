@@ -134,8 +134,29 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 		double average = averageInteger(array, COUNT);
 		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
 	}
-}
 
+	/// Test Flipped Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:-10];
+		}
+
+		double average = averageInteger(array, COUNT);
+		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
+	}
+
+	/// Test Single Bounds
+	{
+		for (size_t i = 0; i < COUNT; ++i)
+		{
+			array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:10];
+		}
+
+		double average = averageInteger(array, COUNT);
+		XCTAssertEqual(average, 10);
+	}
+}
 
 - (void)testUnsignedInteger
 {
@@ -161,6 +182,19 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	XCTAssertFalse(containsUnsignedInteger(array, COUNT, 21));
 }
 
+- (void)testUnsignedIntegerWithBound_single
+{
+	NSUInteger array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntegerWithBound:0];
+	}
+
+	double average = averageUnsignedInteger(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, 0, 0.001);
+}
+
 - (void)testUnsignedIntegerBetweenLowerAndUpperBound
 {
 	NSUInteger array[COUNT];
@@ -181,6 +215,40 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	XCTAssertFalse(containsUnsignedInteger(array, COUNT, 9));
 }
 
+- (void)testUnsignedIntegerBetweenLowerAndUpperBound_flipped
+{
+	NSUInteger array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntegerBetweenLower:20 andUpperBound:10];
+	}
+
+	double average = averageUnsignedInteger(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+
+	XCTAssertTrue(containsUnsignedInteger(array, COUNT, 20));
+	XCTAssertTrue(containsUnsignedInteger(array, COUNT, 10));
+
+	XCTAssertFalse(containsUnsignedInteger(array, COUNT, 21));
+	XCTAssertFalse(containsUnsignedInteger(array, COUNT, 9));
+}
+
+- (void)testUnsignedIntegerBetweenLowerAndUpperBound_single
+{
+	NSUInteger array[COUNT];
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntegerBetweenLower:10 andUpperBound:10];
+	}
+
+	double average = averageUnsignedInteger(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, 10.0, 0.1);
+}
+
 - (void)testUnsignedIntegerInRange
 {
 	NSUInteger array[COUNT];
@@ -194,6 +262,21 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	double average = averageUnsignedInteger(array, COUNT);
 
 	XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+}
+
+- (void)testUnsignedIntegerInRange_overflow
+{
+	NSUInteger array[COUNT];
+	NSRange range = NSMakeRange(1, NSUIntegerMax);
+
+	for ( size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomUnsignedIntegerInRange:range];
+	}
+
+	double average = averageUnsignedInteger(array, COUNT);
+
+	XCTAssertEqualWithAccuracy(average, (NSUIntegerMax - 1)/2.0, NSUIntegerMax*0.01);
 }
 
 @end
