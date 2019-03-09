@@ -68,12 +68,6 @@
  */
 + (double)randomDouble;
 
-/** Generates a pseudo-random `long double` between 0.0Ld and 1.0Ld inclusive. Precision is limited to that of a double.
- *
- * @return              A pseudo-random `long double` between 0.0Ld and 1.0Ld inclusive.
- */
-+ (long double)randomLongDouble;
-
 
 #pragma mark - Char
 

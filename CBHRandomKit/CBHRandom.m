@@ -67,14 +67,6 @@
 	return ((double)value / (double)0xFFFFFFFFFFFFFFFF);
 }
 
-+ (long double)randomLongDouble
-{
-	uint64_t value = 0.0L;
-	[self fillBuffer:&value ofSize:sizeof(uint64_t)];
-
-	return ((double)value / (double)0xFFFFFFFFFFFFFFFF);
-}
-
 
 #pragma mark - Char
 
