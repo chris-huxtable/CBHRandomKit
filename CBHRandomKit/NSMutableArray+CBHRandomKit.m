@@ -45,7 +45,7 @@
 
 #pragma mark - Insertion
 
-- (NSUInteger)insertObjectAtRandomIndex:(id _Nonnull)object
+- (NSUInteger)insertObjectAtRandomIndex:(id)object
 {
 	NSUInteger index = [CBHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
@@ -57,7 +57,7 @@
 
 #pragma mark - Removal
 
-- (id _Nonnull)removeRandomObject
+- (id)removeRandomObject
 {
 	NSUInteger index = [CBHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
