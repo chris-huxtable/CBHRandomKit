@@ -81,7 +81,7 @@ void *CBHSaferMallocOrExit_traceable(size_t nmemb, size_t size, const char *func
 
 void *CBHSaferCallocOrExit_traceable(size_t nmemb, size_t size, const char *funcName)
 {
-	void *tmp = CBHSaferMalloc(nmemb, size);
+	void *tmp = CBHSaferCalloc(nmemb, size);
 	if (tmp == NULL)
 	{
 		fprintf(stderr, "Allocation Failure: CBHSaferCallocOrExit failed (%s)\n", funcName);
