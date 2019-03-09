@@ -94,14 +94,15 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 - (void)testInteger
 {
-	// TODO: [CBHRandom randomInteger];
+	/// Works?
+	[CBHRandom randomInteger];
 }
 
 - (void)testIntegerBetweenLowerAndUpperBound
 {
 	NSInteger array[COUNT];
 
-	// Test Postive Bounds
+	/// Test Postive Bounds
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
@@ -138,7 +139,8 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 - (void)testUnsignedInteger
 {
-	// TODO: [CBHRandom randomUnsignedInteger];
+	/// Works?
+	[CBHRandom randomUnsignedInteger];
 }
 
 - (void)testUnsignedIntegerWithBound

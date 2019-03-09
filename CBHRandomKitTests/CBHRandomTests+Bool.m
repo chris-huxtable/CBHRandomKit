@@ -1,8 +1,8 @@
 //
-//	CBHRandomTests+Chars.h
-//	CBHRandomKit
+//  CBHRandomTests+Bool.m
+//  CBHRandomKitTests
 //
-//	Created by Christian Huxtable, February 2019.
+//	Created by Christian Huxtable, March 2019.
 //	Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
 //
 //	Permission to use, copy, modify, and/or distribute this software for any
@@ -25,18 +25,17 @@
 
 #define COUNT 1000000
 
-
 #pragma mark - Functions
 
-double average_int8(int8_t const *array, size_t length);
-BOOL contains_int8(int8_t const *array, size_t length, int8_t needle);
+double average_bool(BOOL const *array, size_t length);
 
-double average_int8(int8_t const *array, size_t const length)
+
+double average_bool(BOOL const *array, size_t const length)
 {
 	if ( length == 0 ) { return 0; }
 	double average = (double)array[0];
 
-	for ( size_t i = 1; i < length; ++i)
+	for (size_t i = 1; i < length; ++i)
 	{
 		average += (((double)array[i] - average) / (double)(i + 1));
 	}
@@ -44,46 +43,28 @@ double average_int8(int8_t const *array, size_t const length)
 	return average;
 }
 
-BOOL contains_int8(int8_t const *array, size_t const length, int8_t const needle)
-{
-	if ( length == 0 ) { return NO; }
 
-	for (size_t i = 0; i < length; ++i)
-	{
-		if ( array[i] == needle ) { return YES; }
-	}
-
-	return NO;
-}
-
-
-@interface CBHRandomTests_Chars : XCTestCase
+@interface CBHRandomTest_Bool : XCTestCase
 @end
 
-@implementation CBHRandomTests_Chars
+
+@implementation CBHRandomTest_Bool
 
 
-- (void)testChar
+- (void)testBool
 {
-	/// Works?
-	[CBHRandom randomChar];
-}
-
-- (void)testCharBetweenLowerAndUpperBound
-{
-	int8_t array[COUNT];
+	BOOL array[COUNT];
 
 	/// Test Postive Bounds
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
-			array[i] = (int8_t)[CBHRandom randomCharBetweenLower:10 andUpperBound:20];
+			array[i] = [CBHRandom randomBool];
 		}
 
-		double average = average_int8(array, COUNT);
-		XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+		double average = average_bool(array, COUNT);
+		XCTAssertEqualWithAccuracy(average, 0.5, 0.01);
 	}
 }
-
 
 @end

@@ -94,14 +94,15 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 - (void)testInt
 {
-	// TODO: [CBHRandom randomInt];
+	/// Works?
+	[CBHRandom randomInt];
 }
 
 - (void)testIntBetweenLowerAndUpperBound
 {
 	int array[COUNT];
 
-	// Test Postive Bounds
+	/// Test Postive Bounds
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
@@ -138,7 +139,8 @@ BOOL containsUnsignedInt(unsigned int const *array, size_t const length, unsigne
 
 - (void)testUnsignedInt
 {
-	// TODO: [CBHRandom randomUnsignedInt];
+	/// Works?
+	[CBHRandom randomUnsignedInt];
 }
 
 - (void)testUnsignedIntWithBound

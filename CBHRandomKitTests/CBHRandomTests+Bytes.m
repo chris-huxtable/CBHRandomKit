@@ -94,14 +94,15 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 
 - (void)testByte
 {
-	// TODO: [CBHRandom randomByte];
+	/// Works?
+	[CBHRandom randomByte];
 }
 
 - (void)testByteBetweenLowerAndUpperBound
 {
 	int8_t array[COUNT];
 
-	// Test Postive Bounds
+	/// Test Postive Bounds
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
@@ -138,7 +139,8 @@ BOOL containsUnsignedByte(uint8_t const *array, size_t const length, uint8_t nee
 
 - (void)testUnsignedByte
 {
-	// TODO: [CBHRandom randomUnsignedByte];
+	/// Works?
+	[CBHRandom randomUnsignedByte];
 }
 
 - (void)testUnsignedByteWithBound

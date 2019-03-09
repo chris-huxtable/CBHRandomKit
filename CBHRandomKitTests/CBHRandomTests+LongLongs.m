@@ -92,14 +92,15 @@ BOOL containsUnsignedLongLong(unsigned long long const *array, size_t const leng
 
 - (void)testLongLong
 {
-	// TODO: [CBHRandom randomLongLong];
+	/// Works?
+	[CBHRandom randomLongLong];
 }
 
 - (void)testLongLongBetweenLowerAndUpperBound
 {
 	long long array[COUNT];
 
-	// Test Postive Bounds
+	/// Test Postive Bounds
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
@@ -136,7 +137,8 @@ BOOL containsUnsignedLongLong(unsigned long long const *array, size_t const leng
 
 - (void)testUnsignedLongLong
 {
-	// TODO: [CBHRandom randomUnsignedLongLong];
+	/// Works?
+	[CBHRandom randomUnsignedLongLong];
 }
 
 - (void)testUnsignedLongLongWithBound

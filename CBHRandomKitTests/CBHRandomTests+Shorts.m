@@ -94,14 +94,15 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 - (void)testShort
 {
-	// TODO: [CBHRandom randomShort];
+	/// Works?
+	[CBHRandom randomShort];
 }
 
 - (void)testShortBetweenLowerAndUpperBound
 {
 	short array[COUNT];
 
-	// Test Postive Bounds
+	/// Test Postive Bounds
 	{
 		for (size_t i = 0; i < COUNT; ++i)
 		{
@@ -138,7 +139,8 @@ BOOL containsUnsignedShort(unsigned short const *array, size_t const length, uns
 
 - (void)testUnsignedShort
 {
-	// TODO: [CBHRandom randomUnsignedShort];
+	/// Works?
+	[CBHRandom randomUnsignedShort];
 }
 
 - (void)testUnsignedShortWithBound

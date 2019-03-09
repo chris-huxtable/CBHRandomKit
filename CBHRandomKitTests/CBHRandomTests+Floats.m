@@ -30,6 +30,8 @@
 
 double average_float(float const *array, size_t length);
 double average_double(double const *array, size_t length);
+CGFloat average_cgfloat(CGFloat const *array, size_t const length);
+
 
 double average_float(float const *array, size_t const length)
 {
@@ -52,6 +54,19 @@ double average_double(double const *array, size_t const length)
 	for ( size_t i = 1; i < length; ++i)
 	{
 		average += (((double)array[i] - average) / (double)(i + 1));
+	}
+
+	return average;
+}
+
+CGFloat average_cgfloat(CGFloat const *array, size_t const length)
+{
+	if ( length == 0 ) { return 0; }
+	CGFloat average = (CGFloat)array[0];
+
+	for ( size_t i = 1; i < length; ++i)
+	{
+		average += (((CGFloat)array[i] - average) / (CGFloat)(i + 1));
 	}
 
 	return average;
@@ -88,6 +103,19 @@ double average_double(double const *array, size_t const length)
 	}
 
 	double average = average_double(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, 0.5, 0.1);
+}
+
+- (void)testCGFloat
+{
+	CGFloat array[COUNT];
+
+	for (size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomCGFloat];
+	}
+
+	CGFloat average = average_cgfloat(array, COUNT);
 	XCTAssertEqualWithAccuracy(average, 0.5, 0.1);
 }
 
