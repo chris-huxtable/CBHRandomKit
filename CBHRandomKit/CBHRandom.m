@@ -115,7 +115,7 @@
 
 + (uint8_t)randomUnsignedByteWithBound:(uint8_t)bound
 {
-	if ( bound < 1 ) { return 1; }
+	if ( bound < 1 ) { return 0; }
 	++bound;
 
 	uint8_t min = MODULO_BIAS_UNSIGNED_MIN(uint8_t, int8_t, bound);
@@ -168,7 +168,7 @@
 
 + (unsigned short)randomUnsignedShortWithBound:(unsigned short)bound
 {
-	if ( bound < 1 ) { return 1; }
+	if ( bound < 1 ) { return 0; }
 	++bound;
 
 	unsigned short min = MODULO_BIAS_UNSIGNED_MIN(unsigned short, short, bound);
@@ -220,7 +220,7 @@
 
 + (unsigned int)randomUnsignedIntWithBound:(unsigned int)bound
 {
-	if ( bound < 1 ) { return 1; }
+	if ( bound < 1 ) { return 0; }
 	++bound;
 
 	unsigned int min = MODULO_BIAS_UNSIGNED_MIN(unsigned int, int, bound);
@@ -332,7 +332,7 @@
 
 + (unsigned long)randomUnsignedLongWithBound:(unsigned long)bound
 {
-	if ( bound < 1 ) { return 1; }
+	if ( bound < 1 ) { return 0; }
 	++bound;
 
 	unsigned long min = MODULO_BIAS_UNSIGNED_MIN(unsigned long, long, bound);
@@ -384,7 +384,7 @@
 
 + (unsigned long long)randomUnsignedLongLongWithBound:(unsigned long long)bound
 {
-	if ( bound < 1 ) { return 1; }
+	if ( bound < 1 ) { return 0; }
 	++bound;
 
 	unsigned long long min = MODULO_BIAS_UNSIGNED_MIN(unsigned long long, long long, bound);
