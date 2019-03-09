@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		839C0D86223315F10074D919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Longs.m"; sourceTree = "<group>"; };
 		83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+LongLongs.m"; sourceTree = "<group>"; };
 		83A997912210AEB800B31FD5 /* CBHRandomTests+Ints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Ints.m"; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		83A997952210B01000B31FD5 /* CBHRandomTests+Chars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Chars.m"; sourceTree = "<group>"; };
 		83A997972210B24E00B31FD5 /* CBHRandomTests+Floats.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Floats.m"; sourceTree = "<group>"; };
 		83A997992210B6A000B31FD5 /* CBHRandomTests+Bytes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Bytes.m"; sourceTree = "<group>"; };
+		83AB993A2233556C00F0310C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHRandomKit.h; sourceTree = "<group>"; };
 		83E6D15B220FE02D00B6F4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		83E6D14D220FE02D00B6F4A8 = {
 			isa = PBXGroup;
 			children = (
+				839C0D86223315F10074D919 /* README.md */,
+				83AB993A2233556C00F0310C /* LICENSE */,
 				83E6D159220FE02D00B6F4A8 /* CBHRandomKit */,
 				83E6D17D22109A4700B6F4A8 /* CBHRandomKitTests */,
 				83E6D158220FE02D00B6F4A8 /* Products */,
@@ -501,7 +505,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/CBHRandomKit/Info.plist";
+				INFOPLIST_FILE = CBHRandomKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -521,7 +525,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/CBHRandomKit/Info.plist";
+				INFOPLIST_FILE = CBHRandomKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
