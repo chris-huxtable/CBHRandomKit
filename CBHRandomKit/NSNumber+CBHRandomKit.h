@@ -1,21 +1,21 @@
 //
-//	NSNumber+CBHRandomKit.h
-//	CBHRandomKit
+//  NSNumber+CBHRandomKit.h
+//  CBHRandomKit
 //
-//	Created by Christian Huxtable, October 2015.
-//	Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
+//  Created by Christian Huxtable, October 2015.
+//  Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
 //
-//	Permission to use, copy, modify, and/or distribute this software for any
-//	purpose with or without fee is hereby granted, provided that the above
-//	copyright notice and this permission notice appear in all copies.
+//  Permission to use, copy, modify, and/or distribute this software for any
+//  purpose with or without fee is hereby granted, provided that the above
+//  copyright notice and this permission notice appear in all copies.
 //
-//	THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-//	WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-//	MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-//	ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-//	WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-//	ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-//	OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+//  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+//  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+//  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+//  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+//  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+//  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+//  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 //
 
 @import Foundation.NSValue;
@@ -25,9 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Adds randomization methods to Number Objects
  *
- * @author      Chris Huxtable <chris@huxtable.ca>
- * @version     1.2
- * @since       2015-10-15
+ * @author              Christian Huxtable <chris@huxtable.ca>
+ * @version             1.3
  */
 @interface NSNumber (CBHRandomKit)
 
@@ -40,15 +39,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `BOOL`.
  *
- * @return		A NSNumber contianing a pseudo-random `BOOL`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `BOOL`.
  */
 + (instancetype)numberWithRandomBool;
 
 /** Generates a NSNumber contianing a pseudo-random `BOOL`.
  *
- * @return		A NSNumber contianing a pseudo-random `BOOL`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `BOOL`.
  */
 - (instancetype)initWithRandomBool;
 
@@ -61,45 +58,39 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
  *
- * @return		A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
  */
 + (instancetype)numberWithRandomFloat;
 
 /** Generates a NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
  *
- * @return		A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `float` between 0.0 and 1.0 inclusive.
  */
 - (instancetype)initWithRandomFloat;
 
 
 /** Generates a NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  *
- * @return		A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  */
 + (instancetype)numberWithRandomCGFloat;
 
 /** Generates a NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  *
- * @return		A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `CGFloat` between 0.0 and 1.0 inclusive.
  */
 - (instancetype)initWithRandomCGFloat;
 
 
 /** Generates a NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
  *
- * @return		A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
  */
 + (instancetype)numberWithRandomDouble;
 
 /** Generates a NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
  *
- * @return		A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `double` between 0.0 and 1.0 inclusive.
  */
 - (instancetype)initWithRandomDouble;
 
@@ -112,15 +103,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `char`.
  *
- * @return		A NSNumber contianing a pseudo-random `char`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `char`.
  */
 + (instancetype)numberWithRandomChar;
 
 /** Generates a NSNumber contianing a pseudo-random `char`.
  *
- * @return		A NSNumber contianing a pseudo-random `char`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `char`.
  */
 - (instancetype)initWithRandomChar;
 
@@ -133,30 +122,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `int8_t`.
  *
- * @return		A NSNumber contianing a pseudo-random `int8_t`.
- * @since		Available in version 1.2 and later.
+ * @return              A NSNumber contianing a pseudo-random `int8_t`.
  */
 + (instancetype)numberWithRandomByte;
 
 /** Generates a NSNumber contianing a pseudo-random `int8_t`.
  *
- * @return		A NSNumber contianing a pseudo-random `int8_t`.
- * @since		Available in version 1.2 and later.
+ * @return              A NSNumber contianing a pseudo-random `int8_t`.
  */
 - (instancetype)initWithRandomByte;
 
 
 /** Generates a NSNumber contianing a pseudo-random `uint8_t`.
  *
- * @return		A NSNumber contianing a pseudo-random `uint8_t`.
- * @since		Available in version 1.2 and later.
+ * @return              A NSNumber contianing a pseudo-random `uint8_t`.
  */
 + (instancetype)numberWithRandomUnsignedByte;
 
 /** Generates a NSNumber contianing a pseudo-random `uint8_t`.
  *
- * @return		A NSNumber contianing a pseudo-random `uint8_t`.
- * @since		Available in version 1.2 and later.
+ * @return              A NSNumber contianing a pseudo-random `uint8_t`.
  */
 - (instancetype)initWithRandomUnsignedByte;
 
@@ -169,30 +154,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `short`.
  *
- * @return		A NSNumber contianing a pseudo-random `short`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `short`.
  */
 + (instancetype)numberWithRandomShort;
 
 /** Generates a NSNumber contianing a pseudo-random `short`.
  *
- * @return		A NSNumber contianing a pseudo-random `short`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `short`.
  */
 - (instancetype)initWithRandomShort;
 
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned short`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned short`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned short`.
  */
 + (instancetype)numberWithRandomUnsignedShort;
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned short`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned short`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned short`.
  */
 - (instancetype)initWithRandomUnsignedShort;
 
@@ -205,30 +186,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `int`.
  *
- * @return		A NSNumber contianing a pseudo-random `int`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `int`.
  */
 + (instancetype)numberWithRandomInt;
 
 /** Generates a NSNumber contianing a pseudo-random `int`.
  *
- * @return		A NSNumber contianing a pseudo-random `int`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `int`.
  */
 - (instancetype)initWithRandomInt;
 
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned int`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned int`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned int`.
  */
 + (instancetype)numberWithRandomUnsignedInt;
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned int`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned int`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned int`.
  */
 - (instancetype)initWithRandomUnsignedInt;
 
@@ -241,30 +218,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `NSInteger`.
  *
- * @return		A NSNumber contianing a pseudo-random `NSInteger`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `NSInteger`.
  */
 + (instancetype)numberWithRandomInteger;
 
 /** Generates a NSNumber contianing a pseudo-random `NSInteger`.
  *
- * @return		A NSNumber contianing a pseudo-random `NSInteger`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `NSInteger`.
  */
 - (instancetype)initWithRandomInteger;
 
 
 /** Generates a NSNumber contianing a pseudo-random `NSUInteger`.
  *
- * @return		A NSNumber contianing a pseudo-random `NSUInteger`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `NSUInteger`.
  */
 + (instancetype)numberWithRandomUnsignedInteger;
 
 /** Generates a NSNumber contianing a pseudo-random `NSUInteger`.
  *
- * @return		A NSNumber contianing a pseudo-random `NSUInteger`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `NSUInteger`.
  */
 - (instancetype)initWithRandomUnsignedInteger;
 
@@ -277,30 +250,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `long`.
  *
- * @return		A NSNumber contianing a pseudo-random `long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `long`.
  */
 + (instancetype)numberWithRandomLong;
 
 /** Generates a NSNumber contianing a pseudo-random `long`.
  *
- * @return		A NSNumber contianing a pseudo-random `long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `long`.
  */
 - (instancetype)initWithRandomLong;
 
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned long`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned long`.
  */
 + (instancetype)numberWithRandomUnsignedLong;
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned long`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned long`.
  */
 - (instancetype)initWithRandomUnsignedLong;
 
@@ -313,30 +282,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Generates a NSNumber contianing a pseudo-random `long long`.
  *
- * @return		A NSNumber contianing a pseudo-random `long long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `long long`.
  */
 + (instancetype)numberWithRandomLongLong;
 
 /** Generates a NSNumber contianing a pseudo-random `long long`.
  *
- * @return		A NSNumber contianing a pseudo-random `long long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `long long`.
  */
 - (instancetype)initWithRandomLongLong;
 
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned long long`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned long long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned long long`.
  */
 + (instancetype)numberWithRandomUnsignedLongLong;
 
 /** Generates a NSNumber contianing a pseudo-random `unsigned long long`.
  *
- * @return		A NSNumber contianing a pseudo-random `unsigned long long`.
- * @since		Available in version 1.0 and later.
+ * @return              A NSNumber contianing a pseudo-random `unsigned long long`.
  */
 - (instancetype)initWithRandomUnsignedLongLong;
 
