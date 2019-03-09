@@ -382,7 +382,7 @@
  *
  * @return          A NSData object filled with pseudo-random data of a given length.
  */
-+ (NSDate *)randomDataOfLength:(NSUInteger)length;
++ (NSData *)randomDataOfLength:(NSUInteger)length;
 
 /** Generates a NSMutableData object filled with pseudo-random data of a given length.
  *
