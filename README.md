@@ -1,6 +1,6 @@
 # CBHRandomKit
 
-![version](https://img.shields.io/badge/version-1.3-blue.svg?cacheSeconds=2592000)
+![version](https://img.shields.io/badge/version-1.3.1-blue.svg?cacheSeconds=2592000)
 ![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)
 ![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen.svg?cacheSeconds=2592000)
 
