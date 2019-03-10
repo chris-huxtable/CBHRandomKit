@@ -1,8 +1,8 @@
 # CBHRandomKit
 
-![version](https://img.shields.io/badge/version-1.3.1-blue.svg?cacheSeconds=2592000)
-![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)
-![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen.svg?cacheSeconds=2592000)
+[![release](https://img.shields.io/badge/release-1.3.1-blue.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHRandomKit/releases)
+[![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHRandomKit/blob/master/LICENSE)
+[![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHRandomKit)
 
 An easier and safer to use interface for good, cryptographically secure, random.
 
