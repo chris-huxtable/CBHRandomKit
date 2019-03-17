@@ -1,6 +1,7 @@
 # CBHRandomKit
 
 [![release](https://img.shields.io/badge/release-1.3.2-blue.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHRandomKit/releases)
+[![pod](https://img.shields.io/cocoapods/v/CBHRandomKit.svg)](https://cocoapods.org/pods/CBHRandomKit)
 [![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHRandomKit/blob/master/LICENSE)
 [![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHRandomKit)
 
