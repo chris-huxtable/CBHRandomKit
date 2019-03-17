@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.source                 = { :git => "https://github.com/chris-huxtable/CBHRandomKit.git", :tag => "v#{spec.version}" }
 
-  spec.requires_arc = true
+  spec.requires_arc           = true
 
   spec.public_header_files    = 'CBHRandomKit/*.h'
   spec.source_files           = "CBHRandomKit/*.{h,m}"
