@@ -30,7 +30,7 @@
 
 + (instancetype)numberWithRandomBool
 {
-	return [[[self alloc] initWithRandomBool] autorelease];
+	return [[self alloc] initWithRandomBool];
 }
 
 - (instancetype)initWithRandomBool
@@ -43,7 +43,7 @@
 
 + (instancetype)numberWithRandomFloat
 {
-	return [[[self alloc] initWithRandomFloat] autorelease];
+	return [[self alloc] initWithRandomFloat];
 }
 
 - (instancetype)initWithRandomFloat
@@ -54,7 +54,7 @@
 
 + (instancetype)numberWithRandomCGFloat
 {
-	return [[[self alloc] initWithRandomCGFloat] autorelease];
+	return [[self alloc] initWithRandomCGFloat];
 }
 
 - (instancetype)initWithRandomCGFloat
@@ -65,7 +65,7 @@
 
 + (instancetype)numberWithRandomDouble
 {
-	return [[[self alloc] initWithRandomDouble] autorelease];
+	return [[self alloc] initWithRandomDouble];
 }
 
 - (instancetype)initWithRandomDouble
@@ -78,7 +78,7 @@
 
 + (instancetype)numberWithRandomChar
 {
-	return [[[self alloc] initWithRandomChar] autorelease];
+	return [[self alloc] initWithRandomChar];
 }
 
 - (instancetype)initWithRandomChar
@@ -91,7 +91,7 @@
 
 + (instancetype)numberWithRandomByte
 {
-	return [[[self alloc] initWithRandomByte] autorelease];
+	return [[self alloc] initWithRandomByte];
 }
 
 - (instancetype)initWithRandomByte
@@ -102,7 +102,7 @@
 
 + (instancetype)numberWithRandomUnsignedByte
 {
-	return [[[self alloc] initWithRandomUnsignedByte] autorelease];
+	return [[self alloc] initWithRandomUnsignedByte];
 }
 
 - (instancetype)initWithRandomUnsignedByte
@@ -115,7 +115,7 @@
 
 + (instancetype)numberWithRandomShort
 {
-	return [[[self alloc] initWithRandomShort] autorelease];
+	return [[self alloc] initWithRandomShort];
 }
 
 - (instancetype)initWithRandomShort
@@ -126,7 +126,7 @@
 
 + (instancetype)numberWithRandomUnsignedShort
 {
-	return [[[self alloc] initWithRandomUnsignedShort] autorelease];
+	return [[self alloc] initWithRandomUnsignedShort];
 }
 
 - (instancetype)initWithRandomUnsignedShort
@@ -139,7 +139,7 @@
 
 + (instancetype)numberWithRandomInt
 {
-	return [[[self alloc] initWithRandomInt] autorelease];
+	return [[self alloc] initWithRandomInt];
 }
 
 - (instancetype)initWithRandomInt
@@ -150,7 +150,7 @@
 
 + (instancetype)numberWithRandomUnsignedInt
 {
-	return [[[self alloc] initWithRandomUnsignedInt] autorelease];
+	return [[self alloc] initWithRandomUnsignedInt];
 }
 
 - (instancetype)initWithRandomUnsignedInt
@@ -163,7 +163,7 @@
 
 + (instancetype)numberWithRandomInteger
 {
-	return [[[self alloc] initWithRandomInteger] autorelease];
+	return [[self alloc] initWithRandomInteger];
 }
 
 - (instancetype)initWithRandomInteger
@@ -174,7 +174,7 @@
 
 + (instancetype)numberWithRandomUnsignedInteger
 {
-	return [[[self alloc] initWithRandomUnsignedInteger] autorelease];
+	return [[self alloc] initWithRandomUnsignedInteger];
 }
 
 - (instancetype)initWithRandomUnsignedInteger
@@ -187,7 +187,7 @@
 
 + (instancetype)numberWithRandomLong
 {
-	return [[[self alloc] initWithRandomLong] autorelease];
+	return [[self alloc] initWithRandomLong];
 }
 
 - (instancetype)initWithRandomLong
@@ -198,7 +198,7 @@
 
 + (instancetype)numberWithRandomUnsignedLong
 {
-	return [[[self alloc] initWithRandomUnsignedLong] autorelease];
+	return [[self alloc] initWithRandomUnsignedLong];
 }
 
 - (instancetype)initWithRandomUnsignedLong
@@ -211,7 +211,7 @@
 
 + (instancetype)numberWithRandomLongLong
 {
-	return [[[self alloc] initWithRandomLongLong] autorelease];
+	return [[self alloc] initWithRandomLongLong];
 }
 
 - (instancetype)initWithRandomLongLong
@@ -222,7 +222,7 @@
 
 + (instancetype)numberWithRandomUnsignedLongLong
 {
-	return [[[self alloc] initWithRandomUnsignedLongLong] autorelease];
+	return [[self alloc] initWithRandomUnsignedLongLong];
 }
 
 - (instancetype)initWithRandomUnsignedLongLong

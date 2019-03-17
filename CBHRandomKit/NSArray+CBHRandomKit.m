@@ -34,10 +34,7 @@
 	NSMutableArray *mutableArray = [self mutableCopy];
 	[mutableArray shuffle];
 
-	NSArray *array = [mutableArray copy];
-	[mutableArray release];
-
-	return [array autorelease];
+	return [mutableArray copy];
 }
 
 
