@@ -19,7 +19,9 @@
 //
 
 #import "CBHRandom.h"
-#import "CBHSaferMemory.h"
+
+#include <stdlib.h>
+#import <stdio.h>
 
 
 #define SWAP(T, a, b) do { T tmp = a; a = b; b = tmp; } while (0)
@@ -420,7 +422,13 @@
 
 + (void *)randomBytes:(size_t)size
 {
-	void *buffer = CBHSaferCallocOrExit(size, 1);
+	void *buffer = calloc(size, 1);
+	if (buffer == NULL)
+	{
+		fprintf(stderr, "Allocation Failure: Calloc failed \n");
+		exit(EXIT_FAILURE);
+	}
+
 	arc4random_buf(buffer, size);
 
 	return buffer;
