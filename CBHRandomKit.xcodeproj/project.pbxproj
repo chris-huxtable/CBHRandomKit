@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8312D43D223DE9A000941232 /* CBHRandomKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CBHRandomKit.podspec; sourceTree = "<group>"; };
 		839C0D86223315F10074D919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Longs.m"; sourceTree = "<group>"; };
 		83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+LongLongs.m"; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 			children = (
 				839C0D86223315F10074D919 /* README.md */,
 				83AB993A2233556C00F0310C /* LICENSE */,
+				8312D43D223DE9A000941232 /* CBHRandomKit.podspec */,
 				83E6D159220FE02D00B6F4A8 /* CBHRandomKit */,
 				83E6D17D22109A4700B6F4A8 /* CBHRandomKitTests */,
 				83E6D158220FE02D00B6F4A8 /* Products */,
