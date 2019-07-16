@@ -28,11 +28,12 @@
 
 #pragma mark - Functions
 
-double averageInteger(NSInteger const *array, size_t const length);
-BOOL containsInteger(NSInteger const *array, size_t const length, NSInteger needle);
+double averageInteger(NSInteger const *array, size_t length);
+BOOL containsInteger(NSInteger const *array, size_t length, NSInteger needle);
 
-double averageUnsignedInteger(NSUInteger const *array, size_t const length);
-BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUInteger needle);
+double averageUnsignedInteger(NSUInteger const *array, size_t length);
+BOOL containsUnsignedInteger(NSUInteger const *array, size_t length, NSUInteger needle);
+
 
 double averageInteger(NSInteger const *array, size_t const length)
 {
@@ -85,7 +86,6 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 }
 
 
-
 @interface CBHRandomTests_Integers : XCTestCase
 @end
 
@@ -98,69 +98,75 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 	[CBHRandom randomInteger];
 }
 
-- (void)testIntegerBetweenLowerAndUpperBound
+/// Test Postive Bounds
+- (void)testIntegerBetweenLowerAndUpperBound_positive
+{
+	NSInteger array[COUNT];
+	for (size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:20];
+	}
+
+	double average = averageInteger(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+}
+
+/// Test Negative Bounds
+- (void)testIntegerBetweenLowerAndUpperBound_negative
+{
+	NSInteger array[COUNT];
+	for (size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomIntegerBetweenLower:-10 andUpperBound:-20];
+	}
+
+	double average = averageInteger(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, -15.0, 0.1);
+}
+
+/// Test Crossing Bounds
+- (void)testIntegerBetweenLowerAndUpperBound_crossing
+{
+	NSInteger array[COUNT];
+	for (size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomIntegerBetweenLower:-10 andUpperBound:10];
+	}
+
+	double average = averageInteger(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
+}
+
+/// Test Flipped Bounds
+- (void)testIntegerBetweenLowerAndUpperBound_flipped
+{
+	NSInteger array[COUNT];
+	for (size_t i = 0; i < COUNT; ++i)
+	{
+		array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:-10];
+	}
+
+	double average = averageInteger(array, COUNT);
+	XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
+}
+
+/// Test Single Bounds
+- (void)testIntegerBetweenLowerAndUpperBound_single
 {
 	NSInteger array[COUNT];
 
-	/// Test Postive Bounds
+	for (size_t i = 0; i < COUNT; ++i)
 	{
-		for (size_t i = 0; i < COUNT; ++i)
-		{
-			array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:20];
-		}
-
-		double average = averageInteger(array, COUNT);
-		XCTAssertEqualWithAccuracy(average, 15.0, 0.1);
+		array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:10];
 	}
 
-	/// Test Negative Bounds
-	{
-		for (size_t i = 0; i < COUNT; ++i)
-		{
-			array[i] = [CBHRandom randomIntegerBetweenLower:-10 andUpperBound:-20];
-		}
-
-		double average = averageInteger(array, COUNT);
-		XCTAssertEqualWithAccuracy(average, -15.0, 0.1);
-	}
-
-	/// Test Crossing Bounds
-	{
-		for (size_t i = 0; i < COUNT; ++i)
-		{
-			array[i] = [CBHRandom randomIntegerBetweenLower:-10 andUpperBound:10];
-		}
-
-		double average = averageInteger(array, COUNT);
-		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
-	}
-
-	/// Test Flipped Bounds
-	{
-		for (size_t i = 0; i < COUNT; ++i)
-		{
-			array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:-10];
-		}
-
-		double average = averageInteger(array, COUNT);
-		XCTAssertEqualWithAccuracy(average, 0.0, 0.1);
-	}
-
-	/// Test Single Bounds
-	{
-		for (size_t i = 0; i < COUNT; ++i)
-		{
-			array[i] = [CBHRandom randomIntegerBetweenLower:10 andUpperBound:10];
-		}
-
-		double average = averageInteger(array, COUNT);
-		XCTAssertEqual(average, 10);
-	}
+	double average = averageInteger(array, COUNT);
+	XCTAssertEqual(average, 10);
 }
 
+/// Works?
 - (void)testUnsignedInteger
 {
-	/// Works?
 	[CBHRandom randomUnsignedInteger];
 }
 
