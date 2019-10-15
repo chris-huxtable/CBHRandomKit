@@ -1,7 +1,7 @@
-//  CBHRandomTests+MutableArray.m
+//  CBHRandomTests+MutableOrderedSet.m
 //  CBHRandomKitTests
 //
-//  Created by Christian Huxtable, March 2019.
+//  Created by Christian Huxtable, July 2019.
 //  Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
 //
 //  Permission to use, copy, modify, and/or distribute this software for any
@@ -18,39 +18,39 @@
 
 @import XCTest;
 
-@import CBHRandomKit.NSMutableArray_CBHRandomKit;
+@import CBHRandomKit.NSMutableOrderedSet_CBHRandomKit;
 
 
-@interface CBHRandomTests_MutableArray : XCTestCase
+@interface CBHRandomTests_MutableOrderedSet : XCTestCase
 @end
 
 
-@implementation CBHRandomTests_MutableArray
+@implementation CBHRandomTests_MutableOrderedSet
 
 
 - (void)testShuffle
 {
-	NSArray *array = @[@1, @2, @3, @4, @5, @6, @7, @8];
-	NSArray *shuffled = [[array mutableCopy] shuffle];
+	NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+	NSMutableOrderedSet *shuffled = [[orderedSet mutableCopy] shuffle];
 
 	XCTAssertNotNil(shuffled);
-	XCTAssertNotEqualObjects(array, shuffled, @"Arrays should not be the same.");
+	XCTAssertNotEqualObjects(orderedSet, shuffled, @"Arrays should not be the same.");
 }
 
 - (void)testInsertObjectAtRandom
 {
-	NSMutableArray *array = [@[@1, @2, @3, @4, @5, @6, @7, @8] mutableCopy];
-	[array insertObjectAtRandomIndex:@9];
+	NSMutableOrderedSet *orderedSet = [NSMutableOrderedSet orderedSetWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+	[orderedSet insertObjectAtRandomIndex:@9];
 
-	XCTAssert([array count] == 9, @"Array length should have increased.");
+	XCTAssert([orderedSet count] == 9, @"Array length should have increased.");
 }
 
 - (void)testRemoveRandomObject
 {
-	NSMutableArray *array = [@[@1, @2, @3, @4, @5, @6, @7, @8] mutableCopy];
-	[array removeRandomObject];
+	NSMutableOrderedSet *orderedSet = [NSMutableOrderedSet orderedSetWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+	[orderedSet removeRandomObject];
 
-	XCTAssert([array count] == 7, @"Array length should have increased.");
+	XCTAssert([orderedSet count] == 7, @"Array length should have increased.");
 }
 
 @end

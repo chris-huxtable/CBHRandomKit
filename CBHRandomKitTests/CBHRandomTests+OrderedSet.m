@@ -1,7 +1,7 @@
-//  CBHRandomTests+Array.m
+//  CBHRandomTests+OrderedSet.m
 //  CBHRandomKitTests
 //
-//  Created by Christian Huxtable, March 2019.
+//  Created by Christian Huxtable, July 2019.
 //  Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
 //
 //  Permission to use, copy, modify, and/or distribute this software for any
@@ -18,44 +18,37 @@
 
 @import XCTest;
 
-@import CBHRandomKit.NSArray_CBHRandomKit;
+@import CBHRandomKit.NSOrderedSet_CBHRandomKit;
 
 
-@interface CBHRandomTests_Array : XCTestCase
+@interface CBHRandomTests_OrderedSet : XCTestCase
 @end
 
 
-@implementation CBHRandomTests_Array
+@implementation CBHRandomTests_OrderedSet
 
 
 - (void)testShuffle
 {
-	NSArray *array = @[@1, @2, @3, @4, @5, @6, @7, @8];
-	NSArray *shuffled = [array arrayByShuffling];
+	NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+	NSOrderedSet *shuffled = [orderedSet orderedSetByShuffling];
 
 	XCTAssertNotNil(shuffled);
-	XCTAssertNotEqualObjects(array, shuffled, @"Arrays should not be the same");
+	XCTAssertNotEqualObjects(orderedSet, shuffled, @"Arrays should not be the same");
 }
 
 - (void)testRandomObject
 {
-	NSArray *array = @[@1, @2, @3, @4, @5, @6, @7, @8];
-
+	NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+	
 	for (NSUInteger i = 0; i < 10000; ++i)
 	{
-		NSNumber *number = [array randomObject];
+		NSNumber *number = [orderedSet randomObject];
 
 		XCTAssertNotNil(number);
 		XCTAssertLessThanOrEqual([number integerValue], 8);
-		XCTAssertGreaterThanOrEqual([number integerValue], 1);
+		XCTAssertGreaterThanOrEqual([number integerValue], 0);
 	}
-}
-
-- (void)testRandomObject_empty
-{
-	NSArray *array = @[];
-
-	XCTAssertNil([array randomObject]);
 }
 
 @end

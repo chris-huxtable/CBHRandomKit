@@ -1,4 +1,3 @@
-//
 //  CBHRandomTests+Data.m
 //  CBHRandomKitTests
 //
@@ -16,11 +15,10 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 @import XCTest;
 
-#import "CBHRandomKit/CBHRandom.h"
+@import CBHRandomKit.CBHRandom;
 
 
 @interface CBHRandomTests_Data : XCTestCase
@@ -49,6 +47,24 @@
 
 	NSData *emptyData = [NSMutableData dataWithLength:1024];
 	XCTAssertNotEqualObjects(data, emptyData, @"Data should not be empty");
+}
+
+- (void)testBytes
+{
+	uint32_t buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	[CBHRandom fillBuffer:buffer ofSize:sizeof(uint32_t) * 10];
+
+	XCTAssertNotEqual(buffer[0], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[1], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[2], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[3], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[4], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[5], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[6], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[7], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[8], 0, @"Bytes should not be empty");
+	XCTAssertNotEqual(buffer[9], 0, @"Bytes should not be empty");
+
 }
 
 @end
