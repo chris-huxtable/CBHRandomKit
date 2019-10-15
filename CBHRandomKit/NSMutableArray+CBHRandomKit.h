@@ -1,4 +1,3 @@
-//
 //  NSMutableArray+CBHRandomKit.h
 //  CBHRandomKit
 //
@@ -16,7 +15,6 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 @import Foundation.NSArray;
 
@@ -37,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @name Shuffling Arrays.
  */
 
-/** Shuffles the order of its elements.
+/** Shuffles the order of the receivers elements.
  *
  * @return              Its self shuffled.
  */
@@ -65,11 +63,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @name Removing objects from array.
  */
 
-/** Removes a random object from itself.
+/** Removes a random object from the receiver.
  *
  * @return              The object which was removed.
  */
-- (ObjectType)removeRandomObject;
+- (nullable ObjectType)removeRandomObject;
 
 @end
 

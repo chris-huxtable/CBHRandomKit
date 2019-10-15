@@ -1,4 +1,3 @@
-//
 //  NSArray+CBHRandomKit.h
 //  CBHRandomKit
 //
@@ -16,7 +15,6 @@
 //  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-//
 
 @import Foundation.NSArray;
 
@@ -37,9 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
  * @name Shuffling arrays.
  */
 
-/** Creates a new shuffled copy of itself.
+/** Creates a new shuffled copy of the receiver.
  *
- * @return              A new shuffled copy of itself.
+ * @return              A new shuffled copy of the receiver.
  */
 - (NSArray<ObjectType> *)arrayByShuffling;
 
@@ -50,11 +48,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @name Accessing random entries.
  */
 
-/** Returns a random element from itself.
+/** Returns a random element from the receiver.
  *
- * @return              A random element from itself.
+ * @return              A random element from the receiver.
  */
-- (ObjectType)randomObject;
+- (nullable ObjectType)randomObject;
 
 @end
 
