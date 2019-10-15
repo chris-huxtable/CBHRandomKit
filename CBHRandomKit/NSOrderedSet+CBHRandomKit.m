@@ -1,8 +1,8 @@
-//  CBHRandomKit.h
+//  NSOrderedSet+CBHRandomKit.m
 //  CBHRandomKit
 //
-//  Created by Christian Huxtable <chris@huxtable.ca>, October 2015.
-//  Copyright (c) 2015, Christian Huxtable <chris@huxtable.ca>
+//  Created by Christian Huxtable, July 2019.
+//  Copyright (c) 2019, Christian Huxtable <chris@huxtable.ca>
 //
 //  Permission to use, copy, modify, and/or distribute this software for any
 //  purpose with or without fee is hereby granted, provided that the above
@@ -16,19 +16,32 @@
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-@import Foundation.NSObjCRuntime;
+#import "NSOrderedSet+CBHRandomKit.h"
+
+#import "NSMutableOrderedSet+CBHRandomKit.h"
+#import "CBHRandom.h"
 
 
-FOUNDATION_EXPORT double CBHRandomKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char CBHRandomKitVersionString[];
+@implementation NSOrderedSet (CBHRandomKit)
 
 
-#import <CBHRandomKit/CBHRandom.h>
+#pragma mark - Shuffling
 
-#import <CBHRandomKit/NSNumber+CBHRandomKit.h>
+- (NSOrderedSet *)orderedSetByShuffling
+{
+	NSMutableOrderedSet *mutableOrderedSet = [self mutableCopy];
+	[mutableOrderedSet shuffle];
 
-#import <CBHRandomKit/NSArray+CBHRandomKit.h>
-#import <CBHRandomKit/NSMutableArray+CBHRandomKit.h>
+	return [mutableOrderedSet copy];
+}
 
-#import <CBHRandomKit/NSOrderedSet+CBHRandomKit.h>
-#import <CBHRandomKit/NSMutableOrderedSet+CBHRandomKit.h>
+
+#pragma mark - Accessors
+
+- (id)randomObject
+{
+	if ( [self count] <= 0 ) { return nil; }
+	return [self objectAtIndex:[CBHRandom randomUnsignedIntegerWithBound:[self count] - 1]];
+}
+
+@end
