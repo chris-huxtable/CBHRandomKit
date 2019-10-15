@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = "CBHRandomKit"
-  spec.version                = "1.3.2"
+  spec.version                = "1.4.0"
   spec.module_name            = "CBHRandomKit"
 
   spec.summary                = "An easier & safer to use interface for good cryptographically secure random."
