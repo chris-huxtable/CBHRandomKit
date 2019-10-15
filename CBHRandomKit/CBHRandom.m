@@ -35,6 +35,10 @@
 	_guardSwappedBounds(aType, aLower, aUpper)\
 }
 
+#define _fill(aType, aName)\
+aType aName = 0;\
+arc4random_buf(&aName, sizeof(aType));
+
 @implementation CBHRandom
 
 
@@ -42,9 +46,7 @@
 
 + (BOOL)randomBool
 {
-	int8_t value = 0;
-	[self fillBuffer:&value ofSize:sizeof(int8_t)];
-
+	_fill(int8_t, value);
 	return (0x01 & value);
 }
 
@@ -53,9 +55,7 @@
 
 + (float)randomFloat
 {
-	uint32_t value = 0.0L;
-	[self fillBuffer:&value ofSize:sizeof(uint32_t)];
-	
+	_fill(uint32_t, value);
 	return ((float)value / (float)0xFFFFFFFF);
 }
 
@@ -70,9 +70,7 @@
 
 + (double)randomDouble
 {
-	uint64_t value = 0.0L;
-	[self fillBuffer:&value ofSize:sizeof(uint64_t)];
-
+	_fill(uint64_t, value);
 	return ((double)value / (double)0xFFFFFFFFFFFFFFFF);
 }
 
@@ -97,9 +95,7 @@
 
 + (int8_t)randomByte
 {
-	int8_t value = 0;
-	[self fillBuffer:&value ofSize:sizeof(int8_t)];
-
+	_fill(int8_t, value);
 	return value;
 }
 
@@ -114,9 +110,7 @@
 
 + (uint8_t)randomUnsignedByte
 {
-	uint8_t value = 0;
-	[self fillBuffer:&value ofSize:sizeof(uint8_t)];
-
+	_fill(uint8_t, value);
 	return value;
 }
 
@@ -148,9 +142,7 @@
 
 + (short)randomShort
 {
-	short value = 0;
-	[self fillBuffer:&value ofSize:sizeof(short)];
-
+	_fill(short, value);
 	return value;
 }
 
@@ -165,9 +157,7 @@
 
 + (unsigned short)randomUnsignedShort
 {
-	unsigned short value = 0;
-	[self fillBuffer:&value ofSize:sizeof(unsigned short)];
-
+	_fill(unsigned short, value);
 	return value;
 }
 
@@ -198,9 +188,7 @@
 
 + (int)randomInt
 {
-	int value = 0;
-	[self fillBuffer:&value ofSize:sizeof(int)];
-
+	_fill(int, value);
 	return value;
 }
 
@@ -215,9 +203,7 @@
 
 + (unsigned int)randomUnsignedInt
 {
-	unsigned int value = 0;
-	[self fillBuffer:&value ofSize:sizeof(unsigned int)];
-
+	_fill(unsigned int, value);
 	return value;
 }
 
@@ -248,9 +234,7 @@
 
 + (NSInteger)randomInteger
 {
-	NSInteger value = 0;
-	[self fillBuffer:&value ofSize:sizeof(NSInteger)];
-
+	_fill(NSInteger, value);
 	return value;
 }
 
@@ -265,9 +249,7 @@
 
 + (NSUInteger)randomUnsignedInteger
 {
-	NSUInteger value = 0;
-	[self fillBuffer:&value ofSize:sizeof(NSUInteger)];
-
+	_fill(NSUInteger, value);
 	return value;
 }
 
@@ -323,9 +305,7 @@
 
 + (unsigned long)randomUnsignedLong
 {
-	unsigned long value = 0;
-	[self fillBuffer:&value ofSize:sizeof(unsigned long)];
-
+	_fill(unsigned long, value);
 	return value;
 }
 
@@ -356,9 +336,7 @@
 
 + (long long)randomLongLong
 {
-	long long value = 0;
-	[self fillBuffer:&value ofSize:sizeof(long long)];
-
+	_fill(long long, value);
 	return value;
 }
 
@@ -373,9 +351,7 @@
 
 + (unsigned long long)randomUnsignedLongLong
 {
-	unsigned long long value = 0;
-	[self fillBuffer:&value ofSize:sizeof(unsigned long long)];
-
+	_fill(unsigned long long, value);
 	return value;
 }
 
