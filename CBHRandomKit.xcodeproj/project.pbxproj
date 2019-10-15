@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8317D5D122DE5F4A0010DB1E /* CBHRandomTests+OrderedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317D5D022DE5F4A0010DB1E /* CBHRandomTests+OrderedSet.m */; };
+		8317D5D422DE5F8E0010DB1E /* NSOrderedSet+CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8317D5D222DE5F8D0010DB1E /* NSOrderedSet+CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8317D5D522DE5F8E0010DB1E /* NSOrderedSet+CBHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317D5D322DE5F8D0010DB1E /* NSOrderedSet+CBHRandomKit.m */; };
+		8317D5D822DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8317D5D622DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8317D5D922DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317D5D722DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m */; };
+		8317D5DB22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317D5DA22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m */; };
 		83A9978E2210AC6E00B31FD5 /* CBHRandomTests+Longs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */; };
 		83A997902210AE1100B31FD5 /* CBHRandomTests+LongLongs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */; };
 		83A997922210AEB800B31FD5 /* CBHRandomTests+Ints.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997912210AEB800B31FD5 /* CBHRandomTests+Ints.m */; };
@@ -44,6 +50,12 @@
 
 /* Begin PBXFileReference section */
 		8312D43D223DE9A000941232 /* CBHRandomKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CBHRandomKit.podspec; sourceTree = "<group>"; };
+		8317D5D022DE5F4A0010DB1E /* CBHRandomTests+OrderedSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+OrderedSet.m"; sourceTree = "<group>"; };
+		8317D5D222DE5F8D0010DB1E /* NSOrderedSet+CBHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOrderedSet+CBHRandomKit.h"; sourceTree = "<group>"; };
+		8317D5D322DE5F8D0010DB1E /* NSOrderedSet+CBHRandomKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSOrderedSet+CBHRandomKit.m"; sourceTree = "<group>"; };
+		8317D5D622DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableOrderedSet+CBHRandomKit.h"; sourceTree = "<group>"; };
+		8317D5D722DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableOrderedSet+CBHRandomKit.m"; sourceTree = "<group>"; };
+		8317D5DA22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+MutableOrderedSet.m"; sourceTree = "<group>"; };
 		839C0D86223315F10074D919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Longs.m"; sourceTree = "<group>"; };
 		83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+LongLongs.m"; sourceTree = "<group>"; };
@@ -129,12 +141,16 @@
 		83E6D167220FE08000B6F4A8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				83E6D16A220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h */,
+				83E6D16D220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m */,
 				83E6D169220FE09500B6F4A8 /* NSArray+CBHRandomKit.h */,
 				83E6D16C220FE09500B6F4A8 /* NSArray+CBHRandomKit.m */,
 				83E6D16B220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h */,
 				83E6D168220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m */,
-				83E6D16A220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h */,
-				83E6D16D220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m */,
+				8317D5D222DE5F8D0010DB1E /* NSOrderedSet+CBHRandomKit.h */,
+				8317D5D322DE5F8D0010DB1E /* NSOrderedSet+CBHRandomKit.m */,
+				8317D5D622DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h */,
+				8317D5D722DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -152,9 +168,11 @@
 				83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */,
 				83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */,
 				83AB994122341F0600F0310C /* CBHRandomTests+Data.m */,
+				83AB9943223422B900F0310C /* CBHRandomTests+Number.m */,
 				83AB993D2233F78700F0310C /* CBHRandomTests+Array.m */,
 				83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */,
-				83AB9943223422B900F0310C /* CBHRandomTests+Number.m */,
+				8317D5D022DE5F4A0010DB1E /* CBHRandomTests+OrderedSet.m */,
+				8317D5DA22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m */,
 				83E6D18022109A4700B6F4A8 /* Info.plist */,
 			);
 			path = CBHRandomKitTests;
@@ -167,6 +185,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8317D5D422DE5F8E0010DB1E /* NSOrderedSet+CBHRandomKit.h in Headers */,
+				8317D5D822DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h in Headers */,
 				83E6D171220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.h in Headers */,
 				83E6D164220FE05A00B6F4A8 /* CBHRandom.h in Headers */,
 				83E6D170220FE09500B6F4A8 /* NSNumber+CBHRandomKit.h in Headers */,
@@ -272,10 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8317D5D922DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m in Sources */,
 				83E6D16E220FE09500B6F4A8 /* NSMutableArray+CBHRandomKit.m in Sources */,
 				83E6D165220FE05A00B6F4A8 /* CBHRandom.m in Sources */,
 				83E6D173220FE09500B6F4A8 /* NSNumber+CBHRandomKit.m in Sources */,
 				83E6D172220FE09500B6F4A8 /* NSArray+CBHRandomKit.m in Sources */,
+				8317D5D522DE5F8E0010DB1E /* NSOrderedSet+CBHRandomKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +314,12 @@
 				83A9978E2210AC6E00B31FD5 /* CBHRandomTests+Longs.m in Sources */,
 				83AB993E2233F78700F0310C /* CBHRandomTests+Array.m in Sources */,
 				83A997962210B01000B31FD5 /* CBHRandomTests+Chars.m in Sources */,
+				8317D5DB22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m in Sources */,
 				83A997922210AEB800B31FD5 /* CBHRandomTests+Ints.m in Sources */,
 				83A997942210AF1000B31FD5 /* CBHRandomTests+Shorts.m in Sources */,
 				83AB994222341F0600F0310C /* CBHRandomTests+Data.m in Sources */,
 				83AB9940223402AD00F0310C /* CBHRandomTests+MutableArray.m in Sources */,
+				8317D5D122DE5F4A0010DB1E /* CBHRandomTests+OrderedSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +356,12 @@
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
 				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_ATOMIC_IMPLICIT_SEQ_CST = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -353,6 +379,7 @@
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -372,6 +399,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -435,10 +464,12 @@
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
 				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_ATOMIC_IMPLICIT_SEQ_CST = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -456,6 +487,7 @@
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -475,6 +507,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -516,6 +549,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -526,6 +560,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -537,6 +572,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -547,6 +583,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
