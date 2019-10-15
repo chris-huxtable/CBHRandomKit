@@ -40,6 +40,7 @@
 
 - (id)randomObject
 {
+	if ( [self count] <= 0 ) { return nil; }
 	return [self objectAtIndex:[CBHRandom randomUnsignedIntegerWithBound:[self count] - 1]];
 }
 

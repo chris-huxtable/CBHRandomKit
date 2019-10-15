@@ -29,6 +29,8 @@
 - (NSMutableArray *)shuffle
 {
 	NSUInteger count = [self count];
+	if ( count <= 0 ) { return self; }
+
 	NSUInteger index = 0;
 
 	while ( count > 0 )
@@ -45,10 +47,14 @@
 
 - (NSUInteger)insertObjectAtRandomIndex:(id)object
 {
+	if ( [self count] <= 0 )
+	{
+		[self insertObject:object atIndex:0];
+		return 0;
+	}
+
 	NSUInteger index = [CBHRandom randomUnsignedIntegerWithBound:[self count] - 1];
-
 	[self insertObject:object atIndex:index];
-
 	return index;
 }
 
@@ -57,6 +63,8 @@
 
 - (id)removeRandomObject
 {
+	if ( [self count] <= 0 ) { return nil; }
+
 	NSUInteger index = [CBHRandom randomUnsignedIntegerWithBound:[self count] - 1];
 
 	id object = [self objectAtIndex:index];
