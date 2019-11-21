@@ -13,6 +13,7 @@
 		8317D5D822DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8317D5D622DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8317D5D922DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317D5D722DE61890010DB1E /* NSMutableOrderedSet+CBHRandomKit.m */; };
 		8317D5DB22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8317D5DA22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m */; };
+		83655B3D2387371700CB89E1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 83AB993A2233556C00F0310C /* LICENSE */; };
 		83A9978E2210AC6E00B31FD5 /* CBHRandomTests+Longs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978D2210AC6E00B31FD5 /* CBHRandomTests+Longs.m */; };
 		83A997902210AE1100B31FD5 /* CBHRandomTests+LongLongs.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A9978F2210AE1100B31FD5 /* CBHRandomTests+LongLongs.m */; };
 		83A997922210AEB800B31FD5 /* CBHRandomTests+Ints.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A997912210AEB800B31FD5 /* CBHRandomTests+Ints.m */; };
@@ -275,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83655B3D2387371700CB89E1 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +379,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
-				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES_AGGRESSIVE;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -395,7 +397,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
@@ -485,7 +486,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
-				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES_AGGRESSIVE;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -503,7 +504,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -547,7 +547,6 @@
 		83E6D160220FE02D00B6F4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
@@ -559,18 +558,15 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		83E6D161220FE02D00B6F4A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
@@ -582,11 +578,9 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHRandomKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

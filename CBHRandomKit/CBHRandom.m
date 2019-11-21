@@ -39,8 +39,8 @@
 aType aName = 0;\
 arc4random_buf(&aName, sizeof(aType));
 
-@implementation CBHRandom
 
+@implementation CBHRandom
 
 #pragma mark - Boolean
 
