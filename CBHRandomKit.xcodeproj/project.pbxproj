@@ -26,6 +26,7 @@
 		83AB9940223402AD00F0310C /* CBHRandomTests+MutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */; };
 		83AB994222341F0600F0310C /* CBHRandomTests+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB994122341F0600F0310C /* CBHRandomTests+Data.m */; };
 		83AB9944223422B900F0310C /* CBHRandomTests+Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB9943223422B900F0310C /* CBHRandomTests+Number.m */; };
+		83E09E812398E59D003B95B9 /* Correctness.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 83E09E802398E59D003B95B9 /* Correctness.xctestplan */; };
 		83E6D15C220FE02D00B6F4A8 /* CBHRandomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83E6D164220FE05A00B6F4A8 /* CBHRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E6D162220FE05A00B6F4A8 /* CBHRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83E6D165220FE05A00B6F4A8 /* CBHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E6D163220FE05A00B6F4A8 /* CBHRandom.m */; };
@@ -71,6 +72,7 @@
 		83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+MutableArray.m"; sourceTree = "<group>"; };
 		83AB994122341F0600F0310C /* CBHRandomTests+Data.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Data.m"; sourceTree = "<group>"; };
 		83AB9943223422B900F0310C /* CBHRandomTests+Number.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CBHRandomTests+Number.m"; sourceTree = "<group>"; };
+		83E09E802398E59D003B95B9 /* Correctness.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Correctness.xctestplan; sourceTree = "<group>"; };
 		83E6D157220FE02D00B6F4A8 /* CBHRandomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHRandomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E6D15A220FE02D00B6F4A8 /* CBHRandomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHRandomKit.h; sourceTree = "<group>"; };
 		83E6D15B220FE02D00B6F4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				83AB993F223402AD00F0310C /* CBHRandomTests+MutableArray.m */,
 				8317D5D022DE5F4A0010DB1E /* CBHRandomTests+OrderedSet.m */,
 				8317D5DA22DE65FE0010DB1E /* CBHRandomTests+MutableOrderedSet.m */,
+				83E09E802398E59D003B95B9 /* Correctness.xctestplan */,
 				83E6D18022109A4700B6F4A8 /* Info.plist */,
 			);
 			path = CBHRandomKitTests;
@@ -284,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E09E812398E59D003B95B9 /* Correctness.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
