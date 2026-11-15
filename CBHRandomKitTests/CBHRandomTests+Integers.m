@@ -280,7 +280,9 @@ BOOL containsUnsignedInteger(NSUInteger const *array, size_t const length, NSUIn
 
 	double average = averageUnsignedInteger(array, COUNT);
 
-	XCTAssertEqualWithAccuracy(average, (NSUIntegerMax - 1)/2.0, NSUIntegerMax*0.01);
+	double const midpoint = 0x1p63;
+	double const tolerance = 0x1p64 * 0.01;
+	XCTAssertEqualWithAccuracy(average, midpoint, tolerance);
 }
 
 @end

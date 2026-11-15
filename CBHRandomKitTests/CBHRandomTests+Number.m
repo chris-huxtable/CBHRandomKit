@@ -42,7 +42,7 @@
 {
 	NSNumber *number = [NSNumber numberWithRandomFloat];
 	XCTAssertNotNil(number, @"Number should not be nil.");
-	XCTAssertNotEqual([number floatValue], 0, @"Number should not (statistically) be zero.");
+	XCTAssertNotEqual([number floatValue], 0.0f, @"Number should not (statistically) be zero.");
 }
 
 - (void)testRandomCGFloat
