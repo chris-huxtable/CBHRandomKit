@@ -16,9 +16,9 @@
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-@import Foundation.NSData;
-@import Foundation.NSValue;
-@import CoreGraphics.CGBase;
+#import <Foundation/NSData.h>
+#import <Foundation/NSValue.h>
+#import <CoreGraphics/CGBase.h>
 
 
 /** Generates Random Data
