@@ -47,7 +47,7 @@ arc4random_buf(&aName, sizeof(aType));
 + (BOOL)randomBool
 {
 	_fill(int8_t, value);
-	return (0x01 & value);
+	return (BOOL)(0x01 & value);
 }
 
 
@@ -125,7 +125,7 @@ arc4random_buf(&aName, sizeof(aType));
 	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedByte]) < min ) { }
 
-	return (r %= bound);
+	return r % bound;
 }
 
 + (uint8_t)randomUnsignedByteBetweenLower:(uint8_t)lowerBound andUpperBound:(uint8_t)upperBound
@@ -172,7 +172,7 @@ arc4random_buf(&aName, sizeof(aType));
 	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedShort]) < min ) { }
 
-	return (r %= bound);
+	return r % bound;
 }
 
 + (unsigned short)randomUnsignedShortBetweenLower:(unsigned short)lowerBound andUpperBound:(unsigned short)upperBound
@@ -218,7 +218,7 @@ arc4random_buf(&aName, sizeof(aType));
 	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedInt]) < min ) { }
 
-	return (r %= bound);
+	return r % bound;
 }
 
 + (unsigned int)randomUnsignedIntBetweenLower:(unsigned int)lowerBound andUpperBound:(unsigned int)upperBound
@@ -264,7 +264,7 @@ arc4random_buf(&aName, sizeof(aType));
 	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedInteger]) < min ) { }
 
-	return (r %= bound);
+	return r % bound;
 }
 
 + (NSUInteger)randomUnsignedIntegerBetweenLower:(NSUInteger)lowerBound andUpperBound:(NSUInteger)upperBound
@@ -320,7 +320,7 @@ arc4random_buf(&aName, sizeof(aType));
 	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedLong]) < min ) { }
 
-	return (r %= bound);
+	return r % bound;
 }
 
 + (unsigned long)randomUnsignedLongBetweenLower:(unsigned long)lowerBound andUpperBound:(unsigned long)upperBound
@@ -366,7 +366,7 @@ arc4random_buf(&aName, sizeof(aType));
 	/// Recalculate if result has modulo-bias
 	while ( (r = [self randomUnsignedLongLong]) < min ) { }
 
-	return (r %= bound);
+	return r % bound;
 }
 
 + (unsigned long long)randomUnsignedLongLongBetweenLower:(unsigned long long)lowerBound andUpperBound:(unsigned long long)upperBound
