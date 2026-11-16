@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.author                 = { 'Chris Huxtable' => 'chris@huxtable.ca' }
   spec.social_media_url       = 'https://twitter.com/@Chris_Huxtable'
 
-  spec.osx.deployment_target  = '10.10'
+  spec.osx.deployment_target  = '12.0'
 
   spec.source                 = { :git => 'https://github.com/chris-huxtable/CBHRandomKit.git', :tag => "v#{spec.version}" }
 
